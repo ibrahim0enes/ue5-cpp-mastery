@@ -14,8 +14,8 @@ This repo is where I actually write the code for the *"Unreal Engine 5 C++ Game 
 
 | # | Project | Core C++ / UE5 concepts | XP | Status |
 |---|---|---|---|---|
-| 00 | [Introduction & Setup](01-introduction-setup) | Compiler/IDE setup, `C++` vs Blueprint | 50 (+15 bonus) | ⬜ Not started |
-| 01 | [Obstacle Assault](02-obstacle-assault) | Structs, `Tick`, `DeltaTime`, functions, classes | 120 (+30 bonus) | ⬜ Not started |
+| 00 | [Introduction & Setup](01-introduction-setup) | Compiler/IDE setup, `C++` vs Blueprint | 50 (+15 bonus) | ✅ Done |
+| 01 | [Obstacle Assault](02-obstacle-assault) | Structs, `Tick`, `DeltaTime`, functions, classes | 120 (+30 bonus) | 🟨 In progress |
 | 02 | [Dungeon Escape](03-dungeon-escape) | Composition, pointers, delegates, Enhanced Input, tracing | 150 (+35 bonus) | ⬜ Not started |
 | 03 | [Battle Blaster](04-battle-blaster) | Pawn/GameMode, timers, projectiles, damage, UMG, GameInstance | 150 (+35 bonus) | ⬜ Not started |
 | 04 | [Shooter Sam](05-shooter-sam) | Animation Blend Spaces, AI Controller, NavMesh, Behavior Trees | 175 (+40 bonus) | ⬜ Not started |
