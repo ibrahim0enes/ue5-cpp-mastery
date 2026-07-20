@@ -15,14 +15,14 @@ AMyActor::AMyActor()
 void AMyActor::BeginPlay()
 {
 	Super::BeginPlay();
-	UE_LOG(LogTemp, Warning, TEXT("Update is Coming"))
-
+	MyLocations.StartLocation = GetActorLocation();
+	MyLocations.TargetLocation = FVector(1000.0f, 500.0f, 200.0f);
 }
 
 // Called every frame
 void AMyActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	MyLocation.CurrentLocation = GetActorLocation();
 }
 

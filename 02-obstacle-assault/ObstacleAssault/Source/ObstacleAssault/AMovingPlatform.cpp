@@ -15,7 +15,6 @@ AAMovingPlatform::AAMovingPlatform()
 void AAMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
-	UE_LOG(LogTemp, Warning, TEXT("Update is Coming"))
 }
 
 // Called every frame

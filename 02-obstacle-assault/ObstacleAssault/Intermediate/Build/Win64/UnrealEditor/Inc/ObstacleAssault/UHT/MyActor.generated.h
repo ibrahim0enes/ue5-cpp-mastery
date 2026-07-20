@@ -16,10 +16,19 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
+// ********** Begin ScriptStruct FLocations ********************************************************
+#define FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h_12_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FLocations_Statics; \
+	OBSTACLEASSAULT_API static class UScriptStruct* StaticStruct();
+
+
+struct FLocations;
+// ********** End ScriptStruct FLocations **********************************************************
+
 // ********** Begin Class AMyActor *****************************************************************
 OBSTACLEASSAULT_API UClass* Z_Construct_UClass_AMyActor_NoRegister();
 
-#define FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h_27_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMyActor(); \
 	friend struct Z_Construct_UClass_AMyActor_Statics; \
@@ -30,7 +39,7 @@ public: \
 	DECLARE_SERIALIZER(AMyActor)
 
 
-#define FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h_27_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	AMyActor(AMyActor&&) = delete; \
 	AMyActor(const AMyActor&) = delete; \
@@ -40,12 +49,12 @@ public: \
 	NO_API virtual ~AMyActor();
 
 
-#define FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h_9_PROLOG
-#define FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h_12_GENERATED_BODY \
+#define FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h_24_PROLOG
+#define FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h_27_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h_12_INCLASS_NO_PURE_DECLS \
-	FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h_12_ENHANCED_CONSTRUCTORS \
+	FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h_27_INCLASS_NO_PURE_DECLS \
+	FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h_27_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

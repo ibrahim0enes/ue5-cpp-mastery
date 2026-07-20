@@ -6,12 +6,27 @@
 #include "GameFramework/Actor.h"
 #include "MyActor.generated.h"
 
+USTRUCT(BlueprintType)
+struct FLocations
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Locations")
+	FVector StartLocation;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Locations")
+	FVector CurrentLocation;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Locations")
+	FVector TargetLocation;
+};
+
 UCLASS()
 class OBSTACLEASSAULT_API AMyActor : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	AMyActor();
 
@@ -19,8 +34,11 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	UProperty(EditAnywhere, BlueprintReadWrite, Category = "Locations")
+	FLocations MyLocations;
 
 };

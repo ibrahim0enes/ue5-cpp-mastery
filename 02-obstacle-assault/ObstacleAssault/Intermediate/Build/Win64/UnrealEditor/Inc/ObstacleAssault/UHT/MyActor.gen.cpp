@@ -12,11 +12,85 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeMyActor() {}
 
 // ********** Begin Cross Module References ********************************************************
+COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 OBSTACLEASSAULT_API UClass* Z_Construct_UClass_AMyActor();
 OBSTACLEASSAULT_API UClass* Z_Construct_UClass_AMyActor_NoRegister();
+OBSTACLEASSAULT_API UScriptStruct* Z_Construct_UScriptStruct_FLocations();
 UPackage* Z_Construct_UPackage__Script_ObstacleAssault();
 // ********** End Cross Module References **********************************************************
+
+// ********** Begin ScriptStruct FLocations ********************************************************
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_FLocations;
+class UScriptStruct* FLocations::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_FLocations.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_FLocations.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FLocations, (UObject*)Z_Construct_UPackage__Script_ObstacleAssault(), TEXT("Locations"));
+	}
+	return Z_Registration_Info_UScriptStruct_FLocations.OuterSingleton;
+}
+struct Z_Construct_UScriptStruct_FLocations_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "MyActor.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_StartLocation_MetaData[] = {
+		{ "Category", "Locations" },
+		{ "ModuleRelativePath", "MyActor.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentLocation_MetaData[] = {
+		{ "Category", "Locations" },
+		{ "ModuleRelativePath", "MyActor.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TargetLocation_MetaData[] = {
+		{ "Category", "Locations" },
+		{ "ModuleRelativePath", "MyActor.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_StartLocation;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_CurrentLocation;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_TargetLocation;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FLocations>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FLocations_Statics::NewProp_StartLocation = { "StartLocation", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FLocations, StartLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StartLocation_MetaData), NewProp_StartLocation_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FLocations_Statics::NewProp_CurrentLocation = { "CurrentLocation", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FLocations, CurrentLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentLocation_MetaData), NewProp_CurrentLocation_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FLocations_Statics::NewProp_TargetLocation = { "TargetLocation", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FLocations, TargetLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TargetLocation_MetaData), NewProp_TargetLocation_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FLocations_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FLocations_Statics::NewProp_StartLocation,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FLocations_Statics::NewProp_CurrentLocation,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FLocations_Statics::NewProp_TargetLocation,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLocations_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FLocations_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ObstacleAssault,
+	nullptr,
+	&NewStructOps,
+	"Locations",
+	Z_Construct_UScriptStruct_FLocations_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLocations_Statics::PropPointers),
+	sizeof(FLocations),
+	alignof(FLocations),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FLocations_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FLocations_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FLocations()
+{
+	if (!Z_Registration_Info_UScriptStruct_FLocations.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_FLocations.InnerSingleton, Z_Construct_UScriptStruct_FLocations_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_FLocations.InnerSingleton;
+}
+// ********** End ScriptStruct FLocations **********************************************************
 
 // ********** Begin Class AMyActor *****************************************************************
 void AMyActor::StaticRegisterNativesAMyActor()
@@ -100,13 +174,16 @@ AMyActor::~AMyActor() {}
 // ********** Begin Registration *******************************************************************
 struct Z_CompiledInDeferFile_FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h__Script_ObstacleAssault_Statics
 {
+	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
+		{ FLocations::StaticStruct, Z_Construct_UScriptStruct_FLocations_Statics::NewStructOps, TEXT("Locations"), &Z_Registration_Info_UScriptStruct_FLocations, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FLocations), 2428690719U) },
+	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_AMyActor, AMyActor::StaticClass, TEXT("AMyActor"), &Z_Registration_Info_UClass_AMyActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyActor), 981338310U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h__Script_ObstacleAssault_115519727(TEXT("/Script/ObstacleAssault"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h__Script_ObstacleAssault_3008862596(TEXT("/Script/ObstacleAssault"),
 	Z_CompiledInDeferFile_FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h__Script_ObstacleAssault_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h__Script_ObstacleAssault_Statics::ClassInfo),
-	nullptr, 0,
+	Z_CompiledInDeferFile_FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h__Script_ObstacleAssault_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h__Script_ObstacleAssault_Statics::ScriptStructInfo),
 	nullptr, 0);
 // ********** End Registration *********************************************************************
 
