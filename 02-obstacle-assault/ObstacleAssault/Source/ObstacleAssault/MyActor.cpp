@@ -15,14 +15,24 @@ AMyActor::AMyActor()
 void AMyActor::BeginPlay()
 {
 	Super::BeginPlay();
-	MyLocations.StartLocation = GetActorLocation();
-	MyLocations.TargetLocation = FVector(1000.0f, 500.0f, 200.0f);
+	FLocations& Locs = MyLocations;
+
+	Locs.StartLocation = GetActorLocation();
+	Locs.TargetLocation = FVector(1000.0f, 500.0f, 200.0f);
 }
 
 // Called every frame
 void AMyActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	MyLocation.CurrentLocation = GetActorLocation();
+	Locs.CurrentLocation = GetActorLocation();
+	NewLocation = FMath::FInterpTo(Locs.Currentlocation, Locs.TargetLocation, DeltaTime, 4);
+	SetActorLocation(NewLocation);
+
+}
+
+void AMyActor::StartMove()
+{
+
 }
 

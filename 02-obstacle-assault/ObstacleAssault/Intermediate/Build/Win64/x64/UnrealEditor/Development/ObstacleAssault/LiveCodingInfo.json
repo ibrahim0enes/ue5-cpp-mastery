@@ -72,10 +72,7 @@
 			"CombatLavaFloor.cpp.obj",
 			"CombatActivatable.cpp.obj",
 			"CombatAttacker.cpp.obj",
-			"CombatDamageable.cpp.obj",
-			"CombatLifeBar.cpp.obj",
-			"AnimNotify_EndDash.cpp.obj",
-			"PlatformingCharacter.cpp.obj"
+			"CombatDamageable.cpp.obj"
 		]
 	}
 }

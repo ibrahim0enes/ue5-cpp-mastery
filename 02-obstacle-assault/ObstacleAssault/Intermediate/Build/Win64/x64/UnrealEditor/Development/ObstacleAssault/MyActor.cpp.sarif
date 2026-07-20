@@ -3,7 +3,153 @@
     "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
     "runs": [
         {
-            "results": [],
+            "results": [
+                {
+                    "ruleId": "C2065",
+                    "level": "error",
+                    "message": {
+                        "text": "'Locs': undeclared identifier"
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Source/ObstacleAssault/MyActor.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Source/ObstacleAssault/MyActor.cpp"
+                                },
+                                "region": {
+                                    "startLine": 28,
+                                    "startColumn": 2,
+                                    "snippet": {
+                                        "text": "\tLocs.CurrentLocation = GetActorLocation();"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "C2065",
+                    "level": "error",
+                    "message": {
+                        "text": "'Locs': undeclared identifier"
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Source/ObstacleAssault/MyActor.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Source/ObstacleAssault/MyActor.cpp"
+                                },
+                                "region": {
+                                    "startLine": 29,
+                                    "startColumn": 33,
+                                    "snippet": {
+                                        "text": "\tNewLocation = FMath::FInterpTo(Locs.Currentlocation, Locs.TargetLocation, DeltaTime, 4);"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "C2065",
+                    "level": "error",
+                    "message": {
+                        "text": "'Locs': undeclared identifier"
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Source/ObstacleAssault/MyActor.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Source/ObstacleAssault/MyActor.cpp"
+                                },
+                                "region": {
+                                    "startLine": 29,
+                                    "startColumn": 55,
+                                    "snippet": {
+                                        "text": "\tNewLocation = FMath::FInterpTo(Locs.Currentlocation, Locs.TargetLocation, DeltaTime, 4);"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "C2672",
+                    "level": "error",
+                    "message": {
+                        "text": "'FMath::FInterpTo': no matching overloaded function found"
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Source/ObstacleAssault/MyActor.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Source/ObstacleAssault/MyActor.cpp"
+                                },
+                                "region": {
+                                    "startLine": 29,
+                                    "startColumn": 23,
+                                    "snippet": {
+                                        "text": "\tNewLocation = FMath::FInterpTo(Locs.Currentlocation, Locs.TargetLocation, DeltaTime, 4);"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "relatedLocations": [
+                        {
+                            "id": 0,
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///C:/Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Public/Math/UnrealMathUtility.h"
+                                },
+                                "region": {
+                                    "startLine": 1581,
+                                    "startColumn": 28,
+                                    "snippet": {
+                                        "text": "\t[[nodiscard]] static auto FInterpTo( T1  Current, T2 Target, T3 DeltaTime, T4 InterpSpeed )"
+                                    }
+                                }
+                            },
+                            "message": {
+                                "text": "could be 'auto FMath::FInterpTo(T1,T2,T3,T4)'"
+                            }
+                        },
+                        {
+                            "id": 1,
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Source/ObstacleAssault/MyActor.cpp"
+                                },
+                                "region": {
+                                    "startLine": 29,
+                                    "startColumn": 23,
+                                    "snippet": {
+                                        "text": "\tNewLocation = FMath::FInterpTo(Locs.Currentlocation, Locs.TargetLocation, DeltaTime, 4);"
+                                    }
+                                }
+                            },
+                            "message": {
+                                "text": "'auto FMath::FInterpTo(T1,T2,T3,T4)': expects 4 arguments - 3 provided"
+                            },
+                            "properties": {
+                                "nestingLevel": 1
+                            }
+                        }
+                    ]
+                }
+            ],
             "tool": {
                 "driver": {
                     "name": "MSVC",

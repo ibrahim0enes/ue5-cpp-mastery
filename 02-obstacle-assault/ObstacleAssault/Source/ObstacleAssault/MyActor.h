@@ -37,8 +37,12 @@ protected:
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	void StartMove();
 
-	UProperty(EditAnywhere, BlueprintReadWrite, Category = "Locations")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Locations")
 	FLocations MyLocations;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Locations")
+	FVector NewLocation;
 
 };
