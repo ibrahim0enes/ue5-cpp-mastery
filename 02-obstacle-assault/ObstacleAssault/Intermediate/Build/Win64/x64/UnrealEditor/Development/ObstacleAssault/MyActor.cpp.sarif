@@ -5,10 +5,10 @@
         {
             "results": [
                 {
-                    "ruleId": "C2065",
+                    "ruleId": "C2678",
                     "level": "error",
                     "message": {
-                        "text": "'Locs': undeclared identifier"
+                        "text": "binary '<': no operator found which takes a left-hand operand of type 'T' (or there is no acceptable conversion)\n        with\n        [\n            T=RetType\n        ]"
                     },
                     "analysisTarget": {
                         "uri": "file:///E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Source/ObstacleAssault/MyActor.cpp"
@@ -17,91 +17,116 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "file:///E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Source/ObstacleAssault/MyActor.cpp"
+                                    "uri": "file:///C:/Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Public/Math/UnrealMathUtility.h"
                                 },
                                 "region": {
-                                    "startLine": 28,
-                                    "startColumn": 2,
+                                    "startLine": 1596,
+                                    "startColumn": 20,
                                     "snippet": {
-                                        "text": "\tLocs.CurrentLocation = GetActorLocation();"
+                                        "text": "\t\tif( FMath::Square(Dist) < UE_SMALL_NUMBER )"
                                     }
                                 }
                             }
                         }
-                    ]
-                },
-                {
-                    "ruleId": "C2065",
-                    "level": "error",
-                    "message": {
-                        "text": "'Locs': undeclared identifier"
-                    },
-                    "analysisTarget": {
-                        "uri": "file:///E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Source/ObstacleAssault/MyActor.cpp"
-                    },
-                    "locations": [
+                    ],
+                    "relatedLocations": [
                         {
+                            "id": 0,
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "file:///E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Source/ObstacleAssault/MyActor.cpp"
+                                    "uri": "file:///C:/Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/RenderCore/Public/Shader.h"
                                 },
                                 "region": {
-                                    "startLine": 29,
-                                    "startColumn": 33,
+                                    "startLine": 2297,
+                                    "startColumn": 13,
                                     "snippet": {
-                                        "text": "\tNewLocation = FMath::FInterpTo(Locs.Currentlocation, Locs.TargetLocation, DeltaTime, 4);"
+                                        "text": "inline bool operator<(const FShaderPipeline& Lhs, const FShaderPipeline& Rhs)"
                                     }
                                 }
+                            },
+                            "message": {
+                                "text": "could be 'bool operator <(const FShaderPipeline &,const FShaderPipeline &)'"
                             }
-                        }
-                    ]
-                },
-                {
-                    "ruleId": "C2065",
-                    "level": "error",
-                    "message": {
-                        "text": "'Locs': undeclared identifier"
-                    },
-                    "analysisTarget": {
-                        "uri": "file:///E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Source/ObstacleAssault/MyActor.cpp"
-                    },
-                    "locations": [
+                        },
                         {
+                            "id": 1,
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "file:///E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Source/ObstacleAssault/MyActor.cpp"
+                                    "uri": "file:///C:/Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Public/Math/UnrealMathUtility.h"
                                 },
                                 "region": {
-                                    "startLine": 29,
-                                    "startColumn": 55,
+                                    "startLine": 1596,
+                                    "startColumn": 20,
                                     "snippet": {
-                                        "text": "\tNewLocation = FMath::FInterpTo(Locs.Currentlocation, Locs.TargetLocation, DeltaTime, 4);"
+                                        "text": "\t\tif( FMath::Square(Dist) < UE_SMALL_NUMBER )"
                                     }
                                 }
+                            },
+                            "message": {
+                                "text": "while trying to match the argument list '(T, float)'\n        with\n        [\n            T=RetType\n        ]"
                             }
-                        }
-                    ]
-                },
-                {
-                    "ruleId": "C2672",
-                    "level": "error",
-                    "message": {
-                        "text": "'FMath::FInterpTo': no matching overloaded function found"
-                    },
-                    "analysisTarget": {
-                        "uri": "file:///E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Source/ObstacleAssault/MyActor.cpp"
-                    },
-                    "locations": [
+                        },
                         {
+                            "id": 2,
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///C:/Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Public/Math/UnrealMathUtility.h"
+                                },
+                                "region": {
+                                    "startLine": 1596,
+                                    "startColumn": 20,
+                                    "snippet": {
+                                        "text": "\t\tif( FMath::Square(Dist) < UE_SMALL_NUMBER )"
+                                    }
+                                }
+                            },
+                            "message": {
+                                "text": "the template instantiation context (the oldest one first) is"
+                            }
+                        },
+                        {
+                            "id": 3,
                             "physicalLocation": {
                                 "artifactLocation": {
                                     "uri": "file:///E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Source/ObstacleAssault/MyActor.cpp"
                                 },
                                 "region": {
-                                    "startLine": 29,
+                                    "startLine": 30,
                                     "startColumn": 23,
                                     "snippet": {
-                                        "text": "\tNewLocation = FMath::FInterpTo(Locs.Currentlocation, Locs.TargetLocation, DeltaTime, 4);"
+                                        "text": "\tNewLocation = FMath::FInterpTo(Locs.CurrentLocation, Locs.TargetLocation, DeltaTime, 4);"
+                                    }
+                                }
+                            },
+                            "message": {
+                                "text": "see reference to function template instantiation 'RetType FMath::FInterpTo<FVector,FVector,float,int>(T1,T2,T3,T4)' being compiled\n        with\n        [\n            T1=FVector,\n            T2=FVector,\n            T3=float,\n            T4=int\n        ]"
+                            },
+                            "properties": {
+                                "nestingLevel": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "C2665",
+                    "level": "error",
+                    "message": {
+                        "text": "'FMath::Clamp': no overloaded function could convert all the argument types"
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Source/ObstacleAssault/MyActor.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///C:/Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Public/Math/UnrealMathUtility.h"
+                                },
+                                "region": {
+                                    "startLine": 1602,
+                                    "startColumn": 43,
+                                    "snippet": {
+                                        "text": "\t\tconst RetType DeltaMove = Dist * FMath::Clamp<RetType>(DeltaTime * InterpSpeed, 0.f, 1.f);"
                                     }
                                 }
                             }
@@ -115,36 +140,187 @@
                                     "uri": "file:///C:/Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Public/Math/UnrealMathUtility.h"
                                 },
                                 "region": {
-                                    "startLine": 1581,
-                                    "startColumn": 28,
+                                    "startLine": 597,
+                                    "startColumn": 2,
                                     "snippet": {
-                                        "text": "\t[[nodiscard]] static auto FInterpTo( T1  Current, T2 Target, T3 DeltaTime, T4 InterpSpeed )"
+                                        "text": "\tMIX_FLOATS_3_ARGS(Clamp);"
                                     }
                                 }
                             },
                             "message": {
-                                "text": "could be 'auto FMath::FInterpTo(T1,T2,T3,T4)'"
+                                "text": "could be 'UE::Math::TVector<double> FMath::Clamp<RetType,float,float>(Arg1,Arg2,Arg3)'\n        with\n        [\n            Arg1=RetType,\n            Arg2=float,\n            Arg3=float\n        ]"
                             }
                         },
                         {
                             "id": 1,
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "file:///E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Source/ObstacleAssault/MyActor.cpp"
+                                    "uri": "file:///C:/Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Public/Math/UnrealMathUtility.h"
                                 },
                                 "region": {
-                                    "startLine": 29,
-                                    "startColumn": 23,
+                                    "startLine": 1602,
+                                    "startColumn": 43,
                                     "snippet": {
-                                        "text": "\tNewLocation = FMath::FInterpTo(Locs.Currentlocation, Locs.TargetLocation, DeltaTime, 4);"
+                                        "text": "\t\tconst RetType DeltaMove = Dist * FMath::Clamp<RetType>(DeltaTime * InterpSpeed, 0.f, 1.f);"
                                     }
                                 }
                             },
                             "message": {
-                                "text": "'auto FMath::FInterpTo(T1,T2,T3,T4)': expects 4 arguments - 3 provided"
+                                "text": "'UE::Math::TVector<double> FMath::Clamp<RetType,float,float>(Arg1,Arg2,Arg3)': cannot convert argument 1 from 'T3' to 'Arg1'\n        with\n        [\n            Arg1=RetType,\n            Arg2=float,\n            Arg3=float\n        ]\n        and\n        [\n            T3=float\n        ]\n        and\n        [\n            Arg1=RetType\n        ]"
                             },
                             "properties": {
                                 "nestingLevel": 1
+                            }
+                        },
+                        {
+                            "id": 2,
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///C:/Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Public/Math/UnrealMathUtility.h"
+                                },
+                                "region": {
+                                    "startLine": 1602,
+                                    "startColumn": 68,
+                                    "snippet": {
+                                        "text": "\t\tconst RetType DeltaMove = Dist * FMath::Clamp<RetType>(DeltaTime * InterpSpeed, 0.f, 1.f);"
+                                    }
+                                }
+                            },
+                            "message": {
+                                "text": "Constructor for struct 'UE::Math::TVector<double>' is declared 'explicit'"
+                            },
+                            "properties": {
+                                "nestingLevel": 2
+                            }
+                        },
+                        {
+                            "id": 3,
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///C:/Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Public/Math/UnrealMathUtility.h"
+                                },
+                                "region": {
+                                    "startLine": 592,
+                                    "startColumn": 47,
+                                    "snippet": {
+                                        "text": "\t[[nodiscard]] static constexpr FORCEINLINE T Clamp(const T X, const T MinValue, const T MaxValue)"
+                                    }
+                                }
+                            },
+                            "message": {
+                                "text": "or       'T FMath::Clamp<RetType>(const T,const T,const T)'\n        with\n        [\n            T=RetType\n        ]"
+                            }
+                        },
+                        {
+                            "id": 4,
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///C:/Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Public/Math/UnrealMathUtility.h"
+                                },
+                                "region": {
+                                    "startLine": 1602,
+                                    "startColumn": 43,
+                                    "snippet": {
+                                        "text": "\t\tconst RetType DeltaMove = Dist * FMath::Clamp<RetType>(DeltaTime * InterpSpeed, 0.f, 1.f);"
+                                    }
+                                }
+                            },
+                            "message": {
+                                "text": "'T FMath::Clamp<RetType>(const T,const T,const T)': cannot convert argument 1 from 'T3' to 'const T'\n        with\n        [\n            T=RetType\n        ]\n        and\n        [\n            T3=float\n        ]\n        and\n        [\n            T=RetType\n        ]"
+                            },
+                            "properties": {
+                                "nestingLevel": 1
+                            }
+                        },
+                        {
+                            "id": 5,
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///C:/Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Public/Math/UnrealMathUtility.h"
+                                },
+                                "region": {
+                                    "startLine": 1602,
+                                    "startColumn": 68,
+                                    "snippet": {
+                                        "text": "\t\tconst RetType DeltaMove = Dist * FMath::Clamp<RetType>(DeltaTime * InterpSpeed, 0.f, 1.f);"
+                                    }
+                                }
+                            },
+                            "message": {
+                                "text": "Constructor for struct 'UE::Math::TVector<double>' is declared 'explicit'"
+                            },
+                            "properties": {
+                                "nestingLevel": 2
+                            }
+                        },
+                        {
+                            "id": 6,
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///C:/Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Public/Math/UnrealMathUtility.h"
+                                },
+                                "region": {
+                                    "startLine": 1602,
+                                    "startColumn": 43,
+                                    "snippet": {
+                                        "text": "\t\tconst RetType DeltaMove = Dist * FMath::Clamp<RetType>(DeltaTime * InterpSpeed, 0.f, 1.f);"
+                                    }
+                                }
+                            },
+                            "message": {
+                                "text": "while trying to match the argument list '(T3, float, float)'\n        with\n        [\n            T3=float\n        ]"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "C2088",
+                    "level": "error",
+                    "message": {
+                        "text": "'*': illegal for struct"
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Source/ObstacleAssault/MyActor.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///C:/Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Public/Math/UnrealMathUtility.h"
+                                },
+                                "region": {
+                                    "startLine": 1602,
+                                    "startColumn": 34,
+                                    "snippet": {
+                                        "text": "\t\tconst RetType DeltaMove = Dist * FMath::Clamp<RetType>(DeltaTime * InterpSpeed, 0.f, 1.f);"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "C2737",
+                    "level": "error",
+                    "message": {
+                        "text": "'DeltaMove': const object must be initialized"
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Source/ObstacleAssault/MyActor.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///C:/Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Public/Math/UnrealMathUtility.h"
+                                },
+                                "region": {
+                                    "startLine": 1602,
+                                    "startColumn": 17,
+                                    "snippet": {
+                                        "text": "\t\tconst RetType DeltaMove = Dist * FMath::Clamp<RetType>(DeltaTime * InterpSpeed, 0.f, 1.f);"
+                                    }
+                                }
                             }
                         }
                     ]

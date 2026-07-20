@@ -24,9 +24,10 @@ void AMyActor::BeginPlay()
 // Called every frame
 void AMyActor::Tick(float DeltaTime)
 {
+	FLocations& Locs = MyLocations;
 	Super::Tick(DeltaTime);
 	Locs.CurrentLocation = GetActorLocation();
-	NewLocation = FMath::FInterpTo(Locs.Currentlocation, Locs.TargetLocation, DeltaTime, 4);
+	NewLocation = FMath::FInterpTo(Locs.CurrentLocation, Locs.TargetLocation, DeltaTime, 4);
 	SetActorLocation(NewLocation);
 
 }

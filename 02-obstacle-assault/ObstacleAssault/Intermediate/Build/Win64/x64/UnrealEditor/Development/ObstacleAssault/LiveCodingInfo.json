@@ -71,8 +71,7 @@
 			"CombatDummy.cpp.obj",
 			"CombatLavaFloor.cpp.obj",
 			"CombatActivatable.cpp.obj",
-			"CombatAttacker.cpp.obj",
-			"CombatDamageable.cpp.obj"
+			"CombatAttacker.cpp.obj"
 		]
 	}
 }
