@@ -11,6 +11,7 @@
     <None Include="..\..\Source\ObstacleAssaultEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -32,6 +33,18 @@
     <Filter Include="Source\ObstacleAssault">
       <UniqueIdentifier>{7510F764-2898-357B-8D6A-F4D6F89811EC}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ObstacleAssault\AMovingPlatform.cpp">
+      <Filter>Source\ObstacleAssault</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ObstacleAssault\AMovingPlatform.h">
+      <Filter>Source\ObstacleAssault</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ObstacleAssault\MyActor.cpp">
+      <Filter>Source\ObstacleAssault</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ObstacleAssault\MyActor.h">
+      <Filter>Source\ObstacleAssault</Filter>
+    </ClInclude>
     <None Include="..\..\Source\ObstacleAssault\ObstacleAssault.Build.cs">
       <Filter>Source\ObstacleAssault</Filter>
     </None>

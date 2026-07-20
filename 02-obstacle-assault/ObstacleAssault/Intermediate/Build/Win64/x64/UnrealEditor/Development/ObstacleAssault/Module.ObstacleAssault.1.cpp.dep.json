@@ -6,6 +6,9 @@
         "PCH": "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\02-obstacle-assault\\obstacleassault\\intermediate\\build\\win64\\x64\\obstacleassaulteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
         "Includes": [
             "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\02-obstacle-assault\\obstacleassault\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\obstacleassault\\definitions.obstacleassault.h",
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\02-obstacle-assault\\obstacleassault\\intermediate\\build\\win64\\unrealeditor\\inc\\obstacleassault\\uht\\amovingplatform.gen.cpp",
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\02-obstacle-assault\\obstacleassault\\source\\obstacleassault\\amovingplatform.h",
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\02-obstacle-assault\\obstacleassault\\intermediate\\build\\win64\\unrealeditor\\inc\\obstacleassault\\uht\\amovingplatform.generated.h",
             "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\02-obstacle-assault\\obstacleassault\\intermediate\\build\\win64\\unrealeditor\\inc\\obstacleassault\\uht\\animnotify_checkchargedattack.gen.cpp",
             "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\02-obstacle-assault\\obstacleassault\\source\\obstacleassault\\variant_combat\\animation\\animnotify_checkchargedattack.h",
             "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\02-obstacle-assault\\obstacleassault\\intermediate\\build\\win64\\unrealeditor\\inc\\obstacleassault\\uht\\animnotify_checkchargedattack.generated.h",

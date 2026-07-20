@@ -276,11 +276,20 @@
     <None Include="..\..\ObstacleAssault.uproject"/>
     <None Include="..\..\Source\ObstacleAssault.Target.cs"/>
     <None Include="..\..\Source\ObstacleAssaultEditor.Target.cs"/>
+    <None Include="..\..\.vsconfig"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>
     <None Include="..\..\Config\DefaultInput.ini"/>
+    <ClCompile Include="..\..\Source\ObstacleAssault\AMovingPlatform.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ObstacleAssault\AMovingPlatform.h"/>
+    <ClCompile Include="..\..\Source\ObstacleAssault\MyActor.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ObstacleAssault\MyActor.h"/>
     <None Include="..\..\Source\ObstacleAssault\ObstacleAssault.Build.cs"/>
     <ClCompile Include="..\..\Source\ObstacleAssault\ObstacleAssault.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
