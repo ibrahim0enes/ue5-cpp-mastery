@@ -21,12 +21,27 @@ struct FLocations
 	FVector TargetLocation = FVector::ZeroVector;
 };
 
+USTRUCT(BlueprintType)
+struct FRotations
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Rotations")
+	FRotator StartRotation = FRotator::ZeroRotator;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Rotations")
+	FRotator CurrentRotation = FRotator::ZeroRotator;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Rotations")
+	FRotator TargetRotation = FRotator::ZeroRotator;
+};
+
 UCLASS()
 class OBSTACLEASSAULT_API AMyActor : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	AMyActor();
 
@@ -34,17 +49,24 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	void MovePlatform(float DeltaTime);
+	void RotatePlatform(float DeltaTime);
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Locations")
 	FLocations MyLocations;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Rotations")
+	FRotations MyRotations;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
-	FVector Direction = FVector(1, 0, 0); // Varsayýlan olarak X ekseninde hareket
+	FVector LDirection = FVector(1, 0, 0); // Varsayilan olarak X ekseninde hareket
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+	FRotator RDirection = FRotator(0, 1, 0); // Varsayilan olarak Yaw ekseninde (dikey eksen) donus
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
 	float Distance = 500.0f;
@@ -53,6 +75,5 @@ public:
 	float MoveSpeed = 200.0f; // Saniyede 200 cm
 
 private:
-	bool bShouldReturn = false; // Baþlangýçta hedefe doðru gitsin
-
+	bool bShouldReturn = false; // Baslangicta hedefe dogru gitsin
 };

@@ -277,7 +277,8 @@
     <None Include="..\..\Source\ObstacleAssault.Target.cs"/>
     <None Include="..\..\Source\ObstacleAssaultEditor.Target.cs"/>
     <None Include="..\..\.vsconfig"/>
-    <None Include="..\..\ProjectTools.bat"/>
+    <None Include="..\..\clean_rebuild.bat"/>
+    <None Include="..\..\run_pre_commit_check.bat"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>
