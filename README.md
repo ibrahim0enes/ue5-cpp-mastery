@@ -9,8 +9,16 @@ This repo is where I actually write the code for the *"Unreal Engine 5 C++ Game 
 > 🏆 XP & rank tracker: `docs/xp-terminal/`
 
 ---
+ 
+<img width="107" height="101" alt="image" src="https://github.com/user-attachments/assets/f504f71a-e446-4561-b5b1-1a829106e299" /> <img width="99" height="99" alt="image" src="https://github.com/user-attachments/assets/681545e9-ddf5-47bf-9e1c-846910f9fbfc" />  <img width="99" height="103" alt="image" src="https://github.com/user-attachments/assets/206d2dba-f494-4f7b-97ca-8e6bbaf026ab" /> <img width="102" height="102" alt="image" src="https://github.com/user-attachments/assets/3c78277e-3704-4de0-8f43-aa7a0b6f86da" /> <img width="102" height="108" alt="image" src="https://github.com/user-attachments/assets/03819e64-404a-48ae-8792-9c8552911d36" /> <img width="99" height="107" alt="image" src="https://github.com/user-attachments/assets/589180be-29c7-4710-8b84-c58d66289015" />  <img width="105" height="104" alt="image" src="https://github.com/user-attachments/assets/d2554a57-4dab-4ada-81ce-51da739cc78e" /> <img width="104" height="113" alt="image" src="https://github.com/user-attachments/assets/9de0c5cb-20e8-4899-833c-9fd583adeadd" />
 
-<img width="164" height="107" alt="image" src="https://github.com/user-attachments/assets/8e150e34-119e-4f24-8418-396e476b0951" />
+
+
+
+
+
+
+
 
 ## Progress
 
