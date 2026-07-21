@@ -5,39 +5,67 @@
 // Sets default values
 AMyActor::AMyActor()
 {
-	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Bu aktör her frame Tick() çaðýrsýn (performans için ihtiyaç yoksa kapatýlabilir)
 	PrimaryActorTick.bCanEverTick = true;
-
 }
 
 // Called when the game starts or when spawned
 void AMyActor::BeginPlay()
 {
 	Super::BeginPlay();
-	FLocations& Locs = MyLocations;
 
+	// Struct'lara referans alarak kodun geri kalanýný kýsaltýyoruz
+	FLocations& Locs = MyLocations;
+	FRotations& Rots = MyRotations;
+
+	// Oyun baþladýðýndaki mevcut konum, hareketin baþlangýç noktasý olarak kaydediliyor
 	Locs.StartLocation = GetActorLocation();
+
+	// Hedef konum: Start'tan itibaren PlatformVelocity yönünde MoveDistance kadar ileride
 	Locs.TargetLocation = Locs.StartLocation + (PlatformVelocity.GetSafeNormal() * MoveDistance);
+
+	// Oyun baþladýðýndaki mevcut rotasyon (FRotator -> Euler FVector'e çevriliyor)
+	Rots.StartRotation = GetActorRotation().Euler();
+
+	// Hedef rotasyon: Start rotasyonuna RotationAmount kadar ekleniyor
+	Rots.TargetRotation = Rots.StartRotation + RotationAmount;
 }
 
 // Called every frame
 void AMyActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	// Her frame platformu hareket ettir ve döndür
 	MovePlatform(DeltaTime);
 }
 
 void AMyActor::MovePlatform(float DeltaTime)
 {
 	FLocations& Locs = MyLocations;
+	FRotations& Rots = MyRotations;
+
+	// Bu frame'deki anlýk konum ve rotasyonu güncelle
 	Locs.CurrentLocation = GetActorLocation();
+	Rots.CurrentRotation = GetActorRotation().Euler();
 
-	FVector Destination = bShouldReturn ? Locs.TargetLocation : Locs.StartLocation; // Ping-Pong Eðer True ise TargetLoc Destion oluyor eðer False ise StartLoc Destion oluyor
+	// Ping-Pong: bShouldReturn true ise Target'a, false ise Start'a doðru gidiliyor
+	FVector LocationDestination = bShouldReturn ? Locs.TargetLocation : Locs.StartLocation;
+	FVector RotationDestination = bShouldReturn ? Rots.TargetRotation : Rots.StartRotation;
 
-	FVector NewLocation = FMath::VInterpConstantTo(Locs.CurrentLocation, Destination, DeltaTime, InterpSpeed);
+	// Konumu sabit hýzda (InterpSpeed) hedefe doðru interpolate et
+	// VInterpConstantTo hedefi asla aþmaz (overshoot olmaz), hedefe ulaþýnca orada sabit kalýr
+	FVector NewLocation = FMath::VInterpConstantTo(Locs.CurrentLocation, LocationDestination, DeltaTime, InterpSpeed);
 	SetActorLocation(NewLocation);
 
-	if (NewLocation.Equals(Destination, 0.5f))
+	// Rotasyonu (Euler formatýnda) sabit hýzda (RotationInterpSpeed) hedefe doðru interpolate et
+	FVector NewRotationEuler = FMath::VInterpConstantTo(Rots.CurrentRotation, RotationDestination, DeltaTime, RotationInterpSpeed);
+
+	// Euler FVector'ü tekrar FRotator'a çevirip aktöre uygula
+	SetActorRotation(FRotator::MakeFromEuler(NewRotationEuler));
+
+	// Konum hedefe ulaþtýysa (0.5 birim tolerans içinde) yönü tersine çevir
+	if (NewLocation.Equals(LocationDestination, 0.1f))
 	{
 		bShouldReturn = !bShouldReturn;
 	}
