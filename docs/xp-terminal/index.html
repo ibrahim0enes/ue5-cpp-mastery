@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UE5 C++ Mastery — Kimlik Terminali</title>
+<title>UE5 C++ Mastery</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -19,608 +19,133 @@
     --muted-2:#5C6478;
     --amber:#F2A03D;
     --amber-dim:#8A6528;
-    --green:#3ECF8E;
-    --red:#E2694B;
-    --blue:#5B8DEF;
-    --purple:#9C7BE0;
-    --radius:10px;
     --mono: 'IBM Plex Mono', ui-monospace, monospace;
     --sans: 'IBM Plex Sans', -apple-system, sans-serif;
   }
   *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
+  html,body{margin:0;padding:0;height:100%;}
   body{
     background:
-      radial-gradient(ellipse 900px 500px at 50% -10%, rgba(242,160,61,0.08), transparent 60%),
+      radial-gradient(ellipse 900px 560px at 50% -8%, rgba(242,160,61,0.10), transparent 60%),
       repeating-linear-gradient(0deg, var(--bg-grid) 0 1px, transparent 1px 44px),
       repeating-linear-gradient(90deg, var(--bg-grid) 0 1px, transparent 1px 44px),
       var(--bg);
     color:var(--text);
     font-family:var(--sans);
-    line-height:1.5;
+    line-height:1.55;
     min-height:100vh;
-    padding: 28px 16px 80px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:32px 18px;
   }
-  .wrap{max-width:920px;margin:0 auto;}
-  a{color:var(--amber);}
 
-  /* ---------- Header ---------- */
-  header.top{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:26px;flex-wrap:wrap;}
-  .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--muted-2);text-transform:uppercase;}
-  h1.wordmark{font-family:var(--mono);font-size:clamp(20px,4vw,26px);font-weight:600;margin:2px 0 0;letter-spacing:-0.01em;}
-  h1.wordmark span{color:var(--amber);}
-  .top-right{font-family:var(--mono);font-size:11px;color:var(--muted-2);text-align:right;}
-
-  /* ---------- Identity Card ---------- */
-  .id-card{
+  .frame{
+    width:100%;
+    max-width:600px;
     background:linear-gradient(165deg, var(--panel-2), var(--panel));
     border:1px solid var(--line);
-    border-radius:calc(var(--radius) + 4px);
-    padding:26px;
-    display:grid;
-    grid-template-columns: 132px 1fr;
-    gap:26px;
+    border-radius:16px;
+    padding:48px 40px 40px;
     position:relative;
     overflow:hidden;
-    margin-bottom:18px;
+    text-align:center;
+    opacity:0;
+    transform:translateY(10px);
+    animation:frameIn .7s cubic-bezier(.22,.9,.3,1) forwards;
   }
-  .id-card::before{
-    content:"";position:absolute;inset:0;pointer-events:none;
-    background:linear-gradient(90deg, var(--amber) 0%, transparent 2px);
-    background-size:100% 100%;
-    opacity:.03;
+  .frame .corner{position:absolute;width:18px;height:18px;border-color:var(--amber-dim);opacity:.6;}
+  .frame .corner.tl{top:12px;left:12px;border-top:2px solid;border-left:2px solid;}
+  .frame .corner.tr{top:12px;right:12px;border-top:2px solid;border-right:2px solid;}
+  .frame .corner.bl{bottom:12px;left:12px;border-bottom:2px solid;border-left:2px solid;}
+  .frame .corner.br{bottom:12px;right:12px;border-bottom:2px solid;border-right:2px solid;}
+
+  .boot-line{
+    font-family:var(--mono);font-size:11.5px;color:var(--muted-2);letter-spacing:.04em;
+    margin-bottom:22px;
   }
-  .id-card .corner{position:absolute;width:16px;height:16px;border-color:var(--amber-dim);opacity:.6;}
-  .id-card .corner.tl{top:10px;left:10px;border-top:2px solid;border-left:2px solid;}
-  .id-card .corner.tr{top:10px;right:10px;border-top:2px solid;border-right:2px solid;}
-  .id-card .corner.bl{bottom:10px;left:10px;border-bottom:2px solid;border-left:2px solid;}
-  .id-card .corner.br{bottom:10px;right:10px;border-bottom:2px solid;border-right:2px solid;}
+  .boot-line .cursor{display:inline-block;width:7px;height:12px;background:var(--amber);margin-left:2px;vertical-align:-1px;animation:blink 1s step-end infinite;}
 
-  .badge-slot{display:flex;align-items:center;justify-content:center;}
-  .badge-slot svg{width:120px;height:120px;filter:drop-shadow(0 0 14px var(--badge-glow, rgba(242,160,61,.25)));}
+  .badge{margin:0 auto 20px;width:84px;height:84px;filter:drop-shadow(0 0 16px rgba(242,160,61,.28));}
 
-  .id-main{min-width:0;}
-  .id-row1{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:2px;}
-  .name-input{
-    background:transparent;border:none;border-bottom:1px dashed var(--line);
-    color:var(--text);font-family:var(--sans);font-weight:600;font-size:19px;
-    padding:2px 2px 4px;min-width:120px;max-width:260px;
+  .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--amber);text-transform:uppercase;margin-bottom:8px;}
+  h1{font-family:var(--mono);font-size:clamp(24px,5vw,32px);font-weight:600;margin:0 0 16px;letter-spacing:-0.01em;}
+  h1 span{color:var(--amber);}
+
+  .lede{color:var(--muted);font-size:14.5px;max-width:440px;margin:0 auto 26px;}
+  .lede strong{color:var(--text);font-weight:600;}
+
+  .stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:36px;}
+  .stat{
+    font-family:var(--mono);font-size:11px;color:var(--muted);
+    border:1px solid var(--line);border-radius:20px;padding:6px 13px;
+    background:rgba(255,255,255,0.015);
   }
-  .name-input:focus{outline:none;border-bottom-color:var(--amber);}
-  .tier-pill{
-    font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--bg);
-    background:var(--amber);padding:3px 8px;border-radius:20px;font-weight:600;white-space:nowrap;
+  .stat b{color:var(--amber);font-weight:600;}
+
+  .cta-tag{
+    font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--muted);
+    text-transform:uppercase;margin-bottom:12px;
   }
-  .rank-title{font-size:clamp(21px,3.4vw,27px);font-weight:700;margin:4px 0 2px;letter-spacing:-.01em;}
-  .rank-desc{color:var(--muted);font-size:13.5px;margin:0 0 14px;}
+  .cta-tag::before, .cta-tag::after{content:"—";color:var(--line);margin:0 8px;}
 
-  .xp-row{display:flex;align-items:baseline;gap:8px;font-family:var(--mono);margin-bottom:8px;flex-wrap:wrap;}
-  .xp-num{font-size:30px;font-weight:700;color:var(--amber);}
-  .xp-max{font-size:15px;color:var(--muted-2);}
-  .xp-next{margin-left:auto;font-size:11.5px;color:var(--muted);}
-
-  .prog-outer{position:relative;height:10px;background:var(--line-soft);border-radius:6px;overflow:visible;margin-bottom:10px;}
-  .prog-fill{height:100%;border-radius:6px;background:linear-gradient(90deg, var(--amber-dim), var(--amber));transition:width .5s cubic-bezier(.22,.9,.3,1);}
-  .prog-ticks{position:absolute;inset:0;display:flex;justify-content:space-between;pointer-events:none;}
-  .prog-ticks i{width:2px;height:14px;margin-top:-2px;background:var(--bg);opacity:.9;}
-
-  .tier-dots{display:flex;gap:6px;flex-wrap:wrap;}
-  .tier-dot{
-    width:9px;height:9px;border-radius:50%;border:1.5px solid var(--line);
-    background:transparent;
+  .cta-btn{
+    display:inline-flex;align-items:center;gap:9px;
+    font-family:var(--mono);font-weight:600;font-size:14.5px;
+    background:var(--amber);color:#0B0E14;
+    padding:15px 30px;border-radius:9px;text-decoration:none;
+    box-shadow:0 6px 20px rgba(242,160,61,.16);
+    transition:transform .2s ease, box-shadow .2s ease;
   }
-  .tier-dot.done{background:var(--amber);border-color:var(--amber);}
-  .tier-dot.current{border-color:var(--amber);box-shadow:0 0 0 3px rgba(242,160,61,.18);}
+  .cta-btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(242,160,61,.26);}
+  .cta-btn .arrow{transition:transform .2s ease;}
+  .cta-btn:hover .arrow{transform:translateX(3px);}
 
-  /* ---------- Badges strip ---------- */
-  .badges-strip{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px;}
-  .badge-chip{
-    display:flex;align-items:center;gap:6px;
-    border:1px solid var(--line);background:var(--panel);
-    border-radius:20px;padding:6px 12px 6px 8px;font-size:12.5px;color:var(--muted-2);
-    cursor:default;user-select:none;transition:all .2s;
-  }
-  .badge-chip .dot{width:7px;height:7px;border-radius:50%;background:var(--line);flex:none;}
-  .badge-chip.earned{color:var(--text);border-color:var(--amber-dim);background:rgba(242,160,61,.06);}
-  .badge-chip.earned .dot{background:var(--amber);box-shadow:0 0 6px var(--amber);}
-  .badge-chip.self{cursor:pointer;}
-  .badge-chip.self:hover{border-color:var(--muted);}
+  .foot-note{margin-top:22px;font-family:var(--mono);font-size:10.5px;color:var(--muted-2);}
 
-  /* ---------- Section boards ---------- */
-  .section-board{
-    background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
-    margin-bottom:14px;overflow:hidden;
-  }
-  .section-head{
-    display:flex;align-items:center;gap:14px;padding:16px 18px;cursor:pointer;user-select:none;
-  }
-  .section-icon{font-size:22px;flex:none;width:30px;text-align:center;}
-  .section-titles{flex:1;min-width:0;}
-  .section-titles h3{margin:0;font-size:15.5px;font-weight:600;}
-  .section-titles p{margin:2px 0 0;font-size:12px;color:var(--muted);}
-  .section-meta{text-align:right;flex:none;font-family:var(--mono);}
-  .section-xp{font-size:13.5px;color:var(--amber);font-weight:600;}
-  .section-bar{width:90px;height:5px;background:var(--line-soft);border-radius:3px;margin-top:6px;overflow:hidden;}
-  .section-bar i{display:block;height:100%;background:var(--amber);}
-  .chev{color:var(--muted-2);transition:transform .25s;flex:none;}
-  .section-board.open .chev{transform:rotate(90deg);}
+  @keyframes frameIn{to{opacity:1;transform:translateY(0);}}
+  @keyframes blink{50%{opacity:0;}}
+  @media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important;}}
 
-  .section-body{max-height:0;overflow:hidden;transition:max-height .3s ease;}
-  .section-board.open .section-body{max-height:2400px;}
-  .ex-list{padding:0 18px 16px;border-top:1px solid var(--line-soft);}
-  .ex-row{
-    display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line-soft);
-  }
-  .ex-row:last-child{border-bottom:none;}
-  .ex-check{
-    flex:none;width:19px;height:19px;border-radius:5px;border:1.5px solid var(--muted-2);
-    display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .15s;
-  }
-  .ex-check.checked{background:var(--green);border-color:var(--green);}
-  .ex-check.checked::after{content:"✓";color:#08130D;font-size:12px;font-weight:700;}
-  .ex-code{font-family:var(--mono);font-size:10.5px;color:var(--muted-2);flex:none;width:44px;}
-  .ex-title{flex:1;font-size:13.5px;min-width:0;}
-  .ex-row.done .ex-title{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--line);}
-  .ex-xp{font-family:var(--mono);font-size:11.5px;color:var(--amber);flex:none;}
-
-  .ex-row.bonus{margin-top:2px;}
-  .ex-row.bonus .ex-code{color:var(--purple);}
-  .ex-row.locked{opacity:.4;}
-  .ex-row.locked .ex-check{cursor:not-allowed;border-style:dashed;}
-  .lock-note{font-size:10.5px;color:var(--muted-2);font-style:italic;margin-left:auto;padding-right:4px;}
-
-  .section-foot{display:flex;justify-content:space-between;align-items:center;padding:10px 18px 4px;}
-  .obj-line{font-size:12px;color:var(--muted);max-width:70%;}
-  .print-btn{
-    font-family:var(--mono);font-size:11px;background:transparent;color:var(--muted);
-    border:1px solid var(--line);border-radius:6px;padding:6px 10px;cursor:pointer;white-space:nowrap;
-  }
-  .print-btn:hover{color:var(--text);border-color:var(--muted);}
-
-  /* ---------- Footer ---------- */
-  footer{margin-top:30px;font-size:11.5px;color:var(--muted-2);text-align:center;}
-  footer .reset-link{color:var(--muted-2);text-decoration:underline;cursor:pointer;background:none;border:none;font-size:11.5px;font-family:var(--sans);}
-  footer .reset-link:hover{color:var(--red);}
-
-  @media (max-width:560px){
-    .id-card{grid-template-columns:1fr;justify-items:center;text-align:center;}
-    .xp-next{margin-left:0;width:100%;}
-    .id-row1{justify-content:center;}
-  }
-  @media (prefers-reduced-motion: reduce){
-    *{animation:none !important;transition:none !important;}
-  }
-
-  /* ---------- Print ---------- */
-  @media print{
-    body{background:#fff !important;color:#111 !important;padding:0;}
-    body:not([data-printing]) *{display:none !important;}
-    header.top,.id-card,.badges-strip,footer,.print-btn,.section-head .chev,.section-meta{display:none !important;}
-    body[data-printing] .wrap{max-width:100%;}
-    body[data-printing] .section-board{display:block !important;border:none;margin:0;}
-    body[data-printing] .section-board:not(.print-target){display:none !important;}
-    body[data-printing] .section-body{max-height:none !important;display:block !important;}
-    body[data-printing] .section-head{display:flex !important;padding:0 0 10px;}
-    body[data-printing] .section-titles h3{font-size:20px;color:#111;}
-    body[data-printing] .section-titles p{color:#444;}
-    body[data-printing] .ex-list{border-top:1px solid #ccc;padding:0;display:block !important;}
-    body[data-printing] .ex-row{display:flex !important;border-bottom:1px solid #ddd;color:#111;}
-    body[data-printing] .ex-title{color:#111 !important;}
-    body[data-printing] .ex-check{border-color:#888;}
-    body[data-printing] .ex-check.checked{background:#111;border-color:#111;}
-    body[data-printing] .ex-xp{color:#111;}
-    body[data-printing] .section-foot{display:flex !important;}
-    body[data-printing] .obj-line{color:#333;max-width:100%;}
+  @media (max-width:480px){
+    .frame{padding:38px 22px 32px;}
   }
 </style>
 </head>
 <body>
-<div class="wrap">
 
-  <header class="top">
-    <div>
-      <div class="kicker">UE5 C++ Mastery Çalışma Merkezi</div>
-      <h1 class="wordmark">Kimlik <span>Terminali</span></h1>
-    </div>
-    <div class="top-right">645 XP zorunlu · 800 XP bonuslar dahil<br>42 Istanbul puanlama mantığından ilham alınmıştır</div>
-  </header>
-
-  <section class="id-card">
+  <div class="frame">
     <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
-    <div class="badge-slot" id="badgeSlot"></div>
-    <div class="id-main">
-      <div class="id-row1">
-        <input id="nameInput" class="name-input" maxlength="24" placeholder="İsmini gir">
-        <span class="tier-pill" id="tierPill">RANK 0/7</span>
-      </div>
-      <div class="rank-title" id="rankTitle">Çırak</div>
-      <p class="rank-desc" id="rankDesc">Henüz başlamadın.</p>
 
-      <div class="xp-row">
-        <span class="xp-num" id="xpNum">0</span>
-        <span class="xp-max">/ 800 XP</span>
-        <span class="xp-next" id="xpNext"></span>
-      </div>
-      <div class="prog-outer">
-        <div class="prog-fill" id="progFill" style="width:0%"></div>
-        <div class="prog-ticks" id="progTicks"></div>
-      </div>
-      <div class="tier-dots" id="tierDots"></div>
+    <div class="boot-line">&gt; sistem hazır<span class="cursor"></span></div>
+
+    <svg class="badge" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="60,10 103,35 103,85 60,110 17,85 17,35" fill="#0F141F" stroke="#F2A03D" stroke-width="2.5"/>
+      <polygon points="60,20 95,40 95,80 60,100 25,80 25,40" fill="none" stroke="#F2A03D" stroke-width="1" opacity=".35"/>
+      <polyline points="42,66 60,56 78,66" fill="none" stroke="#F2A03D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
+    <div class="kicker">UE5 C++ Mastery</div>
+    <h1>Kimlik <span>Terminali</span></h1>
+
+    <p class="lede">
+      Unreal Engine 5 C++ ustalık yolculuğumun ilerleme günlüğü. <strong>5 proje</strong>,
+      düzinelerce alıştırma, tek bir terminalde XP ve rank olarak takip ediliyor.
+    </p>
+
+    <div class="stats">
+      <div class="stat"><b>5</b> proje</div>
+      <div class="stat"><b>645</b> XP zorunlu</div>
+      <div class="stat"><b>8</b> rank</div>
     </div>
-  </section>
 
-  <div class="badges-strip" id="badgesStrip"></div>
+    <div class="cta-tag">Derle.</div>
+    <a class="cta-btn" href="terminal.html">
+      Terminali Başlat <span class="arrow">→</span>
+    </a>
 
-  <div id="sections"></div>
+    <div class="foot-note">42 Istanbul puanlama mantığından ilham alınmıştır</div>
+  </div>
 
-  <footer>
-    Bu terminal, UE5 C++ Mastery Notion çalışma merkezindeki sujet'lerle aynı içeriği kullanır.
-    <br><span id="storageNote"></span>
-    <br><button class="reset-link" id="resetBtn">İlerlemeyi sıfırla</button>
-  </footer>
-
-</div>
-
-<script>
-/* ===================== DATA ===================== */
-const SECTIONS = [
-  { key:'s1', code:'01', icon:'🧩', title:'Introduction & Setup',
-    obj:'Motoru ve C++ ortamını kurup, C++ vs Blueprint kararını savunulabilir hale getirmek.',
-    exercises:[
-      {id:'s1e0', code:'EX00', title:'Kurulum Doğrulaması', xp:15},
-      {id:'s1e1', code:'EX01', title:'İlk Derleme', xp:15},
-      {id:'s1e2', code:'EX02', title:'Mimari Karar Raporu', xp:20},
-    ],
-    bonus:{id:'s1b', code:'BONUS', title:'Compiler Explorer Denemesi', xp:15}
-  },
-  { key:'s2', code:'02', icon:'🏃', title:'Obstacle Assault',
-    obj:'Hareket eden, döner ve engelli bir platformer ile C++ temellerini inşa etmek.',
-    exercises:[
-      {id:'s2e0', code:'EX00', title:'İlk Actor ve Log', xp:10},
-      {id:'s2e1', code:'EX01', title:"Hedef Struct'ı", xp:10},
-      {id:'s2e2', code:'EX02', title:'Hareketli Platform', xp:20},
-      {id:'s2e3', code:'EX03', title:'Overshoot Düzeltmesi', xp:20},
-      {id:'s2e4', code:'EX04', title:'Gidiş-Dönüş Mekaniği', xp:15},
-      {id:'s2e5', code:'EX05', title:'Döner Platform', xp:15},
-      {id:'s2e6', code:'EX06', title:'Blueprint Child Class', xp:15},
-      {id:'s2e7', code:'EX07', title:'Seviye ve Paketleme', xp:15},
-    ],
-    bonus:{id:'s2b', code:'BONUS', title:'Waypoint Listesi', xp:30}
-  },
-  { key:'s3', code:'03', icon:'🗝️', title:'Dungeon Escape',
-    obj:'Component, pointer, delegate ve trace ile composition tabanlı bir kaçış odası kurmak.',
-    exercises:[
-      {id:'s3e0', code:'EX00', title:'Hareket Ettirici Component', xp:15},
-      {id:'s3e1', code:'EX01', title:'Trigger Component', xp:20},
-      {id:'s3e2', code:'EX02', title:'Delegate Bağlantısı', xp:20},
-      {id:'s3e3', code:'EX03', title:'Basınç Plakası', xp:15},
-      {id:'s3e4', code:'EX04', title:'Enhanced Input Kurulumu', xp:15},
-      {id:'s3e5', code:'EX05', title:'Etkileşim Işını', xp:20},
-      {id:'s3e6', code:'EX06', title:'Envanter Sistemi', xp:20},
-      {id:'s3e7', code:'EX07', title:'Kilit ve Gizli Duvar', xp:25},
-    ],
-    bonus:{id:'s3b', code:'BONUS', title:'Çift Plaka Kapısı', xp:35}
-  },
-  { key:'s4', code:'04', icon:'🎯', title:'Battle Blaster',
-    obj:'Pawn/GameMode mimarisiyle tank, mermi sistemi ve composition tabanlı hasar sistemi kurmak.',
-    exercises:[
-      {id:'s4e0', code:'EX00', title:'Tank Pawn', xp:15},
-      {id:'s4e1', code:'EX01', title:'Hareket Girdisi', xp:15},
-      {id:'s4e2', code:'EX02', title:'Kule Döndürme', xp:15},
-      {id:'s4e3', code:'EX03', title:'Düşman Kuleleri', xp:15},
-      {id:'s4e4', code:'EX04', title:'Mermi Sistemi', xp:20},
-      {id:'s4e5', code:'EX05', title:'Hasar Sistemi', xp:25},
-      {id:'s4e6', code:'EX06', title:'Oyun Sonu Akışı', xp:15},
-      {id:'s4e7', code:'EX07', title:'Game Instance ve Seviyeler', xp:15},
-      {id:'s4e8', code:'EX08', title:"HUD Widget'ı", xp:15},
-    ],
-    bonus:{id:'s4b', code:'BONUS', title:'Görsel/İşitsel Cila', xp:35}
-  },
-  { key:'s5', code:'05', icon:'🔫', title:'Shooter Sam',
-    obj:'Animasyonlu, ateş eden bir oyuncu ile Behavior Tree kullanan bir AI düşman kurmak.',
-    exercises:[
-      {id:'s5e0', code:'EX00', title:'Third Person Kurulumu', xp:15},
-      {id:'s5e1', code:'EX01', title:'Blend Space', xp:20},
-      {id:'s5e2', code:'EX02', title:'Durum Makinesi', xp:15},
-      {id:'s5e3', code:'EX03', title:'Silah Aktörü', xp:15},
-      {id:'s5e4', code:'EX04', title:'Hitscan Ateşleme', xp:20},
-      {id:'s5e5', code:'EX05', title:'Can Sistemi ve Ölüm Animasyonu', xp:15},
-      {id:'s5e6', code:'EX06', title:'AI Controller ve Hareket', xp:20},
-      {id:'s5e7', code:'EX07', title:'Behavior Tree ve Blackboard', xp:30},
-      {id:'s5e8', code:'EX08', title:'Özel C++ Task', xp:25},
-    ],
-    bonus:{id:'s5b', code:'BONUS', title:"Can Barı HUD'u ve Ses", xp:40}
-  },
-];
-
-const RANKS = [
-  {min:0,   title:'Çırak',                         icon:'🥚', desc:'Henüz başlamadın.'},
-  {min:1,   title:'Stajyer Geliştirici',            icon:'🔧', desc:'Kurulum aşamasındasın.'},
-  {min:50,  title:'Junior Gameplay Programcısı',    icon:'⚙️', desc:'Obstacle Assault yolunda, temeller sağlam.'},
-  {min:170, title:'Sistem Programcısı',             icon:'🛠️', desc:'Dungeon Escape mimarisini çözüyorsun.'},
-  {min:320, title:'Gameplay Mühendisi',             icon:'🎮', desc:"Battle Blaster'ın oyun döngüsünü kuruyorsun."},
-  {min:470, title:'Kıdemli C++ Geliştirici',        icon:'🧠', desc:"Shooter Sam'in derinliklerindesin."},
-  {min:645, title:'Motor Programcısı',              icon:'🚀', desc:'Tüm zorunlu bölümler tamam!'},
-  {min:800, title:'UE5 Mastery — Efsane',           icon:'👑', desc:'Zorunlu + tüm bonuslar tamamlandı.'},
-];
-const MAX_XP = 800;
-const MANDATORY_XP = 645;
-const TIER_BOUNDS = RANKS.map(r=>r.min); // for tick marks
-
-/* ===================== STATE ===================== */
-let completed = new Set();
-let selfBadges = new Set();
-
-/* Storage abstraction: uses the platform's window.storage when this page is
-   rendered inside a Claude.ai artifact (persists to your Claude account).
-   When opened as a standalone downloaded file, window.storage does not
-   exist at all, so we fall back to this browser's localStorage instead —
-   that still persists across closes/reopens, just only on this device. */
-const usingNativeStorage = (typeof window.storage !== 'undefined' && window.storage && typeof window.storage.get === 'function');
-const LS_PREFIX = 'ue5_kimlik_';
-const Store = {
-  async get(key){
-    if(usingNativeStorage){
-      try{ return await window.storage.get(key); }catch(e){ return null; }
-    }
-    try{
-      const v = window.localStorage.getItem(LS_PREFIX+key);
-      return v!==null ? {key, value:v, shared:false} : null;
-    }catch(e){ return null; }
-  },
-  async set(key, value){
-    if(usingNativeStorage){
-      try{ return await window.storage.set(key, value); }catch(e){ return null; }
-    }
-    try{
-      window.localStorage.setItem(LS_PREFIX+key, value);
-      return {key, value, shared:false};
-    }catch(e){ return null; }
-  }
-};
-
-async function loadState(){
-  try{
-    const r = await Store.get('completed-exercises');
-    if(r && r.value) completed = new Set(JSON.parse(r.value));
-  }catch(e){}
-  try{
-    const r2 = await Store.get('self-badges');
-    if(r2 && r2.value) selfBadges = new Set(JSON.parse(r2.value));
-  }catch(e){}
-  try{
-    const r3 = await Store.get('user-name');
-    document.getElementById('nameInput').value = (r3 && r3.value) ? r3.value : 'İbrahim';
-  }catch(e){
-    document.getElementById('nameInput').value = 'İbrahim';
-  }
-  const noteEl = document.getElementById('storageNote');
-  if(noteEl){
-    noteEl.textContent = usingNativeStorage
-      ? '☁️ İlerlemen Claude hesabına kaydediliyor.'
-      : '💾 İlerlemen bu tarayıcıda saklanıyor (bu dosyayı hep aynı tarayıcıdan aç).';
-  }
-}
-async function saveCompleted(){
-  await Store.set('completed-exercises', JSON.stringify([...completed]));
-}
-async function saveSelfBadges(){
-  await Store.set('self-badges', JSON.stringify([...selfBadges]));
-}
-async function saveName(v){
-  await Store.set('user-name', v);
-}
-
-/* ===================== DERIVED ===================== */
-function allExercises(){
-  const out=[];
-  SECTIONS.forEach(s=>{ s.exercises.forEach(e=>out.push({...e, sectionKey:s.key, bonus:false}));
-    out.push({...s.bonus, sectionKey:s.key, bonus:true}); });
-  return out;
-}
-function sectionMandatoryDone(s){ return s.exercises.every(e=>completed.has(e.id)); }
-function sectionXP(s){
-  let xp=0;
-  s.exercises.forEach(e=>{ if(completed.has(e.id)) xp+=e.xp; });
-  if(completed.has(s.bonus.id)) xp+=s.bonus.xp;
-  return xp;
-}
-function sectionMaxXP(s){ return s.exercises.reduce((a,e)=>a+e.xp,0) + s.bonus.xp; }
-function totalXP(){ return SECTIONS.reduce((a,s)=>a+sectionXP(s),0); }
-function currentTierIndex(xp){
-  let idx=0;
-  RANKS.forEach((r,i)=>{ if(xp>=r.min) idx=i; });
-  return idx;
-}
-
-/* ===================== BADGE SVG (rank insignia) ===================== */
-function tierColor(idx){
-  // cool blue -> amber/gold across 0..7
-  const stops = ['#5B8DEF','#5B8DEF','#7FA8E8','#9C7BE0','#D9A24E','#F2A03D','#F2A03D','#FFD166'];
-  return stops[idx] ?? '#F2A03D';
-}
-function renderBadge(idx){
-  const n = idx+1; // chevrons 1..8
-  const color = tierColor(idx);
-  const legendary = idx===7;
-  let chevrons='';
-  const startY = 78 - (n-1)*8;
-  for(let i=0;i<n;i++){
-    const y = startY + i*8.5;
-    chevrons += `<polyline points="42,${y+10} 60,${y} 78,${y+10}" fill="none" stroke="${color}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="${0.45 + 0.55*((i+1)/n)}"/>`;
-  }
-  const glow = legendary ? `<circle cx="60" cy="60" r="52" fill="none" stroke="${color}" stroke-width="1" opacity=".35"><animate attributeName="r" values="50;55;50" dur="2.6s" repeatCount="indefinite"/></circle>` : '';
-  const star = legendary ? `<path d="M60 20 l3.6 7.4 8.2 1.2-5.9 5.8 1.4 8.2-7.3-3.9-7.3 3.9 1.4-8.2-5.9-5.8 8.2-1.2z" fill="${color}"/>` : '';
-  document.documentElement.style.setProperty('--badge-glow', color+'40');
-  return `
-  <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-    ${glow}
-    <polygon points="60,10 103,35 103,85 60,110 17,85 17,35" fill="#0F141F" stroke="${color}" stroke-width="2.5"/>
-    <polygon points="60,20 95,40 95,80 60,100 25,80 25,40" fill="none" stroke="${color}" stroke-width="1" opacity=".35"/>
-    ${chevrons}
-    ${star}
-  </svg>`;
-}
-
-/* ===================== RENDER ===================== */
-function render(){
-  const xp = totalXP();
-  const tierIdx = currentTierIndex(xp);
-  const rank = RANKS[tierIdx];
-  const nextRank = RANKS[tierIdx+1];
-
-  document.getElementById('badgeSlot').innerHTML = renderBadge(tierIdx);
-  document.getElementById('tierPill').textContent = `RANK ${tierIdx}/7`;
-  document.getElementById('rankTitle').textContent = `${rank.icon} ${rank.title}`;
-  document.getElementById('rankDesc').textContent = rank.desc;
-  document.getElementById('xpNum').textContent = xp;
-  document.getElementById('xpNext').textContent = nextRank
-    ? `Sıradaki: ${nextRank.title} — ${nextRank.min - xp} XP kaldı`
-    : 'En üst ranktasın.';
-
-  const pct = Math.min(100, (xp/MAX_XP)*100);
-  document.getElementById('progFill').style.width = pct+'%';
-
-  const ticksEl = document.getElementById('progTicks');
-  ticksEl.innerHTML = TIER_BOUNDS.map(()=> '<i></i>').join('');
-
-  const dotsEl = document.getElementById('tierDots');
-  dotsEl.innerHTML = RANKS.map((r,i)=>{
-    const cls = i<tierIdx ? 'done' : (i===tierIdx ? 'done current' : '');
-    return `<div class="tier-dot ${cls}" title="${r.title} (${r.min}+ XP)"></div>`;
-  }).join('');
-
-  renderBadgesStrip(xp);
-  renderSections();
-}
-
-function renderBadgesStrip(xp){
-  const perfSection = SECTIONS.some(s=> sectionXP(s)===sectionMaxXP(s));
-  const fastStart = sectionMandatoryDone(SECTIONS[0]) && sectionMandatoryDone(SECTIONS[1]);
-  const architect = sectionXP(SECTIONS[2])===sectionMaxXP(SECTIONS[2]);
-  const legend = xp>=MAX_XP;
-
-  const chips = [
-    {id:'perf', label:'Mükemmeliyetçi', earned:perfSection, self:false},
-    {id:'fast', label:'Hızlı Başlangıç', earned:fastStart, self:false},
-    {id:'arch', label:'Mimar', earned:architect, self:false},
-    {id:'theo', label:'Teorisyen', earned:selfBadges.has('theo'), self:true},
-    {id:'legend', label:'Efsane', earned:legend, self:false},
-  ];
-  document.getElementById('badgesStrip').innerHTML = chips.map(c=>`
-    <div class="badge-chip ${c.earned?'earned':''} ${c.self?'self':''}" data-self="${c.self}" data-id="${c.id}" title="${c.self?'Kendi kendine işaretlediğin bir başarım — tıkla':''}">
-      <span class="dot"></span>${c.label}
-    </div>`).join('');
-
-  document.querySelectorAll('.badge-chip.self').forEach(el=>{
-    el.onclick = ()=>{
-      const id = el.dataset.id;
-      if(selfBadges.has(id)) selfBadges.delete(id); else selfBadges.add(id);
-      saveSelfBadges(); render();
-    };
-  });
-}
-
-let openSections = new Set(['s1']);
-
-function renderSections(){
-  const host = document.getElementById('sections');
-  host.innerHTML = SECTIONS.map(s=>{
-    const xp = sectionXP(s), maxXp = sectionMaxXP(s);
-    const pct = Math.round((xp/maxXp)*100);
-    const mandDone = sectionMandatoryDone(s);
-    const isOpen = openSections.has(s.key);
-
-    const rows = s.exercises.map(e=>{
-      const done = completed.has(e.id);
-      return `<div class="ex-row ${done?'done':''}">
-        <div class="ex-check ${done?'checked':''}" data-id="${e.id}"></div>
-        <div class="ex-code">${e.code}</div>
-        <div class="ex-title">${e.title}</div>
-        <div class="ex-xp">${e.xp} XP</div>
-      </div>`;
-    }).join('');
-
-    const bDone = completed.has(s.bonus.id);
-    const bonusRow = `<div class="ex-row bonus ${bDone?'done':''} ${mandDone?'':'locked'}">
-        <div class="ex-check ${bDone?'checked':''}" data-id="${mandDone? s.bonus.id : ''}"></div>
-        <div class="ex-code">${s.bonus.code}</div>
-        <div class="ex-title">${s.bonus.title}</div>
-        ${mandDone? '' : '<span class="lock-note">zorunlu %100 gerekir</span>'}
-        <div class="ex-xp">+${s.bonus.xp} XP</div>
-      </div>`;
-
-    return `<div class="section-board ${isOpen?'open':''} ${isOpen?'print-target':''}" data-key="${s.key}">
-      <div class="section-head" data-toggle="${s.key}">
-        <div class="section-icon">${s.icon}</div>
-        <div class="section-titles"><h3>${s.code} · ${s.title}</h3><p>${s.obj}</p></div>
-        <div class="section-meta">
-          <div class="section-xp">${xp}/${maxXp} XP</div>
-          <div class="section-bar"><i style="width:${pct}%"></i></div>
-        </div>
-        <div class="chev">▸</div>
-      </div>
-      <div class="section-body">
-        <div class="ex-list">${rows}${bonusRow}</div>
-        <div class="section-foot">
-          <div class="obj-line">${s.obj}</div>
-          <button class="print-btn" data-print="${s.key}">🖨 Yazdır / PDF kaydet</button>
-        </div>
-      </div>
-    </div>`;
-  }).join('');
-
-  host.querySelectorAll('.section-head').forEach(el=>{
-    el.onclick = ()=>{
-      const key = el.dataset.toggle;
-      if(openSections.has(key)) openSections.delete(key); else openSections.add(key);
-      renderSections();
-    };
-  });
-  host.querySelectorAll('.ex-check').forEach(el=>{
-    el.onclick = (ev)=>{
-      ev.stopPropagation();
-      const id = el.dataset.id;
-      if(!id) return;
-      if(completed.has(id)) completed.delete(id); else completed.add(id);
-      saveCompleted();
-      render();
-    };
-  });
-  host.querySelectorAll('.print-btn').forEach(el=>{
-    el.onclick = (ev)=>{
-      ev.stopPropagation();
-      printSection(el.dataset.print);
-    };
-  });
-}
-
-function printSection(key){
-  openSections.add(key);
-  renderSections();
-  document.body.setAttribute('data-printing', key);
-  setTimeout(()=>{
-    window.print();
-  }, 50);
-}
-window.onafterprint = ()=> document.body.removeAttribute('data-printing');
-
-/* ===================== INIT ===================== */
-document.getElementById('resetBtn').onclick = async ()=>{
-  if(confirm('Tüm ilerlemeni sıfırlamak istediğine emin misin? Bu geri alınamaz.')){
-    completed = new Set();
-    selfBadges = new Set();
-    await saveCompleted();
-    await saveSelfBadges();
-    render();
-  }
-};
-document.getElementById('nameInput').addEventListener('input', (e)=> saveName(e.target.value));
-
-(async ()=>{
-  await loadState();
-  render();
-})();
-</script>
 </body>
 </html>
