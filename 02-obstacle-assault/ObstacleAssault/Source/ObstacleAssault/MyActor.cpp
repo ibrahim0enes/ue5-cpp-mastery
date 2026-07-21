@@ -32,13 +32,13 @@ void AMyActor::MovePlatform(float DeltaTime)
 	FLocations& Locs = MyLocations;
 	Locs.CurrentLocation = GetActorLocation();
 
-	FVector Destination = bMovingToTarget ? Locs.TargetLocation : Locs.StartLocation; // Ping-Pong Eðer True ise TargetLoc Destion oluyor eðer False ise StartLoc Destion oluyor
+	FVector Destination = bShouldReturn ? Locs.TargetLocation : Locs.StartLocation; // Ping-Pong Eðer True ise TargetLoc Destion oluyor eðer False ise StartLoc Destion oluyor
 
 	FVector NewLocation = FMath::VInterpConstantTo(Locs.CurrentLocation, Destination, DeltaTime, InterpSpeed);
 	SetActorLocation(NewLocation);
 
 	if (NewLocation.Equals(Destination, 0.5f))
 	{
-		bMovingToTarget = !bMovingToTarget;
+		bShouldReturn = !bShouldReturn;
 	}
 }
