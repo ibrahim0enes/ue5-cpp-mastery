@@ -10,6 +10,8 @@ This repo is where I actually write the code for the *"Unreal Engine 5 C++ Game 
 
 ---
 
+<img width="164" height="107" alt="image" src="https://github.com/user-attachments/assets/8e150e34-119e-4f24-8418-396e476b0951" />
+
 ## Progress
 
 | # | Project | Core C++ / UE5 concepts | XP | Status |
