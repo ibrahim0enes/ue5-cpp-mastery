@@ -1,6 +1,5 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "MyActor.h"
 
 // Sets default values
@@ -18,26 +17,28 @@ void AMyActor::BeginPlay()
 	FLocations& Locs = MyLocations;
 
 	Locs.StartLocation = GetActorLocation();
-	Locs.TargetLocation = FVector(1000.0f, 500.0f, 200.0f);
+	Locs.TargetLocation = Locs.StartLocation + (PlatformVelocity.GetSafeNormal() * MoveDistance);
 }
 
 // Called every frame
 void AMyActor::Tick(float DeltaTime)
 {
-	FLocations& Locs = MyLocations;
 	Super::Tick(DeltaTime);
-
-	if (bIsMoving)
-	{
-		Locs.CurrentLocation = GetActorLocation();
-		NewLocation = FMath::VInterpTo(Locs.CurrentLocation, Locs.TargetLocation, DeltaTime, InterpSpeed);
-		SetActorLocation(NewLocation);
-	}
-
+	MovePlatform(DeltaTime);
 }
 
-void AMyActor::StartMove()
+void AMyActor::MovePlatform(float DeltaTime)
 {
-	bIsMoving = true;
-}
+	FLocations& Locs = MyLocations;
+	Locs.CurrentLocation = GetActorLocation();
 
+	FVector Destination = bMovingToTarget ? Locs.TargetLocation : Locs.StartLocation; // Ping-Pong Eðer True ise TargetLoc Destion oluyor eðer False ise StartLoc Destion oluyor
+
+	FVector NewLocation = FMath::VInterpConstantTo(Locs.CurrentLocation, Destination, DeltaTime, InterpSpeed);
+	SetActorLocation(NewLocation);
+
+	if (NewLocation.Equals(Destination, 0.5f))
+	{
+		bMovingToTarget = !bMovingToTarget;
+	}
+}

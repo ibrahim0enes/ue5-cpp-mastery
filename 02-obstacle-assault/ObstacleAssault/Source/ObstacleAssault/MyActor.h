@@ -37,19 +37,21 @@ protected:
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	void StartMove();
+
+	void MovePlatform(float DeltaTime);
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Locations")
 	FLocations MyLocations;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Locations")
-	FVector NewLocation;
+	float InterpSpeed = 100.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Locations")
-	float InterpSpeed = 1.0f;
+	FVector PlatformVelocity = FVector(0.0f, 100.0f, 0.0f);
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Locations")
-	bool bIsMoving = true;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Locations")
+	float MoveDistance = 300.f;
 
-
+private:
+	bool bMovingToTarget = true;
 };
