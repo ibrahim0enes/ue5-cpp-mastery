@@ -1,0 +1,7 @@
+Commit Oncesi Kontrol - 20260721_094152
+Sonuc: SORUNLU
+
+Isimlendirme hatasi: 0
+Yanlis klasordeki asset: 0
+Kullanilmayan asset: 0
+Bos klasor: 3

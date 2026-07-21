@@ -1,24 +1,24 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
+
 
 #include "MyActor.h"
 
 // Sets default values
 AMyActor::AMyActor()
 {
-	// Bu aktör her frame Tick() çaðýrsýn (performans için ihtiyaç yoksa kapatýlabilir)
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
 }
 
 // Called when the game starts or when spawned
 void AMyActor::BeginPlay()
 {
 	Super::BeginPlay();
-
-	FLocations& Locs = MyLocations;
-
-	Locs.StartLocation = GetActorLocation();
-	Locs.TargetLocation = Locs.StartLocation + (Direction * Distance);
-
+	MyLocations.StartLocation = GetActorLocation();
+	// Direction varsayï¿½lan olarak normalize edilerek yï¿½n vektï¿½rï¿½ elde edilir
+	MyLocations.TargetLocation = MyLocations.StartLocation + (Direction.GetSafeNormal() * Distance);
+	
 }
 
 // Called every frame
@@ -26,23 +26,23 @@ void AMyActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	MovePlatform(DeltaTime);
+
+
 }
 
 void AMyActor::MovePlatform(float DeltaTime)
 {
-	FLocations& Locs = MyLocations;
+	MyLocations.CurrentLocation = GetActorLocation();
 
-	Locs.CurrentLocation = GetActorLocation();
+	FVector Destination = bShouldReturn ? MyLocations.StartLocation : MyLocations.TargetLocation;
 
-
-	FVector Destination = bShouldReturn ? Locs.StartLocation : Locs.TargetLocation;
-
-	FVector NewLocation = FMath::FInterpConstantTo(Locs.CurrentLocation,Destination,DeltaTime,1);
+	// MoveSpeed ile gï¿½ncellendi
+	FVector NewLocation = FMath::VInterpConstantTo(MyLocations.CurrentLocation, Destination, DeltaTime, MoveSpeed);	
 	SetActorLocation(NewLocation);
 
-	if (Locs.CurrentLocation.Equals(Destination, 0.1f))
+	if (MyLocations.CurrentLocation.Equals(Destination, 1.0f))
 	{
 		bShouldReturn = !bShouldReturn;
 	}
-	
 }
+

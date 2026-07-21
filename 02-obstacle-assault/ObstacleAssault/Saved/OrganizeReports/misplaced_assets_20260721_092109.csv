@@ -1,0 +1,3 @@
+path,name,class,current_folder,expected_folder
+/Game/NewAnimMontage.NewAnimMontage,NewAnimMontage,AnimMontage,/Game,/Game/Animations/Montages
+/Game/NewBlueprint.NewBlueprint,NewBlueprint,Blueprint,/Game,/Game/Blueprints

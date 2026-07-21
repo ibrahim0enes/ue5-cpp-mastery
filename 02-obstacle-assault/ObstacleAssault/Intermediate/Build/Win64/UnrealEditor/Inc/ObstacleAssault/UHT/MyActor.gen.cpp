@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "MyActor.h"
+#include "ObstacleAssault/MyActor.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
@@ -35,43 +35,19 @@ struct Z_Construct_UScriptStruct_FLocations_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// Platformun konum (Location) bilgilerini tutan struct\n" },
-#endif
 		{ "ModuleRelativePath", "MyActor.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Platformun konum (Location) bilgilerini tutan struct" },
-#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_StartLocation_MetaData[] = {
 		{ "Category", "Locations" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// Platformun hareket ba\xef\xbf\xbdlang\xef\xbf\xbd\xef\xbf\xbd noktas\xef\xbf\xbd (BeginPlay'de bir kere set edilir)\n" },
-#endif
 		{ "ModuleRelativePath", "MyActor.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Platformun hareket ba\xef\xbf\xbdlang\xef\xbf\xbd\xef\xbf\xbd noktas\xef\xbf\xbd (BeginPlay'de bir kere set edilir)" },
-#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentLocation_MetaData[] = {
 		{ "Category", "Locations" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// Platformun her frame'deki anl\xef\xbf\xbdk konumu\n" },
-#endif
 		{ "ModuleRelativePath", "MyActor.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Platformun her frame'deki anl\xef\xbf\xbdk konumu" },
-#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TargetLocation_MetaData[] = {
 		{ "Category", "Locations" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// Platformun gitmesi gereken hedef konum\n" },
-#endif
 		{ "ModuleRelativePath", "MyActor.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Platformun gitmesi gereken hedef konum" },
-#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_StartLocation;
@@ -161,17 +137,28 @@ struct Z_Construct_UClass_AMyActor_Statics
 		{ "ModuleRelativePath", "MyActor.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Direction_MetaData[] = {
-		{ "Category", "Locations" },
+		{ "Category", "Movement" },
 		{ "ModuleRelativePath", "MyActor.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Distance_MetaData[] = {
-		{ "Category", "Locations" },
+		{ "Category", "Movement" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Varsay\xef\xbf\xbdlan olarak X ekseninde hareket\n" },
+#endif
+		{ "ModuleRelativePath", "MyActor.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Varsay\xef\xbf\xbdlan olarak X ekseninde hareket" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MoveSpeed_MetaData[] = {
+		{ "Category", "Movement" },
 		{ "ModuleRelativePath", "MyActor.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_MyLocations;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Direction;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_Distance;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_MoveSpeed;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -179,13 +166,15 @@ struct Z_Construct_UClass_AMyActor_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AMyActor_Statics::NewProp_MyLocations = { "MyLocations", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyActor, MyLocations), Z_Construct_UScriptStruct_FLocations, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MyLocations_MetaData), NewProp_MyLocations_MetaData) }; // 734808636
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AMyActor_Statics::NewProp_MyLocations = { "MyLocations", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyActor, MyLocations), Z_Construct_UScriptStruct_FLocations, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MyLocations_MetaData), NewProp_MyLocations_MetaData) }; // 2428690719
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AMyActor_Statics::NewProp_Direction = { "Direction", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyActor, Direction), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Direction_MetaData), NewProp_Direction_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMyActor_Statics::NewProp_Distance = { "Distance", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyActor, Distance), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Distance_MetaData), NewProp_Distance_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMyActor_Statics::NewProp_MoveSpeed = { "MoveSpeed", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyActor, MoveSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoveSpeed_MetaData), NewProp_MoveSpeed_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMyActor_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyActor_Statics::NewProp_MyLocations,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyActor_Statics::NewProp_Direction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyActor_Statics::NewProp_Distance,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyActor_Statics::NewProp_MoveSpeed,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMyActor_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AMyActor_Statics::DependentSingletons[])() = {
@@ -224,13 +213,13 @@ AMyActor::~AMyActor() {}
 struct Z_CompiledInDeferFile_FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h__Script_ObstacleAssault_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FLocations::StaticStruct, Z_Construct_UScriptStruct_FLocations_Statics::NewStructOps, TEXT("Locations"), &Z_Registration_Info_UScriptStruct_FLocations, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FLocations), 734808636U) },
+		{ FLocations::StaticStruct, Z_Construct_UScriptStruct_FLocations_Statics::NewStructOps, TEXT("Locations"), &Z_Registration_Info_UScriptStruct_FLocations, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FLocations), 2428690719U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMyActor, AMyActor::StaticClass, TEXT("AMyActor"), &Z_Registration_Info_UClass_AMyActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyActor), 3136257820U) },
+		{ Z_Construct_UClass_AMyActor, AMyActor::StaticClass, TEXT("AMyActor"), &Z_Registration_Info_UClass_AMyActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyActor), 1684724090U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h__Script_ObstacleAssault_2266802274(TEXT("/Script/ObstacleAssault"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h__Script_ObstacleAssault_884394694(TEXT("/Script/ObstacleAssault"),
 	Z_CompiledInDeferFile_FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h__Script_ObstacleAssault_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h__Script_ObstacleAssault_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h__Script_ObstacleAssault_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ObstacleAssault_Source_ObstacleAssault_MyActor_h__Script_ObstacleAssault_Statics::ScriptStructInfo),
 	nullptr, 0);

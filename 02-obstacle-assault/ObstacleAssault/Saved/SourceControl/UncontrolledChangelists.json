@@ -5,10 +5,18 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Content/MyMyActor.uasset",
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Content/NewMap.umap",
 				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Content/BP_MyMyActor.uasset",
-				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/B/I2/GR1C1FILU57R3OAK5BQORZ.uasset",
-				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/4/NM/R39F4PZHOHPHHCB10LWRO9.uasset",
-				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/4/CR/PUEUNF74G2CNV8ZT7RQPWH.uasset"
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Content/Blueprints/BP_MyMyActor.uasset",
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Content/Level1.umap",
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Content/Blueprints/BP_MyActor.uasset",
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Content/Animations/Montages/NewAnimMontage.uasset",
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Content/Blueprints/BP_NewBlueprint.uasset",
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Content/Animations/Montages/AM_NewAnimMontage.uasset",
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Content/Blueprints/NewBlueprint.uasset",
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Content/sdsa.uasset",
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/02-obstacle-assault/ObstacleAssault/Content/BP_sdsa.uasset"
 			]
 		}
 	]

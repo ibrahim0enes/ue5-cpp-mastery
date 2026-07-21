@@ -6,31 +6,27 @@
 #include "GameFramework/Actor.h"
 #include "MyActor.generated.h"
 
-// Platformun konum (Location) bilgilerini tutan struct
 USTRUCT(BlueprintType)
 struct FLocations
 {
 	GENERATED_BODY()
 
-	// Platformun hareket baþlangýç noktasý (BeginPlay'de bir kere set edilir)
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Locations")
-	FVector StartLocation;
+	FVector StartLocation = FVector::ZeroVector;
 
-	// Platformun her frame'deki anlýk konumu
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Locations")
-	FVector CurrentLocation;
+	FVector CurrentLocation = FVector::ZeroVector;
 
-	// Platformun gitmesi gereken hedef konum
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Locations")
-	FVector TargetLocation;
+	FVector TargetLocation = FVector::ZeroVector;
 };
 
 UCLASS()
 class OBSTACLEASSAULT_API AMyActor : public AActor
 {
 	GENERATED_BODY()
-
-public:
+	
+public:	
 	// Sets default values for this actor's properties
 	AMyActor();
 
@@ -38,22 +34,25 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:
+public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	// Platformu her frame hareket ettiren ve döndüren ana fonksiyon
 	void MovePlatform(float DeltaTime);
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Locations")
 	FLocations MyLocations;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Locations")
-	FVector Direction = FVector(0, 0, 0);
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+	FVector Direction = FVector(1, 0, 0); // Varsayýlan olarak X ekseninde hareket
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Locations")
-	float Distance = 100;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+	float Distance = 500.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+	float MoveSpeed = 200.0f; // Saniyede 200 cm
 
 private:
-	bool bShouldReturn = true;
+	bool bShouldReturn = false; // Baþlangýçta hedefe doðru gitsin
+
 };

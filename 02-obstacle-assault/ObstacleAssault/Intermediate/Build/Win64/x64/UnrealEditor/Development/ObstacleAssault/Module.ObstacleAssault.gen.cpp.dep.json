@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\02-obstacle-assault\\obstacleassault\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\obstacleassault\\module.obstacleassault.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\02-obstacle-assault\\obstacleassault\\intermediate\\build\\win64\\x64\\obstacleassaulteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\02-obstacle-assault\\obstacleassault\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\obstacleassault\\definitions.obstacleassault.h",
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\02-obstacle-assault\\obstacleassault\\intermediate\\build\\win64\\unrealeditor\\inc\\obstacleassault\\uht\\myactor.gen.cpp",
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\02-obstacle-assault\\obstacleassault\\source\\obstacleassault\\myactor.h",
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\02-obstacle-assault\\obstacleassault\\intermediate\\build\\win64\\unrealeditor\\inc\\obstacleassault\\uht\\myactor.generated.h",
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\02-obstacle-assault\\obstacleassault\\intermediate\\build\\win64\\unrealeditor\\inc\\obstacleassault\\uht\\obstacleassault.init.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
