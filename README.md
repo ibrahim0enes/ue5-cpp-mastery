@@ -9,14 +9,25 @@ This repo is where I actually write the code for the *"Unreal Engine 5 C++ Game 
 > 🏆 XP & rank tracker: `docs/xp-terminal/`
 
 ---
+ 
+<img width="128" height="128" alt="badge-rank-0" src="https://github.com/user-attachments/assets/43d3d0de-8b1b-41b3-aa70-4998a3d9e100" /> <img width="128" height="128" alt="badge-rank-2" src="https://github.com/user-attachments/assets/16e1d1c3-9764-4a51-bbbd-80ad354ca499" />  <img width="128" height="128" alt="badge-rank-3" src="https://github.com/user-attachments/assets/c53143f8-0409-412c-a5dd-db38423ea119" /> <img width="128" height="128" alt="badge-rank-4" src="https://github.com/user-attachments/assets/37dc6d22-2938-420c-8bb6-62cab971a5ac" /> <img width="128" height="128" alt="badge-rank-5" src="https://github.com/user-attachments/assets/c01b6954-8fc4-4378-a8dc-cd2b8f97398f" /> <img width="128" height="128" alt="badge-rank-6" src="https://github.com/user-attachments/assets/44601e8a-e82c-48cf-98f0-a7a682a0d5ba" /> <img width="128" height="128" alt="badge-rank-7" src="https://github.com/user-attachments/assets/569cad92-4166-495d-baf3-e369cf58b938" /> 
+
+ 
+
+
+
+
+
+
+
 
 ## Progress
 
 | # | Project | Core C++ / UE5 concepts | XP | Status |
 |---|---|---|---|---|
 | 00 | [Introduction & Setup](01-introduction-setup) | Compiler/IDE setup, `C++` vs Blueprint | 50 (+15 bonus) | ✅ Done |
-| 01 | [Obstacle Assault](02-obstacle-assault) | Structs, `Tick`, `DeltaTime`, functions, classes | 120 (+30 bonus) | 🟨 In progress |
-| 02 | [Dungeon Escape](03-dungeon-escape) | Composition, pointers, delegates, Enhanced Input, tracing | 150 (+35 bonus) | ⬜ Not started |
+| 01 | [Obstacle Assault](02-obstacle-assault) | Structs, `Tick`, `DeltaTime`, functions, classes | 120 (+30 bonus) | ✅ Done |
+| 02 | [Dungeon Escape](03-dungeon-escape) | Composition, pointers, delegates, Enhanced Input, tracing | 150 (+35 bonus) |  🟨 In progress |
 | 03 | [Battle Blaster](04-battle-blaster) | Pawn/GameMode, timers, projectiles, damage, UMG, GameInstance | 150 (+35 bonus) | ⬜ Not started |
 | 04 | [Shooter Sam](05-shooter-sam) | Animation Blend Spaces, AI Controller, NavMesh, Behavior Trees | 175 (+40 bonus) | ⬜ Not started |
 
