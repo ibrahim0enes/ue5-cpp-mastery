@@ -1,9 +1,0 @@
-{
-	"RemapUnityFiles": 
-	{
-		"Module.ObstacleAssault.gen.cpp.obj": [
-			"MyActor.gen.cpp.obj",
-			"ObstacleAssault.init.gen.cpp.obj"
-		]
-	}
-}

@@ -6,36 +6,6 @@
 #include "GameFramework/Actor.h"
 #include "MyActor.generated.h"
 
-USTRUCT(BlueprintType)
-struct FLocations
-{
-	GENERATED_BODY()
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Locations")
-	FVector StartLocation = FVector::ZeroVector;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Locations")
-	FVector CurrentLocation = FVector::ZeroVector;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Locations")
-	FVector TargetLocation = FVector::ZeroVector;
-};
-
-USTRUCT(BlueprintType)
-struct FRotations
-{
-	GENERATED_BODY()
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Rotations")
-	FRotator StartRotation = FRotator::ZeroRotator;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Rotations")
-	FRotator CurrentRotation = FRotator::ZeroRotator;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Rotations")
-	FRotator TargetRotation = FRotator::ZeroRotator;
-};
-
 UCLASS()
 class OBSTACLEASSAULT_API AMyActor : public AActor
 {
@@ -56,24 +26,20 @@ public:
 	void MovePlatform(float DeltaTime);
 	void RotatePlatform(float DeltaTime);
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Locations")
-	FLocations MyLocations;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Rotations")
-	FRotations MyRotations;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
+	UStaticMeshComponent* PlatformMesh;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
-	FVector LDirection = FVector(1, 0, 0); // Varsayilan olarak X ekseninde hareket
+	
+	TArray<FVector> WayPoints;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
-	FRotator RDirection = FRotator(0, 1, 0); // Varsayilan olarak Yaw ekseninde (dikey eksen) donus
+	float MoveSpeed = 200.0f; 
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
-	float Distance = 500.0f;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
-	float MoveSpeed = 200.0f; // Saniyede 200 cm
+	FRotator RDirection = FRotator(0, 1, 0); 
 
 private:
-	bool bShouldReturn = false; // Baslangicta hedefe dogru gitsin
+	FVector StartLocation = FVector::ZeroVector;
+	int32 CurrentWaypointIndex = 0;
 };

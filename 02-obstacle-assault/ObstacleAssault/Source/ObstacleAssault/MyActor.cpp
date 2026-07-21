@@ -7,6 +7,9 @@ AMyActor::AMyActor()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
+	PlatformMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PlatformMesh"));
+	RootComponent = PlatformMesh;
 }
 
 // Called when the game starts or when spawned
@@ -14,8 +17,7 @@ void AMyActor::BeginPlay()
 {
 	Super::BeginPlay();
 
-	MyLocations.StartLocation = GetActorLocation();
-	MyLocations.TargetLocation = MyLocations.StartLocation + (LDirection.GetSafeNormal() * Distance);
+	StartLocation = GetActorLocation();
 }
 
 // Called every frame
@@ -29,15 +31,23 @@ void AMyActor::Tick(float DeltaTime)
 
 void AMyActor::MovePlatform(float DeltaTime)
 {
-	MyLocations.CurrentLocation = GetActorLocation();
-	FVector Destination = bShouldReturn ? MyLocations.StartLocation : MyLocations.TargetLocation;
+	if (WayPoints.Num() == 0) return;
 
-	FVector NewLocation = FMath::VInterpConstantTo(MyLocations.CurrentLocation, Destination, DeltaTime, MoveSpeed);
+	FVector Destination = StartLocation + WayPoints[CurrentWaypointIndex];
+	FVector CurrentLocation = GetActorLocation();
+
+	FVector NewLocation = FMath::FInterpConstantTo(CurrentLocation, Destination , DeltaTime , MoveSpeed);
 	SetActorLocation(NewLocation);
+	
 
-	if (NewLocation.Equals(Destination, 1.0f))
+	if (GetActorLocation().Equals(NewLocation, 0.5f))
 	{
-		bShouldReturn = !bShouldReturn;
+		CurrentWaypointIndex++;
+	}
+
+	if (CurrentWaypointIndex == WayPoints.Num())
+	{
+		CurrentWaypointIndex = 0;
 	}
 }
 
