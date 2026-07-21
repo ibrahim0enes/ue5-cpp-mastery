@@ -68,10 +68,7 @@
 			"CombatActivationVolume.cpp.obj",
 			"CombatCheckpointVolume.cpp.obj",
 			"CombatDamageableBox.cpp.obj",
-			"CombatDummy.cpp.obj",
-			"CombatLavaFloor.cpp.obj",
-			"CombatActivatable.cpp.obj",
-			"CombatAttacker.cpp.obj"
+			"CombatDummy.cpp.obj"
 		]
 	}
 }

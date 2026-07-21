@@ -45,4 +45,11 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Locations")
 	FVector NewLocation;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Locations")
+	float InterpSpeed = 1.0f;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Locations")
+	bool bIsMoving = true;
+
+
 };

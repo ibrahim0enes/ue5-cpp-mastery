@@ -26,14 +26,18 @@ void AMyActor::Tick(float DeltaTime)
 {
 	FLocations& Locs = MyLocations;
 	Super::Tick(DeltaTime);
-	Locs.CurrentLocation = GetActorLocation();
-	NewLocation = FMath::FInterpTo(Locs.CurrentLocation, Locs.TargetLocation, DeltaTime, 4);
-	SetActorLocation(NewLocation);
+
+	if (bIsMoving)
+	{
+		Locs.CurrentLocation = GetActorLocation();
+		NewLocation = FMath::VInterpTo(Locs.CurrentLocation, Locs.TargetLocation, DeltaTime, InterpSpeed);
+		SetActorLocation(NewLocation);
+	}
 
 }
 
 void AMyActor::StartMove()
 {
-
+	bIsMoving = true;
 }
 
