@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"E:\\UnrealEngine\\Repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\DungeonEscape\\Source\\DungeonEscape\\DungeonEscape.Build.cs",
+		"E:\\UnrealEngine\\Repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\DungeonEscape\\Source\\DungeonEscape.Target.cs",
+		"E:\\UnrealEngine\\Repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\DungeonEscape\\Source\\DungeonEscapeEditor.Target.cs"
+	],
+	"EngineVersion": "5.6.1"
+}

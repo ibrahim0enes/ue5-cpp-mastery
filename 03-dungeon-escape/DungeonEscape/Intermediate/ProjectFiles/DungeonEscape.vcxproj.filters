@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\DungeonEscape.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\DungeonEscape.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\DungeonEscapeEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <None Include="..\..\clean_rebuild.bat" />
+    <None Include="..\..\dungeon-escape-readme.md" />
+    <None Include="..\..\run_pre_commit_check.bat" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\DungeonEscape">
+      <UniqueIdentifier>{EA9A2526-EFDA-3225-BF48-597FD94E671D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\DungeonEscape\DungeonEscape.Build.cs">
+      <Filter>Source\DungeonEscape</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\DungeonEscape\DungeonEscape.cpp">
+      <Filter>Source\DungeonEscape</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DungeonEscape\DungeonEscape.h">
+      <Filter>Source\DungeonEscape</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DungeonEscape\Mover.cpp">
+      <Filter>Source\DungeonEscape</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DungeonEscape\Mover.h">
+      <Filter>Source\DungeonEscape</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

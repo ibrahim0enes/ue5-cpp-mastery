@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\dungeonescape\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\dungeonescape\\permoduleinline.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\dungeonescape\\intermediate\\build\\win64\\x64\\dungeonescapeeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\dungeonescape\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\dungeonescape\\definitions.dungeonescape.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

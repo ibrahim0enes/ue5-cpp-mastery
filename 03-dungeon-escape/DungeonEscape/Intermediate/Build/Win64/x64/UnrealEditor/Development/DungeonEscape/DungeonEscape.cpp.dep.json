@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\dungeonescape\\source\\dungeonescape\\dungeonescape.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\dungeonescape\\intermediate\\build\\win64\\x64\\dungeonescapeeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\dungeonescape\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\dungeonescape\\definitions.dungeonescape.h",
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\dungeonescape\\source\\dungeonescape\\dungeonescape.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
