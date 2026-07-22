@@ -48,5 +48,11 @@
     <ClInclude Include="..\..\Source\DungeonEscape\Mover.h">
       <Filter>Source\DungeonEscape</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\DungeonEscape\TriggerComponent.cpp">
+      <Filter>Source\DungeonEscape</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DungeonEscape\TriggerComponent.h">
+      <Filter>Source\DungeonEscape</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

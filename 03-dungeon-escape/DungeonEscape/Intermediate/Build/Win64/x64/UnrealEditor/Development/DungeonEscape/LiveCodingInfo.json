@@ -3,7 +3,8 @@
 	{
 		"Module.DungeonEscape.gen.cpp.obj": [
 			"DungeonEscape.init.gen.cpp.obj",
-			"Mover.gen.cpp.obj"
+			"Mover.gen.cpp.obj",
+			"TriggerComponent.gen.cpp.obj"
 		]
 	}
 }

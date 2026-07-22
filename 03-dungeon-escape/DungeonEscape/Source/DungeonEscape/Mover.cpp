@@ -32,6 +32,7 @@ void UMover::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponent
 
 void UMover::MovePlatform(float DeltaTime)
 {
+	if (!bShouldMove) return;	
 	if (!GetOwner() || WayPoints.Num() == 0)
 	{
 		return;

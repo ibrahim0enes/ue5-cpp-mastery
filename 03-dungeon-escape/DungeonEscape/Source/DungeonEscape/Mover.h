@@ -26,6 +26,8 @@ public:
 
 	void MovePlatform(float DeltaTime);
 	void RotatePlatform(float DeltaTime);
+	void SetShouldMove(bool bNewShouldMove) { bShouldMove = bNewShouldMove; }
+
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Mover")
 	AActor* Actor;
@@ -42,5 +44,7 @@ public:
 private:
 	FVector StartLocation = FVector::ZeroVector;
 	int32 CurrentWaypointIndex = 0;
+	bool bShouldMove = false;
+
 		
 };

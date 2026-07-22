@@ -9,7 +9,10 @@
             "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\dungeonescape\\intermediate\\build\\win64\\unrealeditor\\inc\\dungeonescape\\uht\\dungeonescape.init.gen.cpp",
             "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\dungeonescape\\intermediate\\build\\win64\\unrealeditor\\inc\\dungeonescape\\uht\\mover.gen.cpp",
             "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\dungeonescape\\source\\dungeonescape\\mover.h",
-            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\dungeonescape\\intermediate\\build\\win64\\unrealeditor\\inc\\dungeonescape\\uht\\mover.generated.h"
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\dungeonescape\\intermediate\\build\\win64\\unrealeditor\\inc\\dungeonescape\\uht\\mover.generated.h",
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\dungeonescape\\intermediate\\build\\win64\\unrealeditor\\inc\\dungeonescape\\uht\\triggercomponent.gen.cpp",
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\dungeonescape\\source\\dungeonescape\\triggercomponent.h",
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\dungeonescape\\intermediate\\build\\win64\\unrealeditor\\inc\\dungeonescape\\uht\\triggercomponent.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
