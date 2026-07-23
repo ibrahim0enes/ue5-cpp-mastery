@@ -2,37 +2,45 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
+#include "Components/BoxComponent.h"
+
+#include "Mover.h"
+
 #include "TriggerComponent.generated.h"
 
-class UBoxComponent;
-class UMover;
 
 UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
-class DUNGEONESCAPE_API UTriggerComponent : public UActorComponent
+class DUNGEONESCAPE_API UTriggerComponent : public UBoxComponent   // UActorComponent DEÐÝL
 {
 	GENERATED_BODY()
-
 public:
 	UTriggerComponent();
 
-	void Trigger(bool NewTriggerValue);
-
+	void Trigger(bool Newbool);
 protected:
 	virtual void BeginPlay() override;
+public:
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+	UPROPERTY(EditAnywhere, Category = "Trigger")
+	UMover* Mover;
+
+	UPROPERTY(EditAnywhere, Category = "Trigger")
+	AActor* MoverActor;
+
+	UPROPERTY(EditAnywhere, Category = "Trigger")
+	bool bIsPressurePlate = false;
+
+	UPROPERTY(VisibleAnywhere, Category = "Trigger")
+	bool bIsTriggered = false;
+
+	UFUNCTION()
+	void OnOverlapBegin(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+
+	UFUNCTION()
+	void OnOverlapEnd(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
 private:
-	UPROPERTY()
-	UBoxComponent* BoxComp;
-
-	UPROPERTY()
-	UMover* CachedMover;
-
-	UFUNCTION()
-	void OnBoxOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
-		UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
-
-	UFUNCTION()
-	void OnBoxOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
-		UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+	UPROPERTY(VisibleAnywhere, Category = "Trigger")
+	int32 ActivatorCounter = 0;
 };

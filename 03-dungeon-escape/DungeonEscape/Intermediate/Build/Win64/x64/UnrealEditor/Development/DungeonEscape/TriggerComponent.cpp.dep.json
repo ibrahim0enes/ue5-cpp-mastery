@@ -7,13 +7,13 @@
         "Includes": [
             "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\dungeonescape\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\dungeonescape\\definitions.dungeonescape.h",
             "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\dungeonescape\\source\\dungeonescape\\triggercomponent.h",
-            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\dungeonescape\\intermediate\\build\\win64\\unrealeditor\\inc\\dungeonescape\\uht\\triggercomponent.generated.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\boxcomponent.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\shapecomponent.generated.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\boxcomponent.generated.h",
             "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\dungeonescape\\source\\dungeonescape\\mover.h",
-            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\dungeonescape\\intermediate\\build\\win64\\unrealeditor\\inc\\dungeonescape\\uht\\mover.generated.h"
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\dungeonescape\\intermediate\\build\\win64\\unrealeditor\\inc\\dungeonescape\\uht\\mover.generated.h",
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\03-dungeon-escape\\dungeonescape\\intermediate\\build\\win64\\unrealeditor\\inc\\dungeonescape\\uht\\triggercomponent.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

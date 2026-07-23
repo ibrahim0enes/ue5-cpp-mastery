@@ -58,6 +58,7 @@ void UMover::MovePlatform(float DeltaTime)
 
 void UMover::RotatePlatform(float DeltaTime)
 {
+	if (!bShouldMove) return;
 	FRotator RotationToAdd = RDirection * DeltaTime;
 	GetOwner()->AddActorLocalRotation(RotationToAdd);
 }

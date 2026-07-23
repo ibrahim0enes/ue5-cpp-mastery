@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DungeonEscapeModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55ffb11af05f9acc1ce7541499f9c77519363953")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5004e33d5c487575d1d09b8351259c5d281492e8")]
 [assembly: System.Reflection.AssemblyProductAttribute("DungeonEscapeModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DungeonEscapeModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

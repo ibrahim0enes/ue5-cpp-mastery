@@ -21,25 +21,25 @@ class UPrimitiveComponent;
 struct FHitResult;
 
 // ********** Begin Class UTriggerComponent ********************************************************
-#define FID_DungeonEscape_Source_DungeonEscape_TriggerComponent_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execOnBoxOverlapEnd); \
-	DECLARE_FUNCTION(execOnBoxOverlapBegin);
+#define FID_DungeonEscape_Source_DungeonEscape_TriggerComponent_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnOverlapEnd); \
+	DECLARE_FUNCTION(execOnOverlapBegin);
 
 
 DUNGEONESCAPE_API UClass* Z_Construct_UClass_UTriggerComponent_NoRegister();
 
-#define FID_DungeonEscape_Source_DungeonEscape_TriggerComponent_h_14_INCLASS_NO_PURE_DECLS \
+#define FID_DungeonEscape_Source_DungeonEscape_TriggerComponent_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUTriggerComponent(); \
 	friend struct Z_Construct_UClass_UTriggerComponent_Statics; \
 	static UClass* GetPrivateStaticClass(); \
 	friend DUNGEONESCAPE_API UClass* Z_Construct_UClass_UTriggerComponent_NoRegister(); \
 public: \
-	DECLARE_CLASS2(UTriggerComponent, UActorComponent, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/DungeonEscape"), Z_Construct_UClass_UTriggerComponent_NoRegister) \
+	DECLARE_CLASS2(UTriggerComponent, UBoxComponent, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/DungeonEscape"), Z_Construct_UClass_UTriggerComponent_NoRegister) \
 	DECLARE_SERIALIZER(UTriggerComponent)
 
 
-#define FID_DungeonEscape_Source_DungeonEscape_TriggerComponent_h_14_ENHANCED_CONSTRUCTORS \
+#define FID_DungeonEscape_Source_DungeonEscape_TriggerComponent_h_15_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UTriggerComponent(UTriggerComponent&&) = delete; \
 	UTriggerComponent(const UTriggerComponent&) = delete; \
@@ -49,13 +49,13 @@ public: \
 	NO_API virtual ~UTriggerComponent();
 
 
-#define FID_DungeonEscape_Source_DungeonEscape_TriggerComponent_h_11_PROLOG
-#define FID_DungeonEscape_Source_DungeonEscape_TriggerComponent_h_14_GENERATED_BODY \
+#define FID_DungeonEscape_Source_DungeonEscape_TriggerComponent_h_12_PROLOG
+#define FID_DungeonEscape_Source_DungeonEscape_TriggerComponent_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_DungeonEscape_Source_DungeonEscape_TriggerComponent_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_DungeonEscape_Source_DungeonEscape_TriggerComponent_h_14_INCLASS_NO_PURE_DECLS \
-	FID_DungeonEscape_Source_DungeonEscape_TriggerComponent_h_14_ENHANCED_CONSTRUCTORS \
+	FID_DungeonEscape_Source_DungeonEscape_TriggerComponent_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_DungeonEscape_Source_DungeonEscape_TriggerComponent_h_15_INCLASS_NO_PURE_DECLS \
+	FID_DungeonEscape_Source_DungeonEscape_TriggerComponent_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
