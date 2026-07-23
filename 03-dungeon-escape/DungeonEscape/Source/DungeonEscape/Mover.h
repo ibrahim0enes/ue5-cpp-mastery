@@ -30,9 +30,6 @@ public:
 
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Mover")
-	AActor* Actor;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Mover")
 	TArray<FVector> WayPoints;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Mover")
