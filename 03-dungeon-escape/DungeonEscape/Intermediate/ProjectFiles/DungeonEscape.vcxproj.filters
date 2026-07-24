@@ -33,6 +33,12 @@
     <Filter Include="Source\DungeonEscape">
       <UniqueIdentifier>{EA9A2526-EFDA-3225-BF48-597FD94E671D}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\DungeonEscape\CollectableItem.cpp">
+      <Filter>Source\DungeonEscape</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DungeonEscape\CollectableItem.h">
+      <Filter>Source\DungeonEscape</Filter>
+    </ClInclude>
     <None Include="..\..\Source\DungeonEscape\DungeonEscape.Build.cs">
       <Filter>Source\DungeonEscape</Filter>
     </None>
@@ -40,6 +46,12 @@
       <Filter>Source\DungeonEscape</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\DungeonEscape\DungeonEscape.h">
+      <Filter>Source\DungeonEscape</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\DungeonEscape\Lock.cpp">
+      <Filter>Source\DungeonEscape</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\DungeonEscape\Lock.h">
       <Filter>Source\DungeonEscape</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\DungeonEscape\Mover.cpp">

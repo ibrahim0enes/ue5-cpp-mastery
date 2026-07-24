@@ -2,7 +2,9 @@
 	"RemapUnityFiles": 
 	{
 		"Module.DungeonEscape.gen.cpp.obj": [
+			"CollectableItem.gen.cpp.obj",
 			"DungeonEscape.init.gen.cpp.obj",
+			"Lock.gen.cpp.obj",
 			"Mover.gen.cpp.obj",
 			"TriggerComponent.gen.cpp.obj"
 		]

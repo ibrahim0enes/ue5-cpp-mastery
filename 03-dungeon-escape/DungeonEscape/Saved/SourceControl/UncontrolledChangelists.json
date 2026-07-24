@@ -7,7 +7,8 @@
 			"files": [
 				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/03-dungeon-escape/DungeonEscape/Content/Level.umap",
 				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/03-dungeon-escape/DungeonEscape/Content/BP_MoverActor.uasset",
-				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/03-dungeon-escape/DungeonEscape/Content/BP_Door.uasset"
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/03-dungeon-escape/DungeonEscape/Content/BP_Door.uasset",
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/03-dungeon-escape/DungeonEscape/Content/BP_GlassStatue.uasset"
 			]
 		}
 	]
