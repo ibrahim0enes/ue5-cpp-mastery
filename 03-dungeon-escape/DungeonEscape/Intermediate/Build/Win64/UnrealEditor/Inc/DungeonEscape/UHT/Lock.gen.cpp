@@ -76,10 +76,21 @@ struct Z_Construct_UClass_ALock_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Lock.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_KeyItemName_MetaData[] = {
+		{ "Category", "Lock" },
+		{ "ModuleRelativePath", "Lock.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_IsKeyPlaced_MetaData[] = {
+		{ "Category", "Lock" },
+		{ "ModuleRelativePath", "Lock.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RootComp;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_TriggerComp;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_KeyItemMesh;
+	static const UECodeGen_Private::FStrPropertyParams NewProp_KeyItemName;
+	static void NewProp_IsKeyPlaced_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_IsKeyPlaced;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -90,10 +101,18 @@ struct Z_Construct_UClass_ALock_Statics
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALock_Statics::NewProp_RootComp = { "RootComp", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALock, RootComp), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RootComp_MetaData), NewProp_RootComp_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALock_Statics::NewProp_TriggerComp = { "TriggerComp", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALock, TriggerComp), Z_Construct_UClass_UTriggerComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TriggerComp_MetaData), NewProp_TriggerComp_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALock_Statics::NewProp_KeyItemMesh = { "KeyItemMesh", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALock, KeyItemMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_KeyItemMesh_MetaData), NewProp_KeyItemMesh_MetaData) };
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UClass_ALock_Statics::NewProp_KeyItemName = { "KeyItemName", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALock, KeyItemName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_KeyItemName_MetaData), NewProp_KeyItemName_MetaData) };
+void Z_Construct_UClass_ALock_Statics::NewProp_IsKeyPlaced_SetBit(void* Obj)
+{
+	((ALock*)Obj)->IsKeyPlaced = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ALock_Statics::NewProp_IsKeyPlaced = { "IsKeyPlaced", nullptr, (EPropertyFlags)0x0040000000020001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ALock), &Z_Construct_UClass_ALock_Statics::NewProp_IsKeyPlaced_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_IsKeyPlaced_MetaData), NewProp_IsKeyPlaced_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ALock_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALock_Statics::NewProp_RootComp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALock_Statics::NewProp_TriggerComp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALock_Statics::NewProp_KeyItemMesh,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALock_Statics::NewProp_KeyItemName,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALock_Statics::NewProp_IsKeyPlaced,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ALock_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ALock_Statics::DependentSingletons[])() = {
@@ -132,10 +151,10 @@ ALock::~ALock() {}
 struct Z_CompiledInDeferFile_FID_DungeonEscape_Source_DungeonEscape_Lock_h__Script_DungeonEscape_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ALock, ALock::StaticClass, TEXT("ALock"), &Z_Registration_Info_UClass_ALock, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALock), 3731315827U) },
+		{ Z_Construct_UClass_ALock, ALock::StaticClass, TEXT("ALock"), &Z_Registration_Info_UClass_ALock, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALock), 3620954606U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DungeonEscape_Source_DungeonEscape_Lock_h__Script_DungeonEscape_1502511161(TEXT("/Script/DungeonEscape"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DungeonEscape_Source_DungeonEscape_Lock_h__Script_DungeonEscape_52952496(TEXT("/Script/DungeonEscape"),
 	Z_CompiledInDeferFile_FID_DungeonEscape_Source_DungeonEscape_Lock_h__Script_DungeonEscape_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DungeonEscape_Source_DungeonEscape_Lock_h__Script_DungeonEscape_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

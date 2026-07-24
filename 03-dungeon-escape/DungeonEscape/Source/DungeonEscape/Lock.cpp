@@ -36,3 +36,16 @@ void ALock::Tick(float DeltaTime)
 
 }
 
+bool ALock::GetKeyIsPlaced()
+{
+	return IsKeyPlaced;
+}
+
+void ALock::SetKeyIsPlaced(bool NewIsKeyPlaced)
+{
+	IsKeyPlaced = NewIsKeyPlaced
+
+	TriggerComp->Trigger(NewIsKeyPlaced);
+	KeyItemMesh->SetVisibility(NewIsKeyPlaced);
+}
+
