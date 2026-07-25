@@ -6,7 +6,7 @@
 // Sets default values for this component's properties
 UMover::UMover()
 {
-	
+
 	PrimaryComponentTick.bCanEverTick = true;
 
 }
@@ -18,7 +18,7 @@ void UMover::BeginPlay()
 	Super::BeginPlay();
 
 	StartLocation = GetOwner()->GetActorLocation();
-	
+
 }
 
 
@@ -27,12 +27,12 @@ void UMover::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponent
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 	MovePlatform(DeltaTime);
 	RotatePlatform(DeltaTime);
-	
+
 }
 
 void UMover::MovePlatform(float DeltaTime)
 {
-	if (!bShouldMove) return;	
+	if (!bShouldMove) return;
 	if (!GetOwner() || WayPoints.Num() == 0)
 	{
 		return;
@@ -41,7 +41,7 @@ void UMover::MovePlatform(float DeltaTime)
 	FVector CurrentLocation = GetOwner()->GetActorLocation();
 	FVector Dest = StartLocation + WayPoints[CurrentWaypointIndex];
 
-	FVector NewLocation = FMath::VInterpConstantTo(CurrentLocation,Dest,DeltaTime,MoveSpeed);
+	FVector NewLocation = FMath::VInterpConstantTo(CurrentLocation, Dest, DeltaTime, MoveSpeed);
 	GetOwner()->SetActorLocation(NewLocation);
 
 	if (NewLocation.Equals(Dest, 0.1f))

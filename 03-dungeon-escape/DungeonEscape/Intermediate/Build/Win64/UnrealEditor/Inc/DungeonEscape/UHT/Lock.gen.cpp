@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "DungeonEscape/Lock.h"
+#include "Lock.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 

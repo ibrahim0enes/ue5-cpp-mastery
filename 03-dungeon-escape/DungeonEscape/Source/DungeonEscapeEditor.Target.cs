@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class DungeonEscapeEditorTarget : TargetRules
 {
-	public DungeonEscapeEditorTarget( TargetInfo Target) : base(Target)
+	public DungeonEscapeEditorTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V5;

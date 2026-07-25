@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "DungeonEscape/CollectableItem.h"
+#include "CollectableItem.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 

@@ -15,7 +15,7 @@ ACollectableItem::ACollectableItem()
 void ACollectableItem::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 }
 
 // Called every frame
