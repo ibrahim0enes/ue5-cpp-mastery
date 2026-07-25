@@ -13,21 +13,21 @@ void UTriggerComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	if (MoverActor)
+	for (AActor* MoverActor : MoverActors)
 	{
-		Mover = MoverActor->FindComponentByClass<UMover>();
-		if (Mover)
+		if (MoverActor)
 		{
-			UE_LOG(LogTemp, Display, TEXT("Succesfully found the mover component!"));
+			UMover* FoundMover = MoverActor->FindComponentByClass<UMover>();
+			if (FoundMover)
+			{
+				Movers.Add(FoundMover);
+				UE_LOG(LogTemp, Display, TEXT("Succesfully found a mover component!"));
+			}
+			else
+			{
+				UE_LOG(LogTemp, Display, TEXT("Failed to find mover component on %s!"), *MoverActor->GetActorNameOrLabel());
+			}
 		}
-		else
-		{
-			UE_LOG(LogTemp, Display, TEXT("Failed to find mover component!"));
-		}
-	}
-	else
-	{
-		UE_LOG(LogTemp, Display, TEXT("MoverActor is nullptr"));
 	}
 
 	if (IsPressurePlate)
@@ -47,9 +47,15 @@ void UTriggerComponent::Trigger(bool NewTriggerValue)
 {
 	IsTriggered = NewTriggerValue;
 
-	if (Mover)
+	if (Movers.Num() > 0)
 	{
-		Mover->SetShouldMove(IsTriggered);
+		for (UMover* Mover : Movers)
+		{
+			if (Mover)
+			{
+				Mover->SetShouldMove(IsTriggered);
+			}
+		}
 	}
 	else
 	{

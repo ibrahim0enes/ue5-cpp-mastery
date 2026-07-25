@@ -222,7 +222,7 @@ struct Z_Construct_UClass_UTriggerComponent_Statics
 		{ "Category", "TriggerComponent" },
 		{ "ModuleRelativePath", "TriggerComponent.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MoverActor_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MoverActors_MetaData[] = {
 		{ "Category", "TriggerComponent" },
 		{ "ModuleRelativePath", "TriggerComponent.h" },
 	};
@@ -237,7 +237,8 @@ struct Z_Construct_UClass_UTriggerComponent_Statics
 #endif // WITH_METADATA
 	static void NewProp_IsPressurePlate_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_IsPressurePlate;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_MoverActor;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_MoverActors_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_MoverActors;
 	static void NewProp_IsTriggered_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_IsTriggered;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ActivatorCount;
@@ -258,7 +259,8 @@ void Z_Construct_UClass_UTriggerComponent_Statics::NewProp_IsPressurePlate_SetBi
 	((UTriggerComponent*)Obj)->IsPressurePlate = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UTriggerComponent_Statics::NewProp_IsPressurePlate = { "IsPressurePlate", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UTriggerComponent), &Z_Construct_UClass_UTriggerComponent_Statics::NewProp_IsPressurePlate_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_IsPressurePlate_MetaData), NewProp_IsPressurePlate_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UTriggerComponent_Statics::NewProp_MoverActor = { "MoverActor", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerComponent, MoverActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoverActor_MetaData), NewProp_MoverActor_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UTriggerComponent_Statics::NewProp_MoverActors_Inner = { "MoverActors", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UTriggerComponent_Statics::NewProp_MoverActors = { "MoverActors", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerComponent, MoverActors), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoverActors_MetaData), NewProp_MoverActors_MetaData) };
 void Z_Construct_UClass_UTriggerComponent_Statics::NewProp_IsTriggered_SetBit(void* Obj)
 {
 	((UTriggerComponent*)Obj)->IsTriggered = 1;
@@ -267,7 +269,8 @@ const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UTriggerComponen
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UTriggerComponent_Statics::NewProp_ActivatorCount = { "ActivatorCount", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerComponent, ActivatorCount), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActivatorCount_MetaData), NewProp_ActivatorCount_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UTriggerComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTriggerComponent_Statics::NewProp_IsPressurePlate,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTriggerComponent_Statics::NewProp_MoverActor,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTriggerComponent_Statics::NewProp_MoverActors_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTriggerComponent_Statics::NewProp_MoverActors,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTriggerComponent_Statics::NewProp_IsTriggered,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTriggerComponent_Statics::NewProp_ActivatorCount,
 };
@@ -308,10 +311,10 @@ UTriggerComponent::~UTriggerComponent() {}
 struct Z_CompiledInDeferFile_FID_DungeonEscape_Source_DungeonEscape_TriggerComponent_h__Script_DungeonEscape_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UTriggerComponent, UTriggerComponent::StaticClass, TEXT("UTriggerComponent"), &Z_Registration_Info_UClass_UTriggerComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UTriggerComponent), 301521185U) },
+		{ Z_Construct_UClass_UTriggerComponent, UTriggerComponent::StaticClass, TEXT("UTriggerComponent"), &Z_Registration_Info_UClass_UTriggerComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UTriggerComponent), 3085045790U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DungeonEscape_Source_DungeonEscape_TriggerComponent_h__Script_DungeonEscape_2356210196(TEXT("/Script/DungeonEscape"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DungeonEscape_Source_DungeonEscape_TriggerComponent_h__Script_DungeonEscape_3567825598(TEXT("/Script/DungeonEscape"),
 	Z_CompiledInDeferFile_FID_DungeonEscape_Source_DungeonEscape_TriggerComponent_h__Script_DungeonEscape_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DungeonEscape_Source_DungeonEscape_TriggerComponent_h__Script_DungeonEscape_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

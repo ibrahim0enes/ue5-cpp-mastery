@@ -35,7 +35,7 @@ public:
 	bool IsPressurePlate = false;
 
 	UPROPERTY(EditAnywhere)
-	AActor* MoverActor;
+	TArray<AActor*> MoverActors;
 
 	UPROPERTY(VisibleAnywhere)
 	bool IsTriggered = false;
@@ -43,7 +43,7 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	int32 ActivatorCount = 0;
 
-	UMover* Mover;
+	TArray<UMover*> Movers;
 
 	UFUNCTION()
 	void OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);

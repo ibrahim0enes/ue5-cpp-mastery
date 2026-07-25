@@ -8,8 +8,9 @@
 				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/03-dungeon-escape/DungeonEscape/Content/Stuff/TestLevel.umap",
 				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/03-dungeon-escape/DungeonEscape/Content/Stuff/BP_Trigger.uasset",
 				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/03-dungeon-escape/DungeonEscape/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset",
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/03-dungeon-escape/DungeonEscape/Content/Stuff/BP_GlassStatue.uasset",
 				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/03-dungeon-escape/DungeonEscape/Content/Stuff/BP_Lock.uasset",
-				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/03-dungeon-escape/DungeonEscape/Content/Stuff/BP_GlassStatue.uasset"
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/03-dungeon-escape/DungeonEscape/Content/Stuff/BP_Mover.uasset"
 			]
 		}
 	]
