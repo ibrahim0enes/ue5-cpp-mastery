@@ -413,10 +413,10 @@ AHorrorCharacter::~AHorrorCharacter() {}
 struct Z_CompiledInDeferFile_FID_DungeonEscape_Source_DungeonEscape_Variant_Horror_HorrorCharacter_h__Script_DungeonEscape_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AHorrorCharacter, AHorrorCharacter::StaticClass, TEXT("AHorrorCharacter"), &Z_Registration_Info_UClass_AHorrorCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHorrorCharacter), 3777990209U) },
+		{ Z_Construct_UClass_AHorrorCharacter, AHorrorCharacter::StaticClass, TEXT("AHorrorCharacter"), &Z_Registration_Info_UClass_AHorrorCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHorrorCharacter), 3252017316U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DungeonEscape_Source_DungeonEscape_Variant_Horror_HorrorCharacter_h__Script_DungeonEscape_2567148066(TEXT("/Script/DungeonEscape"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DungeonEscape_Source_DungeonEscape_Variant_Horror_HorrorCharacter_h__Script_DungeonEscape_615709519(TEXT("/Script/DungeonEscape"),
 	Z_CompiledInDeferFile_FID_DungeonEscape_Source_DungeonEscape_Variant_Horror_HorrorCharacter_h__Script_DungeonEscape_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DungeonEscape_Source_DungeonEscape_Variant_Horror_HorrorCharacter_h__Script_DungeonEscape_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
