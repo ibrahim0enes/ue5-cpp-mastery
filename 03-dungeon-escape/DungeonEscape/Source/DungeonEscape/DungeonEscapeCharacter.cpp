@@ -73,7 +73,7 @@ void ADungeonEscapeCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 
 void ADungeonEscapeCharacter::Interact()
 {
-	UE_LOG(LogTemp, Warning, TEXT("INTERACT"));
+
 }
 
 
