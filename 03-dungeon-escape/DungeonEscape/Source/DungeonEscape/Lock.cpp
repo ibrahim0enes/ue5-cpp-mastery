@@ -26,7 +26,8 @@ ALock::ALock()
 void ALock::BeginPlay()
 {
 	Super::BeginPlay();
-
+	KeyItemMesh->SetVisibility(false);
+	IsKeyPlaced = false;
 }
 
 // Called every frame
