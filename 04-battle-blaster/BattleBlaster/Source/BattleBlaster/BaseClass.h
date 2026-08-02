@@ -4,7 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
-#include "Components/CapsuleComponent.h	"
+#include "Components/CapsuleComponent.h"
+#include "Components/StaticMeshComponent.h"
 
 #include "BaseClass.generated.h"
 

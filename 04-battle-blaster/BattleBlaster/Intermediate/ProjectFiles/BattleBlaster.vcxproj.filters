@@ -11,6 +11,7 @@
     <None Include="..\..\Source\BattleBlasterEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -42,6 +43,12 @@
       <Filter>Source\BattleBlaster</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\BattleBlaster\BattleBlaster.h">
+      <Filter>Source\BattleBlaster</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BattleBlaster\Tank.cpp">
+      <Filter>Source\BattleBlaster</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BattleBlaster\Tank.h">
       <Filter>Source\BattleBlaster</Filter>
     </ClInclude>
   </ItemGroup>

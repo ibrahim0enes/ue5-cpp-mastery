@@ -9,13 +9,13 @@ ABaseClass::ABaseClass()
 	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	CapsuleComp = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule Component"));
+	CapsuleComp = CreateDefaultSubobject<UCapsuleComponent>(TEXT("CapsuleComponent"));
 	SetRootComponent(CapsuleComp);
 
-	BaseMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Base Mesh"));
-	BaseMesh->SetupAttachment(GetDefaultAttachComponent());
+	BaseMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("BaseMesh"));
+	BaseMesh->SetupAttachment(CapsuleComp);
 
-	TurrentMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Turrent Mesh"));
+	TurrentMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("TurrentMesh"));
 	TurrentMesh->SetupAttachment(BaseMesh);
 }
 
