@@ -4,6 +4,7 @@
 		"Module.BattleBlaster.gen.cpp.obj": [
 			"BaseClass.gen.cpp.obj",
 			"BattleBlaster.init.gen.cpp.obj",
+			"BattleBlasterGameMode.gen.cpp.obj",
 			"Tank.gen.cpp.obj"
 		]
 	}
