@@ -3,6 +3,10 @@
 
 #include "Tank.h"
 
+#include "Camera/CameraComponent.h"
+#include "InputMappingContext.h"
+
+
 ATank::ATank()
 {
 	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
@@ -18,17 +22,15 @@ void ATank::BeginPlay()
 {
 	Super::BeginPlay();
 
-	APlayerController* PlayerController = Cast<APlayerController>(Controller);
-	if (PlayerController)
+
+	if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
 	{
-		ULocalPlayer* LocalPlayer= PlayerController->GetLocalPlayer();
-		if (LocalPlayer)
+		if (ULocalPlayer* LocalPlayer= PlayerController->GetLocalPlayer())
 		{
 			UEnhancedInputLocalPlayerSubsystem* Subsystem;
-			Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(LocalPlayer);
-			if (Subsystem)
+			if (Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(LocalPlayer))
 			{
-				Subsystem->AddMappingContext(DefaultMappingContext,0)
+				Subsystem->AddMappingContext(DefaultMappingContext, 0);
 			}
 
 		}

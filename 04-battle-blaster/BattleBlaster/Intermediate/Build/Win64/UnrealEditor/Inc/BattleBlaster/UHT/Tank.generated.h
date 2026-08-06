@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class ATank ********************************************************************
 BATTLEBLASTER_API UClass* Z_Construct_UClass_ATank_NoRegister();
 
-#define FID_BattleBlaster_Source_BattleBlaster_Tank_h_21_INCLASS_NO_PURE_DECLS \
+#define FID_BattleBlaster_Source_BattleBlaster_Tank_h_22_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATank(); \
 	friend struct Z_Construct_UClass_ATank_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(ATank)
 
 
-#define FID_BattleBlaster_Source_BattleBlaster_Tank_h_21_ENHANCED_CONSTRUCTORS \
+#define FID_BattleBlaster_Source_BattleBlaster_Tank_h_22_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ATank(ATank&&) = delete; \
 	ATank(const ATank&) = delete; \
@@ -40,12 +40,12 @@ public: \
 	NO_API virtual ~ATank();
 
 
-#define FID_BattleBlaster_Source_BattleBlaster_Tank_h_18_PROLOG
-#define FID_BattleBlaster_Source_BattleBlaster_Tank_h_21_GENERATED_BODY \
+#define FID_BattleBlaster_Source_BattleBlaster_Tank_h_19_PROLOG
+#define FID_BattleBlaster_Source_BattleBlaster_Tank_h_22_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_BattleBlaster_Source_BattleBlaster_Tank_h_21_INCLASS_NO_PURE_DECLS \
-	FID_BattleBlaster_Source_BattleBlaster_Tank_h_21_ENHANCED_CONSTRUCTORS \
+	FID_BattleBlaster_Source_BattleBlaster_Tank_h_22_INCLASS_NO_PURE_DECLS \
+	FID_BattleBlaster_Source_BattleBlaster_Tank_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
