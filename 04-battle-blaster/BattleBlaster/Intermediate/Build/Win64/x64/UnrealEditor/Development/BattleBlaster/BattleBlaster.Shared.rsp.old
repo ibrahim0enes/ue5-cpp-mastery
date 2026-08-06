@@ -284,9 +284,6 @@
 /I "Editor/AnimationEditMode/Public"
 /I "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/04-battle-blaster/BattleBlaster/Intermediate/Build/Win64/UnrealEditor/Inc/BattleBlaster/UHT"
 /I "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/04-battle-blaster/BattleBlaster/Source"
-/I "../Plugins/EnhancedInput/Intermediate/Build/Win64/UnrealEditor/Inc/EnhancedInput/UHT"
-/I "../Plugins/EnhancedInput/Source"
-/I "../Plugins/EnhancedInput/Source/EnhancedInput/Public"
 /I "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/04-battle-blaster/BattleBlaster/Intermediate/Build/Win64/x64/BattleBlasterEditor/Development/UnrealEd"
 /external:W0
 /external:I "ThirdParty/GuidelinesSupportLibrary/GSL-1144/include"
