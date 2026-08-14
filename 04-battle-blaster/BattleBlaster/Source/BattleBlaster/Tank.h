@@ -18,14 +18,15 @@
 class UCameraComponent;
 
 /**
- * 
+ *
  */
 UCLASS()
 class BATTLEBLASTER_API ATank : public ABaseClass
 {
 	GENERATED_BODY()
-	
+
 protected:
+
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
@@ -39,6 +40,7 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+
 	UPROPERTY(EditAnywhere, Category = "Input")
 	class UInputMappingContext* DefaultMappingContext;
 
@@ -48,11 +50,13 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Input")
 	UInputAction* TurnAction;
 
+
 	UPROPERTY(VisibleAnywhere)
 	USpringArmComponent* SpringArmComp;
 
 	UPROPERTY(VisibleAnywhere)
 	UCameraComponent* CameraComp;
+
 
 	UPROPERTY(EditAnywhere)
 	float Speed = 300.0f;
@@ -60,11 +64,14 @@ public:
 	UPROPERTY(EditAnywhere)
 	float TurnRate = 50.0f;
 
+
 	UPROPERTY(VisibleAnywhere)
 	float CurrentMoveInput = 0.0f;
- 
+
 
 	void MoveInput(const FInputActionValue& Value);
-	void TurnInput(const FInputActionValue& Value);
 
+	void MoveCompleted(const FInputActionValue& Value);
+
+	void TurnInput(const FInputActionValue& Value);
 };

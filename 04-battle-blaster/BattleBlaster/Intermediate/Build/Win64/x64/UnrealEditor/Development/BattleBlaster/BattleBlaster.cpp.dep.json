@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\04-battle-blaster\\battleblaster\\source\\battleblaster\\battleblaster.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\04-battle-blaster\\battleblaster\\intermediate\\build\\win64\\x64\\battleblastereditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.inclorderunreal5_3.h.pch",
+        "Includes": [
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\04-battle-blaster\\battleblaster\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\battleblaster\\definitions.battleblaster.h",
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\04-battle-blaster\\battleblaster\\source\\battleblaster\\battleblaster.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

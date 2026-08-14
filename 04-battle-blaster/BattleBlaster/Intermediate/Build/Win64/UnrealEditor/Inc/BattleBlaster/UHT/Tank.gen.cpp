@@ -60,7 +60,7 @@ struct Z_Construct_UClass_ATank_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n *\n */" },
 #endif
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "Tank.h" },
@@ -171,10 +171,10 @@ ATank::~ATank() {}
 struct Z_CompiledInDeferFile_FID_BattleBlaster_Source_BattleBlaster_Tank_h__Script_BattleBlaster_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ATank, ATank::StaticClass, TEXT("ATank"), &Z_Registration_Info_UClass_ATank, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATank), 1515683935U) },
+		{ Z_Construct_UClass_ATank, ATank::StaticClass, TEXT("ATank"), &Z_Registration_Info_UClass_ATank, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATank), 962900538U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_BattleBlaster_Source_BattleBlaster_Tank_h__Script_BattleBlaster_2143936562(TEXT("/Script/BattleBlaster"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_BattleBlaster_Source_BattleBlaster_Tank_h__Script_BattleBlaster_4042156823(TEXT("/Script/BattleBlaster"),
 	Z_CompiledInDeferFile_FID_BattleBlaster_Source_BattleBlaster_Tank_h__Script_BattleBlaster_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_BattleBlaster_Source_BattleBlaster_Tank_h__Script_BattleBlaster_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -31,12 +31,9 @@ void ABattleBlasterGameMode::BeginPlay()
 		}
 	}
 
-	AActor* Tower = Tower[0];
-
-	int32	i = 0;
-	while (i <= TowerCount)
+	for (int32 i = 0; i < TowerCount; i++)
 	{
-		AActor* TowerActor = Towers[i]
+		AActor* TowerActor = Towers[i];
 		if (TowerActor)
 		{
 			ATower* Tower = Cast<ATower>(TowerActor);
@@ -45,6 +42,5 @@ void ABattleBlasterGameMode::BeginPlay()
 				Tower->Tank = Tank;
 			}
 		}
-		i++;
 	}
 }

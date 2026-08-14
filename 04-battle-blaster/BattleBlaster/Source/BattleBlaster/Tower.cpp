@@ -17,7 +17,7 @@ void ATower::Tick(float DeltaTime)
 	if (Tank)
 	{
 		float DistanceToTank = FVector::Dist(GetActorLocation(), Tank->GetActorLocation());
-		if (DistanceToTank <= FireRange)
+		if (DistanceToTank <= FireRange * 100.0f)
 		{
 			RotateTurret(Tank->GetActorLocation());
 		}
