@@ -29,6 +29,11 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* TurrentMesh;
 
+	UPROPERTY(VisibleAnywhere)
+	USceneComponent* ProjectileSpawnPoint;
+
 	void RotateTurret(FVector LookAtTarget);
+
+	void Fire();
 
 };

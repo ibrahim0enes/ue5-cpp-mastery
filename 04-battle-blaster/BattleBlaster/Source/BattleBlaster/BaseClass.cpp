@@ -17,6 +17,10 @@ ABaseClass::ABaseClass()
 
 	TurrentMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("TurrentMesh"));
 	TurrentMesh->SetupAttachment(BaseMesh);
+
+	ProjectileSpawnPoint = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ProjectileSpawnPoint"));
+	ProjectileSpawnPoint->SetupAttachment(TurrentMesh);
+
 }
 
 void ABaseClass::RotateTurret(FVector LookAtTarget)
@@ -35,5 +39,11 @@ void ABaseClass::RotateTurret(FVector LookAtTarget)
 	);
 
 	TurrentMesh->SetWorldRotation(InterpolatedRotation);
+}
+
+void ABaseClass::Fire()
+{
+	FVector SpawnLocation = ProjectileSpawnPoint->GetComponentLocation();
+	FRotator SpawnRotation = ProjectileSpawnPoint->GetComponentRotation();
 }
 
