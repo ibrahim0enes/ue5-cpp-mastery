@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\04-battle-blaster\\battleblaster\\source\\battleblaster\\baseclass.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\04-battle-blaster\\battleblaster\\intermediate\\build\\win64\\x64\\battleblastereditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.inclorderunreal5_3.h.pch",
+        "Includes": [
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\04-battle-blaster\\battleblaster\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\battleblaster\\definitions.battleblaster.h",
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\04-battle-blaster\\battleblaster\\source\\battleblaster\\baseclass.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\capsulecomponent.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\shapecomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\capsulecomponent.generated.h",
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\04-battle-blaster\\battleblaster\\intermediate\\build\\win64\\unrealeditor\\inc\\battleblaster\\uht\\baseclass.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

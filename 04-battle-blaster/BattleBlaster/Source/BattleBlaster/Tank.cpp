@@ -5,6 +5,8 @@
 
 #include "Camera/CameraComponent.h"
 #include "InputMappingContext.h"
+#include "Kismet/GameplayStatics.h"
+
 
 
 ATank::ATank()
@@ -27,8 +29,7 @@ void ATank::BeginPlay()
 	{
 		if (ULocalPlayer* LocalPlayer= PlayerController->GetLocalPlayer())
 		{
-			UEnhancedInputLocalPlayerSubsystem* Subsystem;
-			if (Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(LocalPlayer))
+			if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(LocalPlayer))
 			{
 				Subsystem->AddMappingContext(DefaultMappingContext, 0);
 			}
@@ -49,4 +50,18 @@ void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+	if (UEnhancedInputComponent* EIC = Cast<UEnhancedInputComponent>(PlayerInputComponent))
+	{
+		EIC->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ATank::MoveInput);
+	}
+
+}
+
+void ATank::MoveInput(const FInputActionValue& Value)
+{
+	float InputValue = Value.Get<float>();
+
+	FVector DeltaLocation = FVector(0,0,0);
+	DeltaLocation.X = Speed * InputValue * UGameplayStatics::GetWorldDeltaSeconds(GetWorld());
+	AddActorLocalOffset(DeltaLocation, true);
 }
