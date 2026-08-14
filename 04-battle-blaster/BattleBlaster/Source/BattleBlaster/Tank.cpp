@@ -49,7 +49,8 @@ void ATank::Tick(float DeltaTime)
 		FHitResult HitResult;
 		PlayerController->GetHitResultUnderCursor(ECC_Visibility, false, HitResult);
 
-		DrawDebugSphere(GetWorld(), HitResult.ImpactPoint, 25.0f, 12, FColor::Red);
+		RotateTurret(HitResult.ImpactPoint);
+		 // DrawDebugSphere(GetWorld(), HitResult.ImpactPoint, 25.0f, 12, FColor::Red);
 	}
 
 }
@@ -70,18 +71,33 @@ void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 void ATank::MoveInput(const FInputActionValue& Value)
 {
-	float InputValue = Value.Get<float>();
+	CurrentMoveInput = Value.Get<float>();
 
-	FVector DeltaLocation = FVector(0,0,0);
-	DeltaLocation.X = Speed * InputValue * UGameplayStatics::GetWorldDeltaSeconds(GetWorld());
+	FVector DeltaLocation = FVector(0, 0, 0);
+
+	DeltaLocation.X =
+		Speed *
+		CurrentMoveInput *
+		UGameplayStatics::GetWorldDeltaSeconds(GetWorld());
+
 	AddActorLocalOffset(DeltaLocation, true);
 }
 
 void ATank::TurnInput(const FInputActionValue& Value)
 {
 	float InputValue = Value.Get<float>();
+
+	if (CurrentMoveInput < 0.0f)
+	{
+		InputValue *= -1.0f;
+	}
+
 	FRotator DeltaRotation = FRotator(0, 0, 0);
-	DeltaRotation.Yaw = TurnRate * InputValue * GetWorld()->GetDeltaSeconds();
- 
+
+	DeltaRotation.Yaw =
+		TurnRate *
+		InputValue *
+		GetWorld()->GetDeltaSeconds();
+
 	AddActorLocalRotation(DeltaRotation, true);
 }
