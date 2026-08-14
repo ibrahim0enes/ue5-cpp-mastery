@@ -57,5 +57,11 @@
     <ClInclude Include="..\..\Source\BattleBlaster\Tank.h">
       <Filter>Source\BattleBlaster</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\BattleBlaster\Tower.cpp">
+      <Filter>Source\BattleBlaster</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BattleBlaster\Tower.h">
+      <Filter>Source\BattleBlaster</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

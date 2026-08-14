@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class ABattleBlasterGameMode ***************************************************
 BATTLEBLASTER_API UClass* Z_Construct_UClass_ABattleBlasterGameMode_NoRegister();
 
-#define FID_BattleBlaster_Source_BattleBlaster_BattleBlasterGameMode_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_BattleBlaster_Source_BattleBlaster_BattleBlasterGameMode_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABattleBlasterGameMode(); \
 	friend struct Z_Construct_UClass_ABattleBlasterGameMode_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(ABattleBlasterGameMode)
 
 
-#define FID_BattleBlaster_Source_BattleBlaster_BattleBlasterGameMode_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_BattleBlaster_Source_BattleBlaster_BattleBlasterGameMode_h_18_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ABattleBlasterGameMode(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -42,12 +42,12 @@ public: \
 	NO_API virtual ~ABattleBlasterGameMode();
 
 
-#define FID_BattleBlaster_Source_BattleBlaster_BattleBlasterGameMode_h_12_PROLOG
-#define FID_BattleBlaster_Source_BattleBlaster_BattleBlasterGameMode_h_15_GENERATED_BODY \
+#define FID_BattleBlaster_Source_BattleBlaster_BattleBlasterGameMode_h_15_PROLOG
+#define FID_BattleBlaster_Source_BattleBlaster_BattleBlasterGameMode_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_BattleBlaster_Source_BattleBlaster_BattleBlasterGameMode_h_15_INCLASS_NO_PURE_DECLS \
-	FID_BattleBlaster_Source_BattleBlaster_BattleBlasterGameMode_h_15_ENHANCED_CONSTRUCTORS \
+	FID_BattleBlaster_Source_BattleBlaster_BattleBlasterGameMode_h_18_INCLASS_NO_PURE_DECLS \
+	FID_BattleBlaster_Source_BattleBlaster_BattleBlasterGameMode_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
