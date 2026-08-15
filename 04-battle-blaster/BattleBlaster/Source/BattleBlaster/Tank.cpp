@@ -13,7 +13,7 @@ ATank::ATank()
 	PrimaryActorTick.bCanEverTick = true;
 
 	SpringArmComp = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArmComp"));
-	SpringArmComp->SetupAttachment(CapsuleComp);
+	SpringArmComp->SetupAttachment(TurrentMesh);
 
 	CameraComp = CreateDefaultSubobject<UCameraComponent>(TEXT("CameraComp"));
 	CameraComp->SetupAttachment(SpringArmComp);
@@ -87,7 +87,7 @@ void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 			&ATank::MoveInput
 		);
 
-		// W / S býrakýldýðýnda
+		// W / S bï¿½rakï¿½ldï¿½ï¿½ï¿½nda
 		EIC->BindAction(
 			MoveAction,
 			ETriggerEvent::Completed,
@@ -133,8 +133,8 @@ void ATank::MoveInput(const FInputActionValue& Value)
 
 void ATank::MoveCompleted(const FInputActionValue& Value)
 {
-	// W veya S býrakýldýðýnda
-	// hareket input'unu sýfýrla
+	// W veya S bï¿½rakï¿½ldï¿½ï¿½ï¿½nda
+	// hareket input'unu sï¿½fï¿½rla
 
 	CurrentMoveInput = 0.0f;
 }
@@ -146,7 +146,7 @@ void ATank::TurnInput(const FInputActionValue& Value)
 
 
 	// Tank geriye gidiyorsa
-	// A / D yönünü ters çevir
+	// A / D yï¿½nï¿½nï¿½ ters ï¿½evir
 
 	if (CurrentMoveInput < 0.0f)
 	{
