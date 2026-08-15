@@ -12,7 +12,8 @@
 				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/04-battle-blaster/BattleBlaster/Content/Input/IA_Move.uasset",
 				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/04-battle-blaster/BattleBlaster/Content/Input/IA_Turn.uasset",
 				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/04-battle-blaster/BattleBlaster/Content/Blueprints/BP_Tower.uasset",
-				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/04-battle-blaster/BattleBlaster/Content/Input/IA_Fire.uasset"
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/04-battle-blaster/BattleBlaster/Content/Input/IA_Fire.uasset",
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/04-battle-blaster/BattleBlaster/Content/Blueprints/BP_Projectile.uasset"
 			]
 		}
 	]

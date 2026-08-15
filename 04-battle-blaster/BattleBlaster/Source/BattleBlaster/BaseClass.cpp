@@ -18,7 +18,7 @@ ABaseClass::ABaseClass()
 	TurrentMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("TurrentMesh"));
 	TurrentMesh->SetupAttachment(BaseMesh);
 
-	ProjectileSpawnPoint = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ProjectileSpawnPoint"));
+	ProjectileSpawnPoint = CreateDefaultSubobject<USceneComponent>(TEXT("ProjectileSpawnPoint"));
 	ProjectileSpawnPoint->SetupAttachment(TurrentMesh);
 
 }
@@ -45,5 +45,12 @@ void ABaseClass::Fire()
 {
 	FVector SpawnLocation = ProjectileSpawnPoint->GetComponentLocation();
 	FRotator SpawnRotation = ProjectileSpawnPoint->GetComponentRotation();
+
+	 AProjectile* Projectile =  GetWorld()->SpawnActor<AProjectile>(ProjectileClass,
+		 SpawnLocation, SpawnRotation);
+	 if (Projectile)
+	 {
+		 Projectile->SetOwner(this);
+	 }
 }
 

@@ -6,6 +6,7 @@
 #include "GameFramework/Pawn.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/StaticMeshComponent.h"
+#include "Projectile.h"
 
 #include "BaseClass.generated.h"
 
@@ -31,6 +32,10 @@ public:
 
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* ProjectileSpawnPoint;
+
+	UPROPERTY(EditAnyWhere)
+	TSubclassOf<AProjectile> ProjectileClass;
+
 
 	void RotateTurret(FVector LookAtTarget);
 

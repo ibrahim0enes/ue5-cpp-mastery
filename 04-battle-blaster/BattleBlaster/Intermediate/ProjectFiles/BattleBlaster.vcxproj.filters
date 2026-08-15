@@ -51,6 +51,12 @@
     <ClInclude Include="..\..\Source\BattleBlaster\BattleBlasterGameMode.h">
       <Filter>Source\BattleBlaster</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\BattleBlaster\Projectile.cpp">
+      <Filter>Source\BattleBlaster</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BattleBlaster\Projectile.h">
+      <Filter>Source\BattleBlaster</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\BattleBlaster\Tank.cpp">
       <Filter>Source\BattleBlaster</Filter>
     </ClCompile>

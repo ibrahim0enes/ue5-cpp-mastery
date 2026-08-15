@@ -28,6 +28,13 @@ public:
 	UPROPERTY(EditAnywhere)
 	float FireRange = 300.0f;
 
+	UPROPERTY(EditAnywhere)
+	float FireRate = 2.0f;
+
 	UPROPERTY(VisibleAnywhere)
 	ATank* Tank = nullptr;
+
+	void CheckFireCondition();
+
+	bool InFireRange();
 };
