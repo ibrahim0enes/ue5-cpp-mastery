@@ -16,7 +16,15 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
+class AActor;
+class UPrimitiveComponent;
+struct FHitResult;
+
 // ********** Begin Class AProjectile **************************************************************
+#define FID_BattleBlaster_Source_BattleBlaster_Projectile_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnHit);
+
+
 BATTLEBLASTER_API UClass* Z_Construct_UClass_AProjectile_NoRegister();
 
 #define FID_BattleBlaster_Source_BattleBlaster_Projectile_h_16_INCLASS_NO_PURE_DECLS \
@@ -44,6 +52,7 @@ public: \
 #define FID_BattleBlaster_Source_BattleBlaster_Projectile_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_BattleBlaster_Source_BattleBlaster_Projectile_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_BattleBlaster_Source_BattleBlaster_Projectile_h_16_INCLASS_NO_PURE_DECLS \
 	FID_BattleBlaster_Source_BattleBlaster_Projectile_h_16_ENHANCED_CONSTRUCTORS \
 private: \
