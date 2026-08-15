@@ -5,6 +5,7 @@
 			"BaseClass.gen.cpp.obj",
 			"BattleBlaster.init.gen.cpp.obj",
 			"BattleBlasterGameMode.gen.cpp.obj",
+			"HealthComponent.gen.cpp.obj",
 			"Projectile.gen.cpp.obj",
 			"Tank.gen.cpp.obj",
 			"Tower.gen.cpp.obj"

@@ -6,9 +6,10 @@
 #include "GameFramework/Pawn.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/StaticMeshComponent.h"
-#include "Projectile.h"
 
 #include "BaseClass.generated.h"
+
+class AProjectile;
 
 UCLASS()
 class BATTLEBLASTER_API ABaseClass : public APawn
@@ -33,7 +34,7 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* ProjectileSpawnPoint;
 
-	UPROPERTY(EditAnyWhere)
+	UPROPERTY(EditAnywhere)
 	TSubclassOf<AProjectile> ProjectileClass;
 
 

@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class ABaseClass ***************************************************************
 BATTLEBLASTER_API UClass* Z_Construct_UClass_ABaseClass_NoRegister();
 
-#define FID_BattleBlaster_Source_BattleBlaster_BaseClass_h_16_INCLASS_NO_PURE_DECLS \
+#define FID_BattleBlaster_Source_BattleBlaster_BaseClass_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABaseClass(); \
 	friend struct Z_Construct_UClass_ABaseClass_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(ABaseClass)
 
 
-#define FID_BattleBlaster_Source_BattleBlaster_BaseClass_h_16_ENHANCED_CONSTRUCTORS \
+#define FID_BattleBlaster_Source_BattleBlaster_BaseClass_h_17_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ABaseClass(ABaseClass&&) = delete; \
 	ABaseClass(const ABaseClass&) = delete; \
@@ -40,12 +40,12 @@ public: \
 	NO_API virtual ~ABaseClass();
 
 
-#define FID_BattleBlaster_Source_BattleBlaster_BaseClass_h_13_PROLOG
-#define FID_BattleBlaster_Source_BattleBlaster_BaseClass_h_16_GENERATED_BODY \
+#define FID_BattleBlaster_Source_BattleBlaster_BaseClass_h_14_PROLOG
+#define FID_BattleBlaster_Source_BattleBlaster_BaseClass_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_BattleBlaster_Source_BattleBlaster_BaseClass_h_16_INCLASS_NO_PURE_DECLS \
-	FID_BattleBlaster_Source_BattleBlaster_BaseClass_h_16_ENHANCED_CONSTRUCTORS \
+	FID_BattleBlaster_Source_BattleBlaster_BaseClass_h_17_INCLASS_NO_PURE_DECLS \
+	FID_BattleBlaster_Source_BattleBlaster_BaseClass_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

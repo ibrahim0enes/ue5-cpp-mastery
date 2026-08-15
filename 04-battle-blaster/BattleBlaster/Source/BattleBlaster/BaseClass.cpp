@@ -2,6 +2,7 @@
 
 
 #include "BaseClass.h"
+#include "Projectile.h"
 
 // Sets default values
 ABaseClass::ABaseClass()
