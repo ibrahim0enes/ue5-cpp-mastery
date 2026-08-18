@@ -77,4 +77,7 @@ public:
 	void MoveCompleted(const FInputActionValue& Value);
 
 	void TurnInput(const FInputActionValue& Value);
+
+	void HandleDestruction();
+
 };
