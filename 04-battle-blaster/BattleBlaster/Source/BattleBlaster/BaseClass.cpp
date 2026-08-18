@@ -55,3 +55,9 @@ void ABaseClass::Fire()
 	 }
 }
 
+void ABaseClass::HandleDestruction()
+{
+
+
+}
+

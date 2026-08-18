@@ -28,4 +28,6 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	int32 TowerCount = 0;
 
+	void ActorDied(AActor* DeadActor);
+
 };

@@ -13,7 +13,7 @@ ATank::ATank()
 	PrimaryActorTick.bCanEverTick = true;
 
 	SpringArmComp = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArmComp"));
-	SpringArmComp->SetupAttachment(TurrentMesh);
+	SpringArmComp->SetupAttachment(CapsuleComp);
 
 	CameraComp = CreateDefaultSubobject<UCameraComponent>(TEXT("CameraComp"));
 	CameraComp->SetupAttachment(SpringArmComp);
@@ -27,6 +27,9 @@ void ATank::BeginPlay()
 
 	if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
 	{
+		PlayerController->bShowMouseCursor = true;
+		PlayerController->SetInputMode(FInputModeGameAndUI());
+
 		if (ULocalPlayer* LocalPlayer = PlayerController->GetLocalPlayer())
 		{
 			if (UEnhancedInputLocalPlayerSubsystem* Subsystem =
@@ -58,14 +61,6 @@ void ATank::Tick(float DeltaTime)
 		);
 
 		RotateTurret(HitResult.ImpactPoint);
-
-		// DrawDebugSphere(
-		// 	GetWorld(),
-		// 	HitResult.ImpactPoint,
-		// 	25.0f,
-		// 	12,
-		// 	FColor::Red
-		// );
 	}
 }
 
@@ -143,10 +138,6 @@ void ATank::MoveCompleted(const FInputActionValue& Value)
 void ATank::TurnInput(const FInputActionValue& Value)
 {
 	float InputValue = Value.Get<float>();
-
-
-	// Tank geriye gidiyorsa
-	// A / D y�n�n� ters �evir
 
 	if (CurrentMoveInput < 0.0f)
 	{
