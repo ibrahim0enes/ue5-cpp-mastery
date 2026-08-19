@@ -17,12 +17,14 @@ void UBattleBlasterGameInstance::ChangeLevel(int32 Index)
 
 void UBattleBlasterGameInstance::LoadNextLevel()
 {
-	if (CurrentLevelIndex <= LastLevelIndex)
+	if (CurrentLevelIndex < LastLevelIndex)
 	{
 		ChangeLevel(CurrentLevelIndex + 1);
 	}
 	else
+	{
 		RestartGame();
+	}
 }
 
 void UBattleBlasterGameInstance::RestartCurrentLevel()
