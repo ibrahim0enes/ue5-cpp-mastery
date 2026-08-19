@@ -58,7 +58,9 @@
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\enhancedinputcomponent.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\enhancedinputcomponent.generated.h",
             "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\04-battle-blaster\\battleblaster\\intermediate\\build\\win64\\unrealeditor\\inc\\battleblaster\\uht\\tank.generated.h",
-            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\04-battle-blaster\\battleblaster\\intermediate\\build\\win64\\unrealeditor\\inc\\battleblaster\\uht\\tower.generated.h"
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\04-battle-blaster\\battleblaster\\intermediate\\build\\win64\\unrealeditor\\inc\\battleblaster\\uht\\tower.generated.h",
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\04-battle-blaster\\battleblaster\\source\\battleblaster\\battleblastergameinstance.h",
+            "e:\\unrealengine\\repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\04-battle-blaster\\battleblaster\\intermediate\\build\\win64\\unrealeditor\\inc\\battleblaster\\uht\\battleblastergameinstance.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

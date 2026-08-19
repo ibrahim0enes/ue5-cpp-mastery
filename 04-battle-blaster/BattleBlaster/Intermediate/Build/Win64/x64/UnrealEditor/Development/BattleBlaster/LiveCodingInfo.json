@@ -4,6 +4,7 @@
 		"Module.BattleBlaster.gen.cpp.obj": [
 			"BaseClass.gen.cpp.obj",
 			"BattleBlaster.init.gen.cpp.obj",
+			"BattleBlasterGameInstance.gen.cpp.obj",
 			"BattleBlasterGameMode.gen.cpp.obj",
 			"HealthComponent.gen.cpp.obj",
 			"Projectile.gen.cpp.obj",

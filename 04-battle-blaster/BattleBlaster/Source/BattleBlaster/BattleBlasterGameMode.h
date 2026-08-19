@@ -22,6 +22,12 @@ protected:
 	virtual void BeginPlay() override;
 
 public:
+	UPROPERTY(EditAnywhere)
+	float GameOverDelay = 3.0f;
+
+	bool IsGameOver = false;
+	bool IsVictory = false;
+
 	UPROPERTY(VisibleAnywhere)
 	ATank* Tank = nullptr;
 
@@ -29,5 +35,7 @@ public:
 	int32 TowerCount = 0;
 
 	void ActorDied(AActor* DeadActor);
+
+	void OnGameOverTimerTiemout();
 
 };
