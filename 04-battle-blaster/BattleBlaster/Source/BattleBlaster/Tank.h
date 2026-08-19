@@ -71,6 +71,11 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	float CurrentMoveInput = 0.0f;
 
+	APlayerController* PlayerController;
+
+	UPROPERTY(VisibleAnywhere)
+	bool IsAlive = true;
+
 
 	void MoveInput(const FInputActionValue& Value);
 
@@ -79,5 +84,10 @@ public:
 	void TurnInput(const FInputActionValue& Value);
 
 	void HandleDestruction();
+
+	void SetPlayerEnabled(bool Enabled);
+
+
+
 
 };

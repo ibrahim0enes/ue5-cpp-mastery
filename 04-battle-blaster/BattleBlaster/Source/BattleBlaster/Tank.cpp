@@ -23,13 +23,11 @@ ATank::ATank()
 void ATank::BeginPlay()
 {
 	Super::BeginPlay();
+	
+	PlayerController = Cast<APlayerController>(Controller);
 
-
-	if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
+	if (PlayerController)
 	{
-		PlayerController->bShowMouseCursor = true;
-		PlayerController->SetInputMode(FInputModeGameAndUI());
-
 		if (ULocalPlayer* LocalPlayer = PlayerController->GetLocalPlayer())
 		{
 			if (UEnhancedInputLocalPlayerSubsystem* Subsystem =
@@ -46,9 +44,6 @@ void ATank::BeginPlay()
 void ATank::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-
-	APlayerController* PlayerController = Cast<APlayerController>(GetController());
 
 	if (PlayerController)
 	{
@@ -161,5 +156,26 @@ void ATank::HandleDestruction()
 {
 	Super::HandleDestruction();
 
+	SetActorHiddenInGame(true);
+	SetActorTickEnabled(false);
+	SetPlayerEnabled(false);
+	IsAlive = false;
+}
 
+void ATank::SetPlayerEnabled(bool Enabled)
+{
+	if (PlayerController)
+	{
+
+		if (Enabled)
+		{
+			EnableInput(PlayerController);
+		}
+		else
+		{
+			DisableInput(PlayerController);
+		}
+
+		PlayerController->bShowMouseCursor = Enabled;
+	}
 }
