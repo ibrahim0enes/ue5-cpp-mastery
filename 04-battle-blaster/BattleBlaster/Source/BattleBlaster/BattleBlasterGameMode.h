@@ -25,6 +25,13 @@ public:
 	UPROPERTY(EditAnywhere)
 	float GameOverDelay = 3.0f;
 
+	UPROPERTY(EditAnywhere)
+	int32 CountdownDelay = 3;
+
+	int32  CountdownSeconds;
+
+	FTimerHandle CountdownTimerHandle;
+
 	bool IsGameOver = false;
 	bool IsVictory = false;
 
@@ -37,5 +44,6 @@ public:
 	void ActorDied(AActor* DeadActor);
 
 	void OnGameOverTimerTiemout();
+	void OnCountdownTimerTimout();
 
 };

@@ -37,6 +37,8 @@ void ATank::BeginPlay()
 			}
 		}
 	}
+
+	SetPlayerEnabled(false);
 }
 
 
