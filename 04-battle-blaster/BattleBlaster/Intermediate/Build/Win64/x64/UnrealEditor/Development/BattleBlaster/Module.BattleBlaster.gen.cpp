@@ -5,5 +5,6 @@
 #include "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/04-battle-blaster/BattleBlaster/Intermediate/Build/Win64/UnrealEditor/Inc/BattleBlaster/UHT/BattleBlasterGameMode.gen.cpp"
 #include "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/04-battle-blaster/BattleBlaster/Intermediate/Build/Win64/UnrealEditor/Inc/BattleBlaster/UHT/HealthComponent.gen.cpp"
 #include "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/04-battle-blaster/BattleBlaster/Intermediate/Build/Win64/UnrealEditor/Inc/BattleBlaster/UHT/Projectile.gen.cpp"
+#include "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/04-battle-blaster/BattleBlaster/Intermediate/Build/Win64/UnrealEditor/Inc/BattleBlaster/UHT/ScreenMessage.gen.cpp"
 #include "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/04-battle-blaster/BattleBlaster/Intermediate/Build/Win64/UnrealEditor/Inc/BattleBlaster/UHT/Tank.gen.cpp"
 #include "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/04-battle-blaster/BattleBlaster/Intermediate/Build/Win64/UnrealEditor/Inc/BattleBlaster/UHT/Tower.gen.cpp"
