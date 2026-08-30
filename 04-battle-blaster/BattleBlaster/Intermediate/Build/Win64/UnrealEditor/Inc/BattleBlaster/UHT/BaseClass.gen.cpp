@@ -19,6 +19,7 @@ COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_APawn();
 ENGINE_API UClass* Z_Construct_UClass_UCapsuleComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 NIAGARA_API UClass* Z_Construct_UClass_UNiagaraSystem_NoRegister();
 UPackage* Z_Construct_UPackage__Script_BattleBlaster();
@@ -93,6 +94,10 @@ struct Z_Construct_UClass_ABaseClass_Statics
 		{ "Category", "BaseClass" },
 		{ "ModuleRelativePath", "BaseClass.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DeathSound_MetaData[] = {
+		{ "Category", "BaseClass" },
+		{ "ModuleRelativePath", "BaseClass.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CapsuleComp;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BaseMesh;
@@ -100,6 +105,7 @@ struct Z_Construct_UClass_ABaseClass_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ProjectileSpawnPoint;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_ProjectileClass;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DeathParticles;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_DeathSound;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -113,6 +119,7 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseClass_Sta
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseClass_Statics::NewProp_ProjectileSpawnPoint = { "ProjectileSpawnPoint", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseClass, ProjectileSpawnPoint), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ProjectileSpawnPoint_MetaData), NewProp_ProjectileSpawnPoint_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABaseClass_Statics::NewProp_ProjectileClass = { "ProjectileClass", nullptr, (EPropertyFlags)0x0014000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseClass, ProjectileClass), Z_Construct_UClass_UClass, Z_Construct_UClass_AProjectile_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ProjectileClass_MetaData), NewProp_ProjectileClass_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseClass_Statics::NewProp_DeathParticles = { "DeathParticles", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseClass, DeathParticles), Z_Construct_UClass_UNiagaraSystem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DeathParticles_MetaData), NewProp_DeathParticles_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseClass_Statics::NewProp_DeathSound = { "DeathSound", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseClass, DeathSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DeathSound_MetaData), NewProp_DeathSound_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABaseClass_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseClass_Statics::NewProp_CapsuleComp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseClass_Statics::NewProp_BaseMesh,
@@ -120,6 +127,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABaseClas
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseClass_Statics::NewProp_ProjectileSpawnPoint,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseClass_Statics::NewProp_ProjectileClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseClass_Statics::NewProp_DeathParticles,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseClass_Statics::NewProp_DeathSound,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseClass_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ABaseClass_Statics::DependentSingletons[])() = {
@@ -158,10 +166,10 @@ ABaseClass::~ABaseClass() {}
 struct Z_CompiledInDeferFile_FID_BattleBlaster_Source_BattleBlaster_BaseClass_h__Script_BattleBlaster_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABaseClass, ABaseClass::StaticClass, TEXT("ABaseClass"), &Z_Registration_Info_UClass_ABaseClass, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseClass), 3624144284U) },
+		{ Z_Construct_UClass_ABaseClass, ABaseClass::StaticClass, TEXT("ABaseClass"), &Z_Registration_Info_UClass_ABaseClass, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseClass), 8761990U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_BattleBlaster_Source_BattleBlaster_BaseClass_h__Script_BattleBlaster_3425964168(TEXT("/Script/BattleBlaster"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_BattleBlaster_Source_BattleBlaster_BaseClass_h__Script_BattleBlaster_711375295(TEXT("/Script/BattleBlaster"),
 	Z_CompiledInDeferFile_FID_BattleBlaster_Source_BattleBlaster_BaseClass_h__Script_BattleBlaster_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_BattleBlaster_Source_BattleBlaster_BaseClass_h__Script_BattleBlaster_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

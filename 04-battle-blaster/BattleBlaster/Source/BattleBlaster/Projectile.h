@@ -40,7 +40,15 @@ public:
 	UNiagaraComponent* TrailParticles;
 
 	UPROPERTY(EditAnywhere)
-	UNiagaraSystem* HitParticles;
+	UNiagaraSystem* HitParticles
+
+	;
+	UPROPERTY(EditAnywhere)
+	USoundBase* HitSound;
+
+	UPROPERTY(EditAnywhere)
+	USoundBase* LaunchSound;
+
 
 	UPROPERTY(EditAnywhere)
 	float Damage = 25.0f;

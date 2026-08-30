@@ -2,6 +2,8 @@
 
 
 #include "BaseClass.h"
+#include "Kismet/GameplayStatics.h"
+
 #include "Projectile.h"
 
 // Sets default values
@@ -60,6 +62,11 @@ void ABaseClass::HandleDestruction()
 	if (DeathParticles)
 	{
 		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), DeathParticles, GetActorLocation(), GetActorRotation());
+		
+		if (DeathSound)
+		{
+			UGameplayStatics::PlaySoundAtLocation(GetWorld(), DeathSound, GetActorLocation());
+		}
 	}
 }
 
