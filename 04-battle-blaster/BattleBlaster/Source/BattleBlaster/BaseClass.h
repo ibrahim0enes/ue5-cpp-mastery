@@ -7,6 +7,9 @@
 #include "Components/CapsuleComponent.h"
 #include "Components/StaticMeshComponent.h"
 
+#include "NiagaraComponent.h"
+#include "NiagaraFunctionLibrary.h"
+
 #include "BaseClass.generated.h"
 
 class AProjectile;
@@ -36,6 +39,9 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<AProjectile> ProjectileClass;
+
+	UPROPERTY(EditAnywhere)
+	UNiagaraSystem* DeathParticles;
 
 
 	void RotateTurret(FVector LookAtTarget);

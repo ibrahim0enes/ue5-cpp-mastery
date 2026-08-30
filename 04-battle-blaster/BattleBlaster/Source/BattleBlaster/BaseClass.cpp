@@ -47,8 +47,7 @@ void ABaseClass::Fire()
 	FVector SpawnLocation = ProjectileSpawnPoint->GetComponentLocation();
 	FRotator SpawnRotation = ProjectileSpawnPoint->GetComponentRotation();
 
-	 AProjectile* Projectile =  GetWorld()->SpawnActor<AProjectile>(ProjectileClass,
-		 SpawnLocation, SpawnRotation);
+	 AProjectile* Projectile =  GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation, SpawnRotation);
 	 if (Projectile)
 	 {
 		 Projectile->SetOwner(this);
@@ -58,6 +57,9 @@ void ABaseClass::Fire()
 void ABaseClass::HandleDestruction()
 {
 
-
+	if (DeathParticles)
+	{
+		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), DeathParticles, GetActorLocation(), GetActorRotation());
+	}
 }
 

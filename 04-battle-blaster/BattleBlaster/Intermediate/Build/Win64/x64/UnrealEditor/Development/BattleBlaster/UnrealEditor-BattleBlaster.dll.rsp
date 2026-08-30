@@ -36,6 +36,7 @@
 /FUNCTIONPADMIN:6
 /NOIMPLIB
 /NOEXP
+/NATVIS:"../Plugins/FX/Niagara/Intermediate/Build/Win64/x64/UnrealEditor/Development/Niagara/Niagara.natvis"
 "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/04-battle-blaster/BattleBlaster/Intermediate/Build/Win64/x64/BattleBlasterEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_3.h.obj"
 "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/04-battle-blaster/BattleBlaster/Intermediate/Build/Win64/x64/UnrealEditor/Development/BattleBlaster/Module.BattleBlaster.gen.cpp.obj"
 "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/04-battle-blaster/BattleBlaster/Intermediate/Build/Win64/x64/UnrealEditor/Development/BattleBlaster/BaseClass.cpp.obj"
@@ -55,6 +56,7 @@
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/CoreUObject/UnrealEditor-CoreUObject.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/InputCore/UnrealEditor-InputCore.lib"
 "../Plugins/EnhancedInput/Intermediate/Build/Win64/x64/UnrealEditor/Development/EnhancedInput/UnrealEditor-EnhancedInput.lib"
+"../Plugins/FX/Niagara/Intermediate/Build/Win64/x64/UnrealEditor/Development/Niagara/UnrealEditor-Niagara.lib"
 "delayimp.lib"
 "wininet.lib"
 "rpcrt4.lib"
