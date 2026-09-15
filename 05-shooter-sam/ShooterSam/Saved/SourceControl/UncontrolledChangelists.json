@@ -6,15 +6,18 @@
 			"description": "Default Uncontrolled Changelist",
 			"files": [
 				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Content/MyStuff/Map/TestLevel.umap",
-				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Content/MyStuff/BP_Shooter.uasset",
-				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Content/MyStuff/BP_ShooterSamPlayerController.uasset",
 				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Content/MyStuff/BP_ShooterSamGameMode.uasset",
 				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Content/MyStuff/Blueprints/BP_Shooter.uasset",
 				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Content/MyStuff/Blueprints/BP_ShooterSamGameMode.uasset",
 				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Content/MyStuff/Blueprints/BP_ShooterSamPlayerController.uasset",
 				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Content/MyStuff/Animations/ABP_ShooterPlayer.uasset",
 				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Content/MyStuff/Animations/BS_ShooterLocomotion.uasset",
-				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Content/MyStuff/Widget/WBP_HUD.uasset"
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Content/MyStuff/Widget/WBP_HUD.uasset",
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Content/Input/Actions/IA_Shoot.uasset",
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Content/Input/IMC_Default.uasset",
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Content/MyStuff/Blueprints/BP_Rifle.uasset",
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Content/MyStuff/BP_Shooter.uasset",
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Content/MyStuff/BP_ShooterSamPlayerController.uasset"
 			]
 		}
 	]

@@ -33,6 +33,12 @@
     <Filter Include="Source\ShooterSam">
       <UniqueIdentifier>{259400C2-E8B8-3938-AB8B-BFF846AEEA4D}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ShooterSam\Gun.cpp">
+      <Filter>Source\ShooterSam</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ShooterSam\Gun.h">
+      <Filter>Source\ShooterSam</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ShooterSam\HUDWidget.cpp">
       <Filter>Source\ShooterSam</Filter>
     </ClCompile>

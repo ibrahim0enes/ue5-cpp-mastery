@@ -18,6 +18,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class AShooterSamCharacter *****************************************************
 #define FID_ShooterSam_Source_ShooterSam_ShooterSamCharacter_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execShoot); \
 	DECLARE_FUNCTION(execDoJumpEnd); \
 	DECLARE_FUNCTION(execDoJumpStart); \
 	DECLARE_FUNCTION(execDoLook); \
