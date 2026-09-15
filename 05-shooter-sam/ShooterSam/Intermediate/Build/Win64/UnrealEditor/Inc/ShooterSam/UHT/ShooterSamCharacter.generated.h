@@ -16,8 +16,13 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
+class AActor;
+class AController;
+class UDamageType;
+
 // ********** Begin Class AShooterSamCharacter *****************************************************
 #define FID_ShooterSam_Source_ShooterSam_ShooterSamCharacter_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnDamageTaken); \
 	DECLARE_FUNCTION(execShoot); \
 	DECLARE_FUNCTION(execDoJumpEnd); \
 	DECLARE_FUNCTION(execDoJumpStart); \

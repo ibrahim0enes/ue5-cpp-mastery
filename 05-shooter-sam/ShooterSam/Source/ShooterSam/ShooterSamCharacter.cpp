@@ -54,6 +54,11 @@ void AShooterSamCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
+	Health = MaxHealth;
+	IsAlive = true;
+
+	OnTakeAnyDamage.AddDynamic(this, &AShooterSamCharacter::OnDamageTaken);
+
 	GetMesh()->HideBoneByName(TEXT("weapon_r"), EPhysBodyOp::PBO_None);
 
 	Gun = GetWorld()->SpawnActor<AGun>(GunClass);
@@ -159,3 +164,24 @@ void AShooterSamCharacter::Shoot()
 		Gun->PullTrigger();
 	}
 }
+
+void AShooterSamCharacter::OnDamageTaken(AActor* DamagedActor, float Damage, 
+	const UDamageType* DamageType, AController* InstigatedBy, AActor* DamageCauser)
+{
+	if (IsAlive)
+	{
+		UE_LOG(LogShooterSam, Log, TEXT("'%s' has taken %f damage from '%s'."), *GetNameSafe(DamagedActor), Damage, *GetNameSafe(DamageCauser));
+		Health -= Damage;
+		if (Health <= 0.0f)
+		{
+			IsAlive = false;
+			Health = 0.0f;
+
+			GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+			UE_LOG(LogShooterSam, Log, TEXT("'%s' has died."), *GetNameSafe(this));
+
+		}
+
+	}
+}
+

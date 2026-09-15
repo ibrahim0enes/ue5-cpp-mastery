@@ -62,11 +62,7 @@
 			"AnimNotify_CheckChargedAttack.cpp.obj",
 			"AnimNotify_CheckCombo.cpp.obj",
 			"AnimNotify_DoAttackTrace.cpp.obj",
-			"CombatCharacter.cpp.obj",
-			"CombatGameMode.cpp.obj",
-			"CombatPlayerController.cpp.obj",
-			"CombatActivationVolume.cpp.obj",
-			"CombatCheckpointVolume.cpp.obj"
+			"CombatCharacter.cpp.obj"
 		]
 	}
 }
