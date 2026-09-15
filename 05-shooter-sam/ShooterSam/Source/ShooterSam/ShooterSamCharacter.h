@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
+#include "Gun.h"
+
 #include "ShooterSamCharacter.generated.h"
 
 class USpringArmComponent;
@@ -59,6 +61,8 @@ public:
 
 protected:
 
+	virtual void BeginPlay() override;
+
 	/** Initialize input action bindings */
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
@@ -98,5 +102,11 @@ public:
 
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gun")
+	TSubclassOf<AGun> GunClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gun")
+	AGun* Gun;
 };
 

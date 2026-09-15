@@ -33,6 +33,23 @@ void AGun::Tick(float DeltaTime)
 
 void AGun::PullTrigger()
 {
-	UE_LOG(LogTemp, Display, TEXT("Pull Trigger"));
+	if (OwnerController)
+	{
+		FVector ViewPointLocation;
+		FRotator ViewPointRotation;
+		OwnerController->GetPlayerViewPoint(ViewPointLocation, ViewPointRotation);
+
+		FVector EndLocation = ViewPointLocation + (ViewPointRotation.Vector() * MaxRange);
+
+		FHitResult HitResult;
+		FCollisionQueryParams Params;
+		Params.AddIgnoredActor(this);
+		Params.AddIgnoredActor(GetOwner());
+		bool IsHit = GetWorld()->LineTraceSingleByChannel(HitResult, ViewPointLocation, EndLocation, ECC_GameTraceChannel2, Params);
+		if (IsHit)
+		{
+			DrawDebugPoint(GetWorld(), HitResult.Location, 20.f, FColor::Red, false, 2.f);
+		}
+	}
 }
 
