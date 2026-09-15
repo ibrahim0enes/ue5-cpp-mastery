@@ -53,6 +53,8 @@ void AGun::PullTrigger()
 		if (IsHit)
 		{
 			DrawDebugPoint(GetWorld(), HitResult.Location, 20.f, FColor::Red, false, 2.f);
+			UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ImpactPartcileSystem, HitResult.ImpactPoint, 
+				HitResult.ImpactPoint.Rotation());
 		}
 	}
 }
