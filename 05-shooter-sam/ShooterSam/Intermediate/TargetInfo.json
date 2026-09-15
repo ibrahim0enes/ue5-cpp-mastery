@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "ShooterSam",
+			"Path": "..\\Source\\ShooterSam.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "ShooterSamEditor",
+			"Path": "..\\Source\\ShooterSamEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

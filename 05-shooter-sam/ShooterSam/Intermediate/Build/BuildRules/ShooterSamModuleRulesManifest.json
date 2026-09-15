@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"E:\\UnrealEngine\\Repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\05-shooter-sam\\ShooterSam\\Source\\ShooterSam\\ShooterSam.Build.cs",
+		"E:\\UnrealEngine\\Repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\05-shooter-sam\\ShooterSam\\Source\\ShooterSam.Target.cs",
+		"E:\\UnrealEngine\\Repo\\ue5-cpp-mastery\\ue5-cpp-mastery\\05-shooter-sam\\ShooterSam\\Source\\ShooterSamEditor.Target.cs"
+	],
+	"EngineVersion": "5.6.1"
+}
