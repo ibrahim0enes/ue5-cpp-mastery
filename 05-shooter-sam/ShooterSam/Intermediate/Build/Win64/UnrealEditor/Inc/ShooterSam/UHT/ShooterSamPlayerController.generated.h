@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class AShooterSamPlayerController **********************************************
 SHOOTERSAM_API UClass* Z_Construct_UClass_AShooterSamPlayerController_NoRegister();
 
-#define FID_ShooterSam_Source_ShooterSam_ShooterSamPlayerController_h_19_INCLASS_NO_PURE_DECLS \
+#define FID_ShooterSam_Source_ShooterSam_ShooterSamPlayerController_h_22_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAShooterSamPlayerController(); \
 	friend struct Z_Construct_UClass_AShooterSamPlayerController_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(AShooterSamPlayerController)
 
 
-#define FID_ShooterSam_Source_ShooterSam_ShooterSamPlayerController_h_19_ENHANCED_CONSTRUCTORS \
+#define FID_ShooterSam_Source_ShooterSam_ShooterSamPlayerController_h_22_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AShooterSamPlayerController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -42,12 +42,12 @@ public: \
 	NO_API virtual ~AShooterSamPlayerController();
 
 
-#define FID_ShooterSam_Source_ShooterSam_ShooterSamPlayerController_h_16_PROLOG
-#define FID_ShooterSam_Source_ShooterSam_ShooterSamPlayerController_h_19_GENERATED_BODY \
+#define FID_ShooterSam_Source_ShooterSam_ShooterSamPlayerController_h_19_PROLOG
+#define FID_ShooterSam_Source_ShooterSam_ShooterSamPlayerController_h_22_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ShooterSam_Source_ShooterSam_ShooterSamPlayerController_h_19_INCLASS_NO_PURE_DECLS \
-	FID_ShooterSam_Source_ShooterSam_ShooterSamPlayerController_h_19_ENHANCED_CONSTRUCTORS \
+	FID_ShooterSam_Source_ShooterSam_ShooterSamPlayerController_h_22_INCLASS_NO_PURE_DECLS \
+	FID_ShooterSam_Source_ShooterSam_ShooterSamPlayerController_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

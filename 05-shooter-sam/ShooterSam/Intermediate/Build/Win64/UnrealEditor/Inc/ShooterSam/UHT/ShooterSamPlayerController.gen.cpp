@@ -17,6 +17,7 @@ ENGINE_API UClass* Z_Construct_UClass_APlayerController();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputMappingContext_NoRegister();
 SHOOTERSAM_API UClass* Z_Construct_UClass_AShooterSamPlayerController();
 SHOOTERSAM_API UClass* Z_Construct_UClass_AShooterSamPlayerController_NoRegister();
+SHOOTERSAM_API UClass* Z_Construct_UClass_UHUDWidget_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 UPackage* Z_Construct_UPackage__Script_ShooterSam();
 // ********** End Cross Module References **********************************************************
@@ -98,12 +99,23 @@ struct Z_Construct_UClass_AShooterSamPlayerController_Statics
 		{ "ToolTip", "Mobile controls widget to spawn" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HUDWidgetClass_MetaData[] = {
+		{ "Category", "UI" },
+		{ "ModuleRelativePath", "ShooterSamPlayerController.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HUDWidget_MetaData[] = {
+		{ "Category", "UI" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "ShooterSamPlayerController.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DefaultMappingContexts_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_DefaultMappingContexts;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MobileExcludedMappingContexts_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_MobileExcludedMappingContexts;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_MobileControlsWidgetClass;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_HUDWidgetClass;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_HUDWidget;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -116,12 +128,16 @@ const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AShooterSamPlay
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AShooterSamPlayerController_Statics::NewProp_MobileExcludedMappingContexts_Inner = { "MobileExcludedMappingContexts", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AShooterSamPlayerController_Statics::NewProp_MobileExcludedMappingContexts = { "MobileExcludedMappingContexts", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterSamPlayerController, MobileExcludedMappingContexts), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MobileExcludedMappingContexts_MetaData), NewProp_MobileExcludedMappingContexts_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AShooterSamPlayerController_Statics::NewProp_MobileControlsWidgetClass = { "MobileControlsWidgetClass", nullptr, (EPropertyFlags)0x0024080000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterSamPlayerController, MobileControlsWidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MobileControlsWidgetClass_MetaData), NewProp_MobileControlsWidgetClass_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AShooterSamPlayerController_Statics::NewProp_HUDWidgetClass = { "HUDWidgetClass", nullptr, (EPropertyFlags)0x0024080000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterSamPlayerController, HUDWidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UHUDWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HUDWidgetClass_MetaData), NewProp_HUDWidgetClass_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AShooterSamPlayerController_Statics::NewProp_HUDWidget = { "HUDWidget", nullptr, (EPropertyFlags)0x00200800000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AShooterSamPlayerController, HUDWidget), Z_Construct_UClass_UHUDWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HUDWidget_MetaData), NewProp_HUDWidget_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AShooterSamPlayerController_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterSamPlayerController_Statics::NewProp_DefaultMappingContexts_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterSamPlayerController_Statics::NewProp_DefaultMappingContexts,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterSamPlayerController_Statics::NewProp_MobileExcludedMappingContexts_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterSamPlayerController_Statics::NewProp_MobileExcludedMappingContexts,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterSamPlayerController_Statics::NewProp_MobileControlsWidgetClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterSamPlayerController_Statics::NewProp_HUDWidgetClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AShooterSamPlayerController_Statics::NewProp_HUDWidget,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AShooterSamPlayerController_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AShooterSamPlayerController_Statics::DependentSingletons[])() = {
@@ -161,10 +177,10 @@ AShooterSamPlayerController::~AShooterSamPlayerController() {}
 struct Z_CompiledInDeferFile_FID_ShooterSam_Source_ShooterSam_ShooterSamPlayerController_h__Script_ShooterSam_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AShooterSamPlayerController, AShooterSamPlayerController::StaticClass, TEXT("AShooterSamPlayerController"), &Z_Registration_Info_UClass_AShooterSamPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterSamPlayerController), 818099392U) },
+		{ Z_Construct_UClass_AShooterSamPlayerController, AShooterSamPlayerController::StaticClass, TEXT("AShooterSamPlayerController"), &Z_Registration_Info_UClass_AShooterSamPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShooterSamPlayerController), 1041383319U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ShooterSam_Source_ShooterSam_ShooterSamPlayerController_h__Script_ShooterSam_1848045853(TEXT("/Script/ShooterSam"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ShooterSam_Source_ShooterSam_ShooterSamPlayerController_h__Script_ShooterSam_3221682158(TEXT("/Script/ShooterSam"),
 	Z_CompiledInDeferFile_FID_ShooterSam_Source_ShooterSam_ShooterSamPlayerController_h__Script_ShooterSam_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ShooterSam_Source_ShooterSam_ShooterSamPlayerController_h__Script_ShooterSam_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

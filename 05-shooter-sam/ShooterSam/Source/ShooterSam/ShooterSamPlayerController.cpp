@@ -7,6 +7,7 @@
 #include "InputMappingContext.h"
 #include "Blueprint/UserWidget.h"
 #include "ShooterSam.h"
+
 #include "Widgets/Input/SVirtualJoystick.h"
 
 void AShooterSamPlayerController::BeginPlay()
@@ -31,6 +32,13 @@ void AShooterSamPlayerController::BeginPlay()
 		}
 
 	}
+
+	HUDWidget = CreateWidget<UHUDWidget>(this, HUDWidgetClass);
+	if (HUDWidget)
+	{
+		HUDWidget->AddToViewport();
+	}
+
 }
 
 void AShooterSamPlayerController::SetupInputComponent()

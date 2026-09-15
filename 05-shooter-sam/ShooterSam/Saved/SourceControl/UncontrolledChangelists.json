@@ -13,7 +13,8 @@
 				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Content/MyStuff/Blueprints/BP_ShooterSamGameMode.uasset",
 				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Content/MyStuff/Blueprints/BP_ShooterSamPlayerController.uasset",
 				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Content/MyStuff/Animations/ABP_ShooterPlayer.uasset",
-				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Content/MyStuff/Animations/BS_ShooterLocomotion.uasset"
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Content/MyStuff/Animations/BS_ShooterLocomotion.uasset",
+				"E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Content/MyStuff/Widget/WBP_HUD.uasset"
 			]
 		}
 	]
