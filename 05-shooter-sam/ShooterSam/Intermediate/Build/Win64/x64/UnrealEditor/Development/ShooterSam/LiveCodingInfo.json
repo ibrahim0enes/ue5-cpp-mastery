@@ -66,9 +66,7 @@
 			"CombatGameMode.cpp.obj",
 			"CombatPlayerController.cpp.obj",
 			"CombatActivationVolume.cpp.obj",
-			"CombatCheckpointVolume.cpp.obj",
-			"CombatDamageableBox.cpp.obj",
-			"CombatDummy.cpp.obj"
+			"CombatCheckpointVolume.cpp.obj"
 		]
 	}
 }

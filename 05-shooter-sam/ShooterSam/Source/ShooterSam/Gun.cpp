@@ -14,14 +14,16 @@ AGun::AGun()
 
 	GunMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Gun Mesh"));
 	GunMesh->SetupAttachment(SceneRoot);
-
+	
+	MuzzleFlash = CreateDefaultSubobject<UNiagaraComponent>(TEXT("Muzzle Flash"));
+	MuzzleFlash->SetupAttachment(GunMesh);
 }
 
 // Called when the game starts or when spawned
 void AGun::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	MuzzleFlash->Deactivate();
 }
 
 // Called every frame
@@ -33,6 +35,8 @@ void AGun::Tick(float DeltaTime)
 
 void AGun::PullTrigger()
 {
+	MuzzleFlash->Activate(true);
+	UE_LOG(LogTemp, Warning, TEXT("Trigger Pulled!"));
 	if (OwnerController)
 	{
 		FVector ViewPointLocation;

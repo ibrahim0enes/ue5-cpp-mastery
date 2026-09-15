@@ -4090,6 +4090,14 @@
 			"Type": "RequiredResource"
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/FX/CascadeToNiagaraConverter/Binaries/Win64/UnrealEditor-CascadeToNiagaraConverter.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/FX/CascadeToNiagaraConverter/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/FX/Cascade/Binaries/Win64/UnrealEditor-Cascade.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -30372,6 +30380,10 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/FX/CascadeToNiagaraConverter/CascadeToNiagaraConverter.uplugin",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/FX/Cascade/Cascade.uplugin",
 			"Type": "UFS"
 		},
@@ -30780,6 +30792,7 @@
 		"CameraCalibrationCore",
 		"CameraShakePreviewer",
 		"Cascade",
+		"CascadeToNiagaraConverter",
 		"ChangelistReview",
 		"ChaosCaching",
 		"ChaosCloth",

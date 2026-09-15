@@ -54,7 +54,9 @@ void AShooterSamCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
-	GetWorld()->SpawnActor<AGun>(GunClass);
+	GetMesh()->HideBoneByName(TEXT("weapon_r"), EPhysBodyOp::PBO_None);
+
+	Gun = GetWorld()->SpawnActor<AGun>(GunClass);
 	if (Gun)
 	{
 		Gun->SetOwner(this);

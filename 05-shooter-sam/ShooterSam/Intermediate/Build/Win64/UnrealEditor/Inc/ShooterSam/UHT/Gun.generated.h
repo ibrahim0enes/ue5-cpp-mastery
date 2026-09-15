@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class AGun *********************************************************************
 SHOOTERSAM_API UClass* Z_Construct_UClass_AGun_NoRegister();
 
-#define FID_ShooterSam_Source_ShooterSam_Gun_h_13_INCLASS_NO_PURE_DECLS \
+#define FID_ShooterSam_Source_ShooterSam_Gun_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAGun(); \
 	friend struct Z_Construct_UClass_AGun_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(AGun)
 
 
-#define FID_ShooterSam_Source_ShooterSam_Gun_h_13_ENHANCED_CONSTRUCTORS \
+#define FID_ShooterSam_Source_ShooterSam_Gun_h_17_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	AGun(AGun&&) = delete; \
 	AGun(const AGun&) = delete; \
@@ -40,12 +40,12 @@ public: \
 	NO_API virtual ~AGun();
 
 
-#define FID_ShooterSam_Source_ShooterSam_Gun_h_10_PROLOG
-#define FID_ShooterSam_Source_ShooterSam_Gun_h_13_GENERATED_BODY \
+#define FID_ShooterSam_Source_ShooterSam_Gun_h_14_PROLOG
+#define FID_ShooterSam_Source_ShooterSam_Gun_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ShooterSam_Source_ShooterSam_Gun_h_13_INCLASS_NO_PURE_DECLS \
-	FID_ShooterSam_Source_ShooterSam_Gun_h_13_ENHANCED_CONSTRUCTORS \
+	FID_ShooterSam_Source_ShooterSam_Gun_h_17_INCLASS_NO_PURE_DECLS \
+	FID_ShooterSam_Source_ShooterSam_Gun_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
