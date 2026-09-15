@@ -276,6 +276,7 @@
     <None Include="..\..\ShooterSam.uproject"/>
     <None Include="..\..\Source\ShooterSam.Target.cs"/>
     <None Include="..\..\Source\ShooterSamEditor.Target.cs"/>
+    <None Include="..\..\.vsconfig"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
