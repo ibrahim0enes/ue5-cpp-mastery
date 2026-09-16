@@ -111,12 +111,11 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	float MaxHealth = 100.0f;
-
+	
 	float Health;
 
 	UPROPERTY(BlueprintReadOnly)
-	bool IsAlive;
-
+	bool IsAlive = true;
 
 	UFUNCTION()
 	void OnDamageTaken(AActor* DamagedActor, float Damage, 

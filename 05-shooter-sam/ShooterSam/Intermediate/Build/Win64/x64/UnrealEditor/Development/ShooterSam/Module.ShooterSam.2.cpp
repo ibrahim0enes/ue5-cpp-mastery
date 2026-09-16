@@ -5,6 +5,7 @@
 #include "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Intermediate/Build/Win64/UnrealEditor/Inc/ShooterSam/UHT/PlatformingCharacter.gen.cpp"
 #include "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Intermediate/Build/Win64/UnrealEditor/Inc/ShooterSam/UHT/PlatformingGameMode.gen.cpp"
 #include "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Intermediate/Build/Win64/UnrealEditor/Inc/ShooterSam/UHT/PlatformingPlayerController.gen.cpp"
+#include "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Intermediate/Build/Win64/UnrealEditor/Inc/ShooterSam/UHT/ShooterAI.gen.cpp"
 #include "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Intermediate/Build/Win64/UnrealEditor/Inc/ShooterSam/UHT/ShooterSam.init.gen.cpp"
 #include "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Intermediate/Build/Win64/UnrealEditor/Inc/ShooterSam/UHT/ShooterSamCharacter.gen.cpp"
 #include "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Intermediate/Build/Win64/UnrealEditor/Inc/ShooterSam/UHT/ShooterSamGameMode.gen.cpp"
