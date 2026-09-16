@@ -2,40 +2,36 @@
 
 
 #include "ShooterAI.h"
+
 #include "Kismet/GameplayStatics.h"
 
 void AShooterAI::BeginPlay()
 {
 	Super::BeginPlay();
 
-	CachedPlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+	if (EnemyAIBehaviorTree)
+	{
+		RunBehaviorTree(EnemyAIBehaviorTree);
+	}
+
 }
 
 void AShooterAI::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	/*APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+	if (PlayerPawn)
+	{
+		if (LineOfSightTo(PlayerPawn))
+		{
+			SetFocus(PlayerPawn);
+			MoveToActor(PlayerPawn, 150);
+		}
+		else
+		{
+			ClearFocus();
 
-    APawn* Player = CachedPlayerPawn.Get();
-    if (!Player) return;
-
-    if (LineOfSightTo(Player))
-    {
-        SetFocus(Player, EAIFocusPriority::Gameplay);
-
-        // Yolu sadece durum deðiþtiðinde veya hareket tamamlandýðýnda yenile
-        if (!bIsChasing)
-        {
-            MoveToActor(Player, 150.0f);
-            bIsChasing = true;
-        }
-    }
-    else
-    {
-        if (bIsChasing)
-        {
-            ClearFocus(EAIFocusPriority::Gameplay);
-            StopMovement();
-            bIsChasing = false;
-        }
-    }
+		}
+	}
+	*/
 }
