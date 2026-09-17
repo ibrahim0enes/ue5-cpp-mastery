@@ -21,13 +21,13 @@ void EmptyLinkFunctionForGeneratedCodeShooterSam_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xD17106CE,
-				0x130D37F1,
+				0xCF6932F6,
+				0xE690696F,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_ShooterSam.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_ShooterSam.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_ShooterSam(Z_Construct_UPackage__Script_ShooterSam, TEXT("/Script/ShooterSam"), Z_Registration_Info_UPackage__Script_ShooterSam, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xD17106CE, 0x130D37F1));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_ShooterSam(Z_Construct_UPackage__Script_ShooterSam, TEXT("/Script/ShooterSam"), Z_Registration_Info_UPackage__Script_ShooterSam, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xCF6932F6, 0xE690696F));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
