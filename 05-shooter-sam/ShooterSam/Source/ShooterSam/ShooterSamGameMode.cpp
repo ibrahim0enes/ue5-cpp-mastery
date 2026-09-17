@@ -27,11 +27,21 @@ void AShooterSamGameMode::BeginPlay()
 		LoopIndex++;
 	}*/
 
-	for (int32 LoopIndex = 0; LoopIndex < ShooterAIActors.Num(); LoopIndex++)
+	/*for (int32 LoopIndex = 0; LoopIndex < ShooterAIActors.Num(); LoopIndex++)
 	{
 		AActor* ShooterAIActor = ShooterAIActors[LoopIndex];
 		AShooterAI* ShooterAI = Cast<AShooterAI>(ShooterAIActor);
 
+		if (ShooterAI)
+		{
+			ShooterAI->StartBehaviorTree(Player);
+		}
+	}
+	*/
+
+	for (AActor* ShooterAIActor : ShooterAIActors)
+	{
+		AShooterAI* ShooterAI = Cast<AShooterAI>(ShooterAIActor);
 		if (ShooterAI)
 		{
 			ShooterAI->StartBehaviorTree(Player);
