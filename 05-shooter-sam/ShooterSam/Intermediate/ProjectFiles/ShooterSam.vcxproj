@@ -286,6 +286,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\ShooterSam\BTService_PlayerLocation.h"/>
+    <ClCompile Include="..\..\Source\ShooterSam\BTTaskNode_Shoot.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ShooterSam\BTTaskNode_Shoot.h"/>
     <ClCompile Include="..\..\Source\ShooterSam\BTTask_ClearBlackboardValue.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

@@ -39,6 +39,12 @@
     <ClInclude Include="..\..\Source\ShooterSam\BTService_PlayerLocation.h">
       <Filter>Source\ShooterSam</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ShooterSam\BTTaskNode_Shoot.cpp">
+      <Filter>Source\ShooterSam</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ShooterSam\BTTaskNode_Shoot.h">
+      <Filter>Source\ShooterSam</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ShooterSam\BTTask_ClearBlackboardValue.cpp">
       <Filter>Source\ShooterSam</Filter>
     </ClCompile>
