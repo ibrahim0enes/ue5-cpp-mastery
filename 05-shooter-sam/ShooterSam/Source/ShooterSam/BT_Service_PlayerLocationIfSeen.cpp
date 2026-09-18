@@ -19,7 +19,7 @@ void UBT_Service_PlayerLocationIfSeen::TickNode(UBehaviorTreeComponent& OwnerCom
 
 	if (OwnerController && Player && BlackBoard)
 	{
-		if (OwnerController->LineOfSightTo(Player))
+		if (OwnerController->LineOfSightTo(Player) && Player->IsAlive)
 		{
 			BlackBoard->SetValueAsVector(GetSelectedBlackboardKey(), Player->GetActorLocation());
 			OwnerController->SetFocus(Player);

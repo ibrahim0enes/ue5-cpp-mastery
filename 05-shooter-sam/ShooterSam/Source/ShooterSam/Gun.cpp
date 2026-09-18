@@ -38,7 +38,6 @@ void AGun::Tick(float DeltaTime)
 void AGun::PullTrigger()
 {
 	MuzzleFlash->Activate(true);
-	UE_LOG(LogTemp, Warning, TEXT("Trigger Pulled!"));
 	if (OwnerController)
 	{
 		FVector ViewPointLocation;

@@ -44,6 +44,7 @@ protected:
 	/** Input mapping context setup */
 	virtual void SetupInputComponent() override;
 
+public:
 	UPROPERTY(EditAnywhere, Category = "UI")
 	TSubclassOf<UHUDWidget> HUDWidgetClass;
 
