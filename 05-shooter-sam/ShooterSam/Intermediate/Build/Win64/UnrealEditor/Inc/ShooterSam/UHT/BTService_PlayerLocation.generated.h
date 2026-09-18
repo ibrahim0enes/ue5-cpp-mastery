@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class UBTService_PlayerLocation ************************************************
 SHOOTERSAM_API UClass* Z_Construct_UClass_UBTService_PlayerLocation_NoRegister();
 
-#define FID_ShooterSam_Source_ShooterSam_BTService_PlayerLocation_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_ShooterSam_Source_ShooterSam_BTService_PlayerLocation_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUBTService_PlayerLocation(); \
 	friend struct Z_Construct_UClass_UBTService_PlayerLocation_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(UBTService_PlayerLocation)
 
 
-#define FID_ShooterSam_Source_ShooterSam_BTService_PlayerLocation_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_ShooterSam_Source_ShooterSam_BTService_PlayerLocation_h_13_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UBTService_PlayerLocation(UBTService_PlayerLocation&&) = delete; \
 	UBTService_PlayerLocation(const UBTService_PlayerLocation&) = delete; \
@@ -40,12 +40,12 @@ public: \
 	NO_API virtual ~UBTService_PlayerLocation();
 
 
-#define FID_ShooterSam_Source_ShooterSam_BTService_PlayerLocation_h_12_PROLOG
-#define FID_ShooterSam_Source_ShooterSam_BTService_PlayerLocation_h_15_GENERATED_BODY \
+#define FID_ShooterSam_Source_ShooterSam_BTService_PlayerLocation_h_10_PROLOG
+#define FID_ShooterSam_Source_ShooterSam_BTService_PlayerLocation_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ShooterSam_Source_ShooterSam_BTService_PlayerLocation_h_15_INCLASS_NO_PURE_DECLS \
-	FID_ShooterSam_Source_ShooterSam_BTService_PlayerLocation_h_15_ENHANCED_CONSTRUCTORS \
+	FID_ShooterSam_Source_ShooterSam_BTService_PlayerLocation_h_13_INCLASS_NO_PURE_DECLS \
+	FID_ShooterSam_Source_ShooterSam_BTService_PlayerLocation_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

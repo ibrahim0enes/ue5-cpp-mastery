@@ -55,9 +55,6 @@ struct Z_Construct_UClass_UBTService_PlayerLocation_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
-#endif
 		{ "IncludePath", "BTService_PlayerLocation.h" },
 		{ "ModuleRelativePath", "BTService_PlayerLocation.h" },
 	};
@@ -104,10 +101,10 @@ UBTService_PlayerLocation::~UBTService_PlayerLocation() {}
 struct Z_CompiledInDeferFile_FID_ShooterSam_Source_ShooterSam_BTService_PlayerLocation_h__Script_ShooterSam_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UBTService_PlayerLocation, UBTService_PlayerLocation::StaticClass, TEXT("UBTService_PlayerLocation"), &Z_Registration_Info_UClass_UBTService_PlayerLocation, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTService_PlayerLocation), 1031852461U) },
+		{ Z_Construct_UClass_UBTService_PlayerLocation, UBTService_PlayerLocation::StaticClass, TEXT("UBTService_PlayerLocation"), &Z_Registration_Info_UClass_UBTService_PlayerLocation, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTService_PlayerLocation), 4136362482U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ShooterSam_Source_ShooterSam_BTService_PlayerLocation_h__Script_ShooterSam_1030620873(TEXT("/Script/ShooterSam"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ShooterSam_Source_ShooterSam_BTService_PlayerLocation_h__Script_ShooterSam_1813715225(TEXT("/Script/ShooterSam"),
 	Z_CompiledInDeferFile_FID_ShooterSam_Source_ShooterSam_BTService_PlayerLocation_h__Script_ShooterSam_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ShooterSam_Source_ShooterSam_BTService_PlayerLocation_h__Script_ShooterSam_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

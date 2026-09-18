@@ -4,6 +4,7 @@
 #include "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Intermediate/Build/Win64/UnrealEditor/Inc/ShooterSam/UHT/AnimNotify_DoAttackTrace.gen.cpp"
 #include "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Intermediate/Build/Win64/UnrealEditor/Inc/ShooterSam/UHT/AnimNotify_EndDash.gen.cpp"
 #include "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Intermediate/Build/Win64/UnrealEditor/Inc/ShooterSam/UHT/BTService_PlayerLocation.gen.cpp"
+#include "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Intermediate/Build/Win64/UnrealEditor/Inc/ShooterSam/UHT/BTTask_ClearBlackboardValue.gen.cpp"
 #include "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Intermediate/Build/Win64/UnrealEditor/Inc/ShooterSam/UHT/BT_Service_PlayerLocationIfSeen.gen.cpp"
 #include "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Intermediate/Build/Win64/UnrealEditor/Inc/ShooterSam/UHT/CombatActivatable.gen.cpp"
 #include "E:/UnrealEngine/Repo/ue5-cpp-mastery/ue5-cpp-mastery/05-shooter-sam/ShooterSam/Intermediate/Build/Win64/UnrealEditor/Inc/ShooterSam/UHT/CombatActivationVolume.gen.cpp"
