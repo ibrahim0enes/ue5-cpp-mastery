@@ -33,6 +33,12 @@
     <Filter Include="Source\ShooterSam">
       <UniqueIdentifier>{259400C2-E8B8-3938-AB8B-BFF846AEEA4D}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ShooterSam\BTService_PlayerLocation.cpp">
+      <Filter>Source\ShooterSam</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ShooterSam\BTService_PlayerLocation.h">
+      <Filter>Source\ShooterSam</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ShooterSam\BT_Service_PlayerLocationIfSeen.cpp">
       <Filter>Source\ShooterSam</Filter>
     </ClCompile>

@@ -6,6 +6,7 @@
 			"AnimNotify_CheckCombo.gen.cpp.obj",
 			"AnimNotify_DoAttackTrace.gen.cpp.obj",
 			"AnimNotify_EndDash.gen.cpp.obj",
+			"BTService_PlayerLocation.gen.cpp.obj",
 			"BT_Service_PlayerLocationIfSeen.gen.cpp.obj",
 			"CombatActivatable.gen.cpp.obj",
 			"CombatActivationVolume.gen.cpp.obj",
@@ -50,6 +51,7 @@
 			"SideScrollingStateTreeUtility.gen.cpp.obj",
 			"SideScrollingUI.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
+			"BTService_PlayerLocation.cpp.obj",
 			"BT_Service_PlayerLocationIfSeen.cpp.obj",
 			"Gun.cpp.obj",
 			"HUDWidget.cpp.obj",
@@ -62,8 +64,7 @@
 			"CombatEnemy.cpp.obj",
 			"CombatEnemySpawner.cpp.obj",
 			"CombatStateTreeUtility.cpp.obj",
-			"EnvQueryContext_Player.cpp.obj",
-			"AnimNotify_CheckChargedAttack.cpp.obj"
+			"EnvQueryContext_Player.cpp.obj"
 		]
 	}
 }
