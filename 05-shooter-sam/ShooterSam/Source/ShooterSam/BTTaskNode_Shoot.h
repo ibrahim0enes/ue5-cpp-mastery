@@ -6,9 +6,6 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "BTTaskNode_Shoot.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class SHOOTERSAM_API UBTTaskNode_Shoot : public UBTTaskNode
 {
@@ -18,7 +15,8 @@ public:
 
 	UBTTaskNode_Shoot();
 
-	virtual EBTNodeResult::Type ExecuteTask (UBehaviorTreeComponent& OwnerComp,uint8* NodeMemory) override;
-};
-	
+	virtual EBTNodeResult::Type ExecuteTask(
+		UBehaviorTreeComponent& OwnerComp,
+		uint8* NodeMemory
+	) override;
 };

@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class UBTTaskNode_Shoot ********************************************************
 SHOOTERSAM_API UClass* Z_Construct_UClass_UBTTaskNode_Shoot_NoRegister();
 
-#define FID_ShooterSam_Source_ShooterSam_BTTaskNode_Shoot_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_ShooterSam_Source_ShooterSam_BTTaskNode_Shoot_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUBTTaskNode_Shoot(); \
 	friend struct Z_Construct_UClass_UBTTaskNode_Shoot_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(UBTTaskNode_Shoot)
 
 
-#define FID_ShooterSam_Source_ShooterSam_BTTaskNode_Shoot_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_ShooterSam_Source_ShooterSam_BTTaskNode_Shoot_h_12_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UBTTaskNode_Shoot(UBTTaskNode_Shoot&&) = delete; \
 	UBTTaskNode_Shoot(const UBTTaskNode_Shoot&) = delete; \
@@ -40,12 +40,12 @@ public: \
 	NO_API virtual ~UBTTaskNode_Shoot();
 
 
-#define FID_ShooterSam_Source_ShooterSam_BTTaskNode_Shoot_h_12_PROLOG
-#define FID_ShooterSam_Source_ShooterSam_BTTaskNode_Shoot_h_15_GENERATED_BODY \
+#define FID_ShooterSam_Source_ShooterSam_BTTaskNode_Shoot_h_9_PROLOG
+#define FID_ShooterSam_Source_ShooterSam_BTTaskNode_Shoot_h_12_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ShooterSam_Source_ShooterSam_BTTaskNode_Shoot_h_15_INCLASS_NO_PURE_DECLS \
-	FID_ShooterSam_Source_ShooterSam_BTTaskNode_Shoot_h_15_ENHANCED_CONSTRUCTORS \
+	FID_ShooterSam_Source_ShooterSam_BTTaskNode_Shoot_h_12_INCLASS_NO_PURE_DECLS \
+	FID_ShooterSam_Source_ShooterSam_BTTaskNode_Shoot_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
